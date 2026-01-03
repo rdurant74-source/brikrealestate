@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import newsletters from "../../data/newsletters.json";
+---
+
+<BaseLayout title="Newsletter Archive">
+  <section>
+    <h2>BRIK Newsletter</h2>
+    <p class="muted">
+      Education-first insights, market clarity, and real-world framing.
+      Sign up below to receive new editions and access the archive.
+    </p>
+
+    <!-- Signup -->
+    <div class="card" style="margin-top:16px">
+      <h3>Join the newsletter</h3>
+
+      <!-- MAILERLITE EMBED GOES HERE -->
+      <div id="ml-embed">
+        <p style="color:var(--muted);font-size:13px">
+          Paste your MailerLite embedded form HTML here.
+        </p>
+      </div>
+    </div>
+
+    <!-- Archive -->
+    <div
+      style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:18px"
+    >
+      {newsletters.map((n) => (
+        <div class="card" style="grid-column:span 6">
+          <h3 style="margin:0 0 6px">{n.title}</h3>
+          <p style="margin:0;color:var(--muted);font-size:13px">
+            {n.summary}
+          </p>
+          <a class="pill" href={n.url} target="_blank">
+            Read issue →
+          </a>
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
