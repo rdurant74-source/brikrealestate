@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const description = "Newsletter archive, glossary breakdowns, and case studies — the BRIK learning hub.";
+---
+
+<BaseLayout title="Education | BRIK Real Estate" description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:34px;line-height:1.1;margin:0 0 10px;letter-spacing:-.5px">Education</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:75ch">{description}</p>
+
+    <div class="card" id="newsletter">
+      <h3 style="margin:0 0 8px">Newsletter Archive</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px">
+        Next: embed MailerLite signup and store past newsletters here on the site.
+      </p>
+    </div>
+
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" id="glossary" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Glossary</h3>
+        <p style="margin:0;color:var(--muted);font-size:13px">
+          Plain language definitions + “BRIK Link” examples. Unlimited growth.
+        </p>
+      </div>
+      <div class="card" id="case-studies" style="grid-column:span 6">
+  <h3 style="margin:0 0 8px">Case Studies</h3>
+  <p style="margin:0;color:var(--muted);font-size:13px">
+    Scenario → decision points → what to consider → outcome options.
+  </p>
+
+  <div style="margin-top:12px">
+    <a class="pill primary" href="/case-studies">Browse Case Studies</a>
+  </div>
+</div>
+
+    </div>
+  </section>
+</BaseLayout>

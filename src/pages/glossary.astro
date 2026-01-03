@@ -1,0 +1,124 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import glossary from "../data/glossary.json";
+
+const description =
+  "Plain-language real estate terms with BRIK Links that make the concepts stick.";
+
+// sorted copy
+const items = [...glossary].sort((a, b) => a.term.localeCompare(b.term));
+
+// category list
+const categories = Array.from(new Set(items.map((i) => i.category))).sort();
+---
+
+<BaseLayout title="Glossary | BRIK Real Estate" description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:34px;line-height:1.1;margin:0 0 10px;letter-spacing:-.5px">Glossary</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:80ch">{description}</p>
+
+    <div class="card" style="margin-bottom:14px">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+        <div style="flex:1;min-width:220px">
+          <label style="display:block;color:var(--muted);font-size:12px;margin-bottom:6px">Search terms</label>
+          <input
+            id="search"
+            type="text"
+            placeholder="Try: appraisal, earnest, HOA..."
+            style="width:100%;padding:12px 12px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--text)"
+          />
+        </div>
+
+        <div style="min-width:220px">
+          <label style="display:block;color:var(--muted);font-size:12px;margin-bottom:6px">Category</label>
+          <select
+            id="category"
+            style="width:100%;padding:12px 12px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--text)"
+          >
+            <option value="All">All</option>
+            {categories.map((c) => <option value={c}>{c}</option>)}
+          </select>
+        </div>
+
+        <div style="min-width:120px">
+          <label style="display:block;color:var(--muted);font-size:12px;margin-bottom:6px">Count</label>
+          <div id="count" style="font-weight:800">0</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="grid" style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr)">
+      {items.map((i) => (
+        <article
+          class="card glossary-card"
+          style="grid-column:span 6"
+          data-term={i.term}
+          data-category={i.category}
+          data-definition={i.definition}
+          data-briklink={i.brikLink}
+        >
+          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+            <h3 style="margin:0 0 6px;font-size:16px">{i.term}</h3>
+            <span style="font-size:12px;color:var(--muted);border:1px solid var(--line);padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.03)">
+              {i.category}
+            </span>
+          </div>
+
+          <p style="margin:0 0 10px;color:var(--muted);font-size:13px;line-height:1.7">
+            {i.definition}
+          </p>
+
+          <div style="border-top:1px solid var(--line);padding-top:10px;color:var(--muted);font-size:13px;line-height:1.7">
+            <strong style="color:var(--text)">BRIK Link:</strong> {i.brikLink}
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.35px;margin-bottom:6px">Want a personalized breakdown?</div>
+      <p style="margin:0 0 12px;color:var(--muted);font-size:13px">
+        Submit Intake and we’ll translate the terms into a plan for your situation.
+      </p>
+      <a class="pill primary" href="/intake">Submit Intake</a>
+    </div>
+  </section>
+
+  <script is:inline>
+    const search = document.getElementById("search");
+    const category = document.getElementById("category");
+    const cards = Array.from(document.querySelectorAll(".glossary-card"));
+    const count = document.getElementById("count");
+
+    function apply() {
+      const q = (search.value || "").toLowerCase().trim();
+      const cat = category.value;
+
+      let visible = 0;
+      for (const el of cards) {
+        const term = (el.dataset.term || "").toLowerCase();
+        const def = (el.dataset.definition || "").toLowerCase();
+        const link = (el.dataset.briklink || "").toLowerCase();
+        const c = el.dataset.category || "";
+
+        const matchesText = !q || term.includes(q) || def.includes(q) || link.includes(q);
+        const matchesCat = cat === "All" || c === cat;
+
+        const show = matchesText && matchesCat;
+        el.style.display = show ? "" : "none";
+        if (show) visible++;
+      }
+      count.textContent = String(visible);
+    }
+
+    search.addEventListener("input", apply);
+    category.addEventListener("change", apply);
+    apply();
+  </script>
+
+  <style>
+    @media (max-width: 900px) {
+      .glossary-card { grid-column: span 12 !important; }
+    }
+  </style>
+</BaseLayout>

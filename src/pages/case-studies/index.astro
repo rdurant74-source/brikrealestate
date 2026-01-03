@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const description =
+  "Real-world scenarios that teach decision-making: offers, inspections, HOA vs repairs, rentability, and more.";
+const studies = [
+  { slug: "offer-strategy-clean-terms-vs-escalation", title: "Offer strategy: clean terms vs escalation", desc: "How to win without overpaying, and what terms actually move the needle." },
+  { slug: "inspection-negotiation-credits-vs-repairs", title: "Inspection negotiation: credits vs repairs", desc: "How to negotiate after inspection without killing the deal or getting shorted." },
+  { slug: "condo-hoa-tradeoff-vs-sfh-repairs", title: "Condo HOA tradeoff vs SFH repairs", desc: "The real cost tradeoff: dues + rules vs maintenance + reserves." },
+  { slug: "special-assessments-protection", title: "Special assessments: what they are + how to protect yourself", desc: "What to check before buying into an HOA to avoid ugly surprises." },
+  { slug: "first-year-ownership-costs", title: "First-year ownership costs: repairs, reserves, reality", desc: "The hidden costs nobody budgets for — and how to plan correctly." },
+  { slug: "rentability-checklist", title: "Rentability checklist: what makes a property easy to rent later", desc: "Even if you buy to live, this protects your future flexibility." },
+  { slug: "preapproval-the-5-numbers", title: "Pre-approval basics: the 5 numbers that matter", desc: "Budget clarity: what you can afford vs what you should buy." },
+];
+---
+
+<BaseLayout title="Case Studies | BRIK Real Estate" description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:34px;line-height:1.1;margin:0 0 10px;letter-spacing:-.5px">Case Studies</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:75ch">{description}</p>
+
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr)">
+      {studies.map((s) => (
+        <a class="card" style="grid-column:span 6" href={`/case-studies/${s.slug}`}>
+          <h3 style="margin:0 0 6px;font-size:16px">{s.title}</h3>
+          <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.6">{s.desc}</p>
+          <div style="margin-top:10px;color:var(--muted);font-size:12px">Read →</div>
+        </a>
+      ))}
+    </div>
+
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.35px;margin-bottom:6px">Want it personalized?</div>
+      <p style="margin:0 0 12px;color:var(--muted);font-size:13px">
+        Submit your Intake and we’ll map the right path for your budget, timeline, and goals.
+      </p>
+      <a class="pill primary" href="/intake">Submit Intake</a>
+    </div>
+  </section>
+</BaseLayout>

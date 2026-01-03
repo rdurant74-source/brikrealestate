@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Rentability checklist: what makes a property easy to rent later";
+const description = "Even if you buy to live, this protects your future flexibility.";
+---
+
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+
+    <div class="card">
+      <h3 style="margin:0 0 8px">Why it matters</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        “Owner-occupant today” can become “rental tomorrow.” A rentable home protects you if life changes.
+      </p>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Rentability checklist</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Location fundamentals: access, jobs, demand</li>
+        <li>Layout: practical bedrooms/baths (not just “cool”)</li>
+        <li>Parking + laundry (big renter magnets)</li>
+        <li>HOA rules: rental caps, approvals, STR bans</li>
+        <li>Condition: low-maintenance wins long-term</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        You don’t need to be an investor to think smart. We use rentability as a “future-proofing” filter while still prioritizing your lifestyle.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

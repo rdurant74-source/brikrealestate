@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const description = "Submit your intake so we can build a plan around your goals. (Form embed goes here.)";
+---
+
+<BaseLayout title="Intake | BRIK Real Estate" description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:34px;line-height:1.1;margin:0 0 10px;letter-spacing:-.5px">Intake</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:75ch">{description}</p>
+
+    <div class="card">
+      <p style="margin:0;color:var(--muted);font-size:13px">
+        Next: paste your form embed (Tally / Fillout / Jotform). Then we connect submissions to Asana.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

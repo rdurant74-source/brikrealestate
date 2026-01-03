@@ -1,0 +1,38 @@
+[
+  {
+    "term": "Earnest Money",
+    "category": "Offers",
+    "definition": "A good-faith deposit that shows the seller you’re serious. It’s usually held by an attorney or brokerage and credited at closing.",
+    "brikLink": "Think of it like reserving your seat — it signals commitment, and there are rules for how you get it back if the deal falls apart."
+  },
+  {
+    "term": "Due Diligence",
+    "category": "Process",
+    "definition": "A defined window where the buyer investigates the property (inspections, disclosures, HOA docs) and can negotiate or terminate under the contract terms.",
+    "brikLink": "This is your ‘research phase.’ The better you use it, the calmer the rest of the deal feels."
+  },
+  {
+    "term": "Appraisal",
+    "category": "Financing",
+    "definition": "An opinion of value used by the lender to confirm the property is worth the loan amount. If it comes in low, you may renegotiate, bring cash, or walk away depending on terms.",
+    "brikLink": "It’s the bank’s reality check — not a vibe check."
+  },
+  {
+    "term": "HOA",
+    "category": "Ownership",
+    "definition": "A Homeowners Association that may manage shared spaces, enforce rules, and collect dues. HOA rules and finances matter as much as the property itself.",
+    "brikLink": "You’re not just buying the unit — you’re buying into the community’s rules and financial health."
+  },
+  {
+    "term": "Special Assessment",
+    "category": "Ownership",
+    "definition": "An additional HOA charge (often large) when reserves aren’t enough to cover major repairs like roofs, elevators, or structural work.",
+    "brikLink": "It’s the HOA saying: ‘We didn’t save enough — now everyone chips in.’"
+  },
+  {
+    "term": "Contingency",
+    "category": "Contracts",
+    "definition": "A contract condition that must be met for the deal to move forward (financing, appraisal, inspection, sale of another home).",
+    "brikLink": "A contingency is your safety latch — it protects you if something doesn’t go as planned."
+  }
+]

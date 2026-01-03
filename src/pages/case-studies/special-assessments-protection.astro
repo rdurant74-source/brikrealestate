@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Special assessments: what they are + how to protect yourself";
+const description = "What to check before buying into an HOA to avoid ugly surprises.";
+---
+
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+
+    <div class="card">
+      <h3 style="margin:0 0 8px">What it means</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        A special assessment is an extra HOA charge (sometimes thousands) when reserves aren’t enough to cover major repairs:
+        roofs, elevators, structural work, plumbing, etc.
+      </p>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Protection checklist</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Request HOA docs early (financials, reserves, meeting minutes)</li>
+        <li>Look for big upcoming projects and “we voted” language</li>
+        <li>Check reserve balance vs building age/condition</li>
+        <li>Ask about pending litigation (can impact lending)</li>
+        <li>Understand rental restrictions (future flexibility)</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Condos can be amazing — if the HOA is healthy. Special assessments are usually a symptom of weak reserves or deferred maintenance.
+        We focus on HOA financial health the same way we focus on roof/HVAC health for a single-family.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

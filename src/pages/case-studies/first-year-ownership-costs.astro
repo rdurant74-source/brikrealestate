@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "First-year ownership costs: repairs, reserves, and reality";
+const description = "The hidden costs nobody budgets for — and how to plan correctly.";
+---
+
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        You can afford the mortgage — but the first year still hits you with expenses you didn’t expect.
+      </p>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">What shows up in Year 1</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Repairs: plumbing leaks, electrical fixes, appliances</li>
+        <li>Maintenance: HVAC service, gutter cleaning, pest control</li>
+        <li>Utilities: often higher than renting</li>
+        <li>Tools & setup: lawn care, small upgrades, security</li>
+        <li>Reserve fund: the “oh no” budget</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        The goal is not “can you close.” The goal is “can you own peacefully.”
+        We’ll plan cash-to-close plus reserves so ownership doesn’t become stress.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

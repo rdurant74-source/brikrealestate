@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Offer strategy: clean terms vs escalation";
+const description = "How to win without overpaying — and which terms actually matter.";
+---
+
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:80ch">{description}</p>
+
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        You found “the one.” There are multiple offers. You want to win, but you don’t want to get played or overpay.
+      </p>
+    </div>
+
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Clean terms (often wins quietly)</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Strong earnest money (signals commitment)</li>
+          <li>Short due diligence (if you can inspect fast)</li>
+          <li>Solid lender + quick close timeline</li>
+          <li>Clear appraisal plan (if you’re financing)</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Escalation clause (use carefully)</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Set a real max you can live with</li>
+          <li>Require proof of the competing offer</li>
+          <li>Don’t escalate past appraisal reality</li>
+          <li>Know you may “win” and still lose value</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Price helps. But in hot situations, the offer that feels easiest to close often wins.
+        Clean terms + credible financing can beat a higher number with uncertainty.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake (build my strategy)</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

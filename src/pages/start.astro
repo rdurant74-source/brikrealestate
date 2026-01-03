@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const description = "Pick your lane — buyer, seller, investor lens, or commercial — and get a clear next step.";
+---
+
+<BaseLayout title="Start Here | BRIK Real Estate" description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:34px;line-height:1.1;margin:0 0 10px;letter-spacing:-.5px">Start Here</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:70ch">{description}</p>
+
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr)">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Buy</h3>
+        <p style="margin:0 0 14px;color:var(--muted);font-size:13px">
+          Take Buyers Beginning to clarify your intent and next steps.
+        </p>
+        <a class="pill primary" href="/buyers-beginning">Start as a buyer</a>
+      </div>
+
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Sell</h3>
+        <p style="margin:0 0 14px;color:var(--muted);font-size:13px">
+          Submit intake so we can map a pricing + prep + marketing plan.
+        </p>
+        <a class="pill primary" href="/intake">Start as a seller</a>
+      </div>
+
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Investor Lens</h3>
+        <p style="margin:0 0 14px;color:var(--muted);font-size:13px">
+          Learn the basics of deal evaluation, cash flow, and risk.
+        </p>
+        <a class="pill primary" href="/education">Go to Education</a>
+      </div>
+
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Commercial</h3>
+        <p style="margin:0 0 14px;color:var(--muted);font-size:13px">
+          Retail, office, industrial, land, mixed-use — strategy-first.
+        </p>
+        <a class="pill primary" href="/intake">Start commercial intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

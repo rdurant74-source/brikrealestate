@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const description = "Rudolph “Realtor Rudy” Durant — licensed Georgia Realtor. Powered by CJ Property Solutions LLC.";
+---
+
+<BaseLayout title="About | BRIK Real Estate" description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:34px;line-height:1.1;margin:0 0 10px;letter-spacing:-.5px">About</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:75ch">{description}</p>
+
+    <div class="card">
+      <p style="margin:0;color:var(--muted);font-size:13px">
+        Next: add your headshot + BRIK logo + CJ logo and a clean bio + service area statement.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

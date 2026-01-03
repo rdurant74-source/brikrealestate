@@ -1,0 +1,333 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const description =
+  "8 questions that clarify what you should buy, how you should think, and what to read next.";
+---
+
+<BaseLayout title="Buyers Beginning | BRIK Real Estate" description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:34px;line-height:1.1;margin:0 0 10px;letter-spacing:-.5px">
+      Buyers Beginning
+    </h2>
+    <p style="margin:0 0 14px;color:var(--muted);max-width:78ch">
+      This is a quick, educational quiz to clarify your intent (resident vs investor lens), your best-fit property type
+      (condo vs single-family), and your next step. It’s not a replacement for a personalized plan — that’s what the
+      Intake is for.
+    </p>
+
+    <div class="card" style="margin-bottom:14px">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+        <div>
+          <div style="font-size:13px;color:var(--muted)">Progress</div>
+          <div id="progressText" style="font-weight:700">0 / 8</div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button id="resetBtn" class="pill" type="button">Reset</button>
+          <a class="pill primary" href="/intake">Skip to Intake</a>
+        </div>
+      </div>
+    </div>
+
+    <form id="quiz" class="card">
+      <div style="display:grid;gap:14px">
+        <!-- Q1 -->
+        <fieldset style="border:0;padding:0;margin:0">
+          <legend style="font-weight:800;margin-bottom:8px">
+            1) What’s the main reason you want to buy within the next 12 months?
+          </legend>
+          <div style="display:grid;gap:8px">
+            <label><input type="radio" name="q1" value="resident:2 readiness:2" /> I want a home base (stability + lifestyle).</label>
+            <label><input type="radio" name="q1" value="investor:2 readiness:2" /> I want a deal that makes sense on paper.</label>
+            <label><input type="radio" name="q1" value="resident:1 investor:1 readiness:1" /> Both — I want to live smart AND build wealth.</label>
+            <label><input type="radio" name="q1" value="readiness:0" /> I’m not sure yet — I’m exploring.</label>
+          </div>
+        </fieldset>
+
+        <!-- Q2 -->
+        <fieldset style="border:0;padding:0;margin:0">
+          <legend style="font-weight:800;margin-bottom:8px">
+            2) How do you feel about ongoing maintenance and unexpected repairs?
+          </legend>
+          <div style="display:grid;gap:8px">
+            <label><input type="radio" name="q2" value="condo:2 sfh:0" /> Prefer low maintenance even if I pay HOA.</label>
+            <label><input type="radio" name="q2" value="sfh:2 condo:0" /> I’m okay owning the repairs if I own the land/structure.</label>
+            <label><input type="radio" name="q2" value="condo:1 sfh:1" /> I can do either — depends on the deal.</label>
+            <label><input type="radio" name="q2" value="condo:0 sfh:0" /> I really don’t know what I’m signing up for yet.</label>
+          </div>
+        </fieldset>
+
+        <!-- Q3 -->
+        <fieldset style="border:0;padding:0;margin:0">
+          <legend style="font-weight:800;margin-bottom:8px">
+            3) Which risk stresses you more?
+          </legend>
+          <div style="display:grid;gap:8px">
+            <label><input type="radio" name="q3" value="condo:2" /> Special assessments / HOA changes (condo risks).</label>
+            <label><input type="radio" name="q3" value="sfh:2" /> Big repairs (roof, HVAC, foundation) (SFH risks).</label>
+            <label><input type="radio" name="q3" value="investor:1 resident:1" /> Overpaying / buying the wrong thing for my goals.</label>
+            <label><input type="radio" name="q3" value="readiness:1" /> The process itself (paperwork, timing, decisions).</label>
+          </div>
+        </fieldset>
+
+        <!-- Q4 -->
+        <fieldset style="border:0;padding:0;margin:0">
+          <legend style="font-weight:800;margin-bottom:8px">
+            4) Which statement feels most true?
+          </legend>
+          <div style="display:grid;gap:8px">
+            <label><input type="radio" name="q4" value="resident:2" /> “I care about commute, vibe, and daily life first.”</label>
+            <label><input type="radio" name="q4" value="investor:2" /> “I care about numbers, upside, and risk control first.”</label>
+            <label><input type="radio" name="q4" value="resident:1 investor:1" /> “I want both, but I need a clear framework.”</label>
+            <label><input type="radio" name="q4" value="readiness:0" /> “I need guidance before I can even answer this.”</label>
+          </div>
+        </fieldset>
+
+        <!-- Q5 -->
+        <fieldset style="border:0;padding:0;margin:0">
+          <legend style="font-weight:800;margin-bottom:8px">
+            5) Timeline reality check: when would you ideally move (or close)?
+          </legend>
+          <div style="display:grid;gap:8px">
+            <label><input type="radio" name="q5" value="readiness:3" /> 0–3 months</label>
+            <label><input type="radio" name="q5" value="readiness:2" /> 3–6 months</label>
+            <label><input type="radio" name="q5" value="readiness:1" /> 6–12 months</label>
+            <label><input type="radio" name="q5" value="readiness:0" /> 12+ months / unknown</label>
+          </div>
+        </fieldset>
+
+        <!-- Q6 -->
+        <fieldset style="border:0;padding:0;margin:0">
+          <legend style="font-weight:800;margin-bottom:8px">
+            6) What matters more in your first purchase?
+          </legend>
+          <div style="display:grid;gap:8px">
+            <label><input type="radio" name="q6" value="condo:2" /> Convenience (lock-and-leave, amenities, proximity).</label>
+            <label><input type="radio" name="q6" value="sfh:2" /> Space + control (yard, privacy, fewer shared walls).</label>
+            <label><input type="radio" name="q6" value="investor:1" /> Flexibility to rent/hold later.</label>
+            <label><input type="radio" name="q6" value="resident:1" /> Comfort as my main home.</label>
+          </div>
+        </fieldset>
+
+        <!-- Q7 -->
+        <fieldset style="border:0;padding:0;margin:0">
+          <legend style="font-weight:800;margin-bottom:8px">
+            7) How prepared are you financially right now?
+          </legend>
+          <div style="display:grid;gap:8px">
+            <label><input type="radio" name="q7" value="readiness:3" /> Pre-approval in progress or done + budget defined.</label>
+            <label><input type="radio" name="q7" value="readiness:2" /> I know my budget range but haven’t talked to a lender yet.</label>
+            <label><input type="radio" name="q7" value="readiness:1" /> I’m saving / repairing credit / building stability.</label>
+            <label><input type="radio" name="q7" value="readiness:0" /> I have no clue — I need the basics.</label>
+          </div>
+        </fieldset>
+
+        <!-- Q8 -->
+        <fieldset style="border:0;padding:0;margin:0">
+          <legend style="font-weight:800;margin-bottom:8px">
+            8) Which “style” of decision-making fits you best?
+          </legend>
+          <div style="display:grid;gap:8px">
+            <label><input type="radio" name="q8" value="investor:2" /> I want a checklist and I’ll follow it.</label>
+            <label><input type="radio" name="q8" value="resident:2" /> I want clarity, then I trust the feel.</label>
+            <label><input type="radio" name="q8" value="investor:1 resident:1" /> I want both: checklist + vibe.</label>
+            <label><input type="radio" name="q8" value="readiness:1" /> I freeze without guidance and structure.</label>
+          </div>
+        </fieldset>
+
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:8px">
+          <button id="scoreBtn" class="pill primary" type="button">Get my results</button>
+          <a class="pill" href="/education">Go to Education</a>
+          <a class="pill" href="/intake">Submit Intake</a>
+          <span id="validation" style="color:var(--muted);font-size:12px"></span>
+        </div>
+      </div>
+    </form>
+
+    <div id="results" class="card" style="margin-top:14px;display:none"></div>
+  </section>
+
+  <script is:inline>
+    const quiz = document.getElementById("quiz");
+    const scoreBtn = document.getElementById("scoreBtn");
+    const resetBtn = document.getElementById("resetBtn");
+    const results = document.getElementById("results");
+    const validation = document.getElementById("validation");
+    const progressText = document.getElementById("progressText");
+
+    const TOTAL = 8;
+
+    function parseValue(str) {
+      // "resident:2 investor:1"
+      const out = {};
+      str.split(" ").forEach((pair) => {
+        const [k, v] = pair.split(":");
+        if (!k || v === undefined) return;
+        out[k] = (out[k] || 0) + Number(v);
+      });
+      return out;
+    }
+
+    function getProgress() {
+      let answered = 0;
+      for (let i = 1; i <= TOTAL; i++) {
+        const sel = quiz.querySelector(`input[name="q${i}"]:checked`);
+        if (sel) answered++;
+      }
+      progressText.textContent = `${answered} / ${TOTAL}`;
+      return answered;
+    }
+
+    function collectScores() {
+      const scores = { resident: 0, investor: 0, condo: 0, sfh: 0, readiness: 0 };
+      for (let i = 1; i <= TOTAL; i++) {
+        const sel = quiz.querySelector(`input[name="q${i}"]:checked`);
+        if (!sel) return null;
+        const parsed = parseValue(sel.value);
+        for (const k in parsed) scores[k] += parsed[k];
+      }
+      return scores;
+    }
+
+    function readinessLabel(r) {
+      if (r >= 18) return { label: "Ready now", desc: "You’re close. Let’s turn clarity into a plan and execute." };
+      if (r >= 12) return { label: "Close soon", desc: "You’re in range. A structured plan will speed things up." };
+      if (r >= 7) return { label: "Building phase", desc: "Smart. Focus on prep so the purchase is clean and calm." };
+      return { label: "Foundation first", desc: "We’ll start with basics: budget, lending, and timeline." };
+    }
+
+    function mindsetLabel(resident, investor) {
+      if (investor - resident >= 3) return { label: "Investor-minded", desc: "You prioritize numbers, risk control, and long-term upside." };
+      if (resident - investor >= 3) return { label: "Resident-minded", desc: "You prioritize lifestyle fit, comfort, and day-to-day reality." };
+      return { label: "Hybrid thinker", desc: "You want lifestyle *and* strategy — best combo if we structure it." };
+    }
+
+    function propertyLabel(condo, sfh) {
+      if (condo - sfh >= 2) return { label: "Condo / low-maintenance lean", desc: "Convenience-first. HOA tradeoffs need to be evaluated carefully." };
+      if (sfh - condo >= 2) return { label: "Single-family lean", desc: "Control + space. Repairs are real — we plan for them." };
+      return { label: "Depends on the deal", desc: "Your fit comes down to finances, location, and risk tolerance." };
+    }
+
+    function recommendCaseStudies(scores) {
+      const recs = [];
+
+      // universal
+      recs.push("Offer strategy: clean terms vs escalation");
+      recs.push("Inspection negotiation: credits vs repairs");
+
+      // condo vs sfh
+      if (scores.condo > scores.sfh) {
+        recs.push("Condo HOA tradeoff vs SFH repairs");
+        recs.push("Special assessments: what they are and how to protect yourself");
+      } else if (scores.sfh > scores.condo) {
+        recs.push("First-year ownership costs: repairs, reserves, and reality");
+        recs.push("Renovation vs move-in ready: what your budget can actually handle");
+      } else {
+        recs.push("Condo vs SFH decision framework (risk + lifestyle + math)");
+      }
+
+      // investor lens
+      if (scores.investor >= scores.resident) {
+        recs.push("House hacking: duplex strategy vs single family");
+        recs.push("Rentability checklist: what makes a property easy to rent later");
+      } else {
+        recs.push("Commute + lifestyle mapping: how to choose an area without guessing");
+        recs.push("Starter home vs forever home: buying the right first step");
+      }
+
+      // readiness
+      if (scores.readiness <= 7) {
+        recs.push("Pre-approval basics: the 5 numbers that matter");
+        recs.push("Savings plan: cash to close without stress");
+      } else if (scores.readiness >= 18) {
+        recs.push("30-day buyer game plan: showings → offer → closing");
+        recs.push("How to win without overpaying: terms that actually matter");
+      }
+
+      // de-dupe
+      return Array.from(new Set(recs)).slice(0, 7);
+    }
+
+    function renderResults(scores) {
+      const mind = mindsetLabel(scores.resident, scores.investor);
+      const prop = propertyLabel(scores.condo, scores.sfh);
+      const ready = readinessLabel(scores.readiness);
+      const recs = recommendCaseStudies(scores);
+
+      results.style.display = "block";
+      results.innerHTML = `
+        <h3 style="margin:0 0 8px;font-size:18px">Your Results</h3>
+
+        <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:10px">
+          <div class="card" style="grid-column:span 4;background:rgba(255,255,255,.03);box-shadow:none">
+            <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.35px;margin-bottom:6px">Mindset</div>
+            <div style="font-weight:800;margin-bottom:6px">${mind.label}</div>
+            <div style="color:var(--muted);font-size:13px;line-height:1.5">${mind.desc}</div>
+          </div>
+
+          <div class="card" style="grid-column:span 4;background:rgba(255,255,255,.03);box-shadow:none">
+            <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.35px;margin-bottom:6px">Property Lean</div>
+            <div style="font-weight:800;margin-bottom:6px">${prop.label}</div>
+            <div style="color:var(--muted);font-size:13px;line-height:1.5">${prop.desc}</div>
+          </div>
+
+          <div class="card" style="grid-column:span 4;background:rgba(255,255,255,.03);box-shadow:none">
+            <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.35px;margin-bottom:6px">Readiness</div>
+            <div style="font-weight:800;margin-bottom:6px">${ready.label}</div>
+            <div style="color:var(--muted);font-size:13px;line-height:1.5">${ready.desc}</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03);box-shadow:none">
+          <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.35px;margin-bottom:6px">Recommended Next Reads</div>
+          <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+            ${recs.map((r) => `<li>${r}</li>`).join("")}
+          </ul>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+            <a class="pill" href="/education">Go to Education</a>
+            <a class="pill primary" href="/intake">Submit Intake (build my plan)</a>
+          </div>
+        </div>
+
+        <div style="margin-top:10px;color:var(--muted);font-size:12px">
+          Tip: If you submit Intake, we’ll use your answers + your actual numbers (budget, timeline, lender status) to build a real plan.
+        </div>
+      `;
+
+      // responsive fix for small screens
+      if (window.innerWidth < 900) {
+        results.querySelectorAll('[style*="grid-column:span 4"]').forEach((el) => {
+          el.style.gridColumn = "span 12";
+        });
+      }
+    }
+
+    quiz.addEventListener("change", () => {
+      const answered = getProgress();
+      validation.textContent = answered === TOTAL ? "All set — get your results." : "";
+    });
+
+    scoreBtn.addEventListener("click", () => {
+      const answered = getProgress();
+      if (answered !== TOTAL) {
+        validation.textContent = `Answer all questions to score (${answered}/${TOTAL}).`;
+        results.style.display = "none";
+        return;
+      }
+      validation.textContent = "";
+      const scores = collectScores();
+      renderResults(scores);
+      results.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    resetBtn.addEventListener("click", () => {
+      quiz.reset();
+      results.style.display = "none";
+      validation.textContent = "";
+      getProgress();
+    });
+
+    // init progress
+    getProgress();
+  </script>
+</BaseLayout>
