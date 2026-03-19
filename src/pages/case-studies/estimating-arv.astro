@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Estimating ARV: how investors price the finished product before buying";
+const description = "ARV is where the deal math starts. Get it wrong and everything else is built on a bad foundation.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Devon is evaluating a distressed 3BR/2BA house. He's heard it will be worth $200,000 after renovation. But where did that number come from? His wholesaler told him. That's not ARV — that's a sales pitch. ARV must be derived from actual sold comparable properties in the same neighborhood, with similar features, that have already been renovated. Devon needs to learn how to run his own comps before he trusts any number someone else gives him.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">How to build a real ARV</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Find 3–5 recently SOLD comps (not listed — sold)</li>
+          <li>Same neighborhood — ideally within 0.5 miles</li>
+          <li>Similar bed/bath, square footage, and lot size</li>
+          <li>Sold within last 90 days — 6 months max</li>
+          <li>Renovated condition — not distressed comparables</li>
+          <li>Adjust for differences in size, features, condition</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Common ARV mistakes</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Using active listings — those are asking prices, not values</li>
+          <li>Using distressed comps to value a renovated product</li>
+          <li>Comparing across different neighborhoods or school zones</li>
+          <li>Using stale data — 12+ month old sales in a changing market</li>
+          <li>Trusting the wholesaler's or seller's ARV without verification</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Your ARV is the ceiling of your deal — everything else (purchase price, rehab budget, profit) works down from it.</li>
+        <li>Conservative ARV + accurate rehab budget = deals that work. Optimistic ARV = deals that don't.</li>
+        <li>Work with a local agent who can pull MLS comps for you — Zillow Zestimates are not ARV.</li>
+        <li>Build your ARV range: best case, most likely, worst case. Price your deal on the most likely.</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Every investment real estate decision starts with ARV. If your ARV is wrong, your maximum allowable offer is wrong, your profit projection is wrong, and your deal thesis is wrong. Learn to run your own comps — or work closely with someone who can. Never trust an ARV you didn't verify yourself.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,58 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Rate lock timing: when to lock and when to wait";
+const description = "Locking too early or too late can cost you — but so can not understanding what a lock actually means.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Lisa went under contract on a $295,000 home on a Monday. Her lender called and asked if she wanted to lock her rate at 7.125%. She said she'd think about it. By Thursday, rates moved up 0.25%. Her monthly payment is now $45 higher for the life of the loan. She didn't understand what a rate lock was, when to use it, or what it would cost her to wait.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">What a rate lock is</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>A commitment from your lender to hold a specific rate for a set period</li>
+          <li>Typically 30, 45, or 60 days — longer locks cost more</li>
+          <li>Protects you if rates rise before closing</li>
+          <li>If rates fall after locking, you generally don't benefit (unless you have a float-down option)</li>
+          <li>Lock expires if closing is delayed beyond the lock period</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">When to lock</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Lock as soon as you go under contract if you're satisfied with the rate</li>
+          <li>Don't wait hoping rates fall — that's speculation, not strategy</li>
+          <li>Match lock period to your realistic closing timeline plus buffer</li>
+          <li>Ask about float-down options if rates are volatile</li>
+          <li>New construction may need 90–180 day locks — these cost more</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>What is your closing timeline — and does your lock period cover it with buffer?</li>
+        <li>What does a 0.25% rate increase cost you monthly on your loan amount?</li>
+        <li>Does your lender offer a float-down option — and what does it cost?</li>
+        <li>What happens if your closing is delayed — what is the extension cost?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        A rate lock is insurance against rising rates. Lock when you have a rate you can afford and a closing timeline you can meet. Waiting to see if rates drop is gambling. Protect the deal you have.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

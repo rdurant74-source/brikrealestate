@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Bridge loan scenario: buying before selling";
+const description = "A bridge loan lets you buy the next home before selling the current one — but you're carrying two mortgages.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Diane owns a home worth $380,000 with $145,000 left on the mortgage — roughly $235,000 in equity. She found her next home but doesn't want to sell first because she'd need temporary housing and could lose the new home to another buyer. Her lender offers a bridge loan: short-term financing secured by her existing home's equity to fund the down payment on the new purchase. It solves the timing problem — but at a cost.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">How bridge loans work</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Short-term loan (6-12 months) secured by current home's equity</li>
+          <li>Funds used for down payment on new purchase</li>
+          <li>Borrower carries both mortgages during the overlap period</li>
+          <li>Bridge loan paid off when existing home sells</li>
+          <li>Higher rates than standard mortgages — typically 1-3% above prime</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Risks to understand</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>If existing home doesn't sell quickly, carrying costs compound</li>
+          <li>If existing home sells below expected price, equity gap emerges</li>
+          <li>Qualifying for both mortgages simultaneously requires strong income</li>
+          <li>Bridge loan fees and interest reduce net proceeds from sale</li>
+          <li>Market slowdowns can extend overlap period significantly</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>How confident are you in your existing home's marketability and price — get an honest CMA before committing.</li>
+        <li>Can you qualify for both mortgages simultaneously on your income alone?</li>
+        <li>What is the worst-case scenario if your current home sits for 6 months — can you carry it?</li>
+        <li>Have you explored a sale contingency offer on the new home as an alternative to a bridge loan?</li>
+        <li>What are the total costs of the bridge loan — origination, interest, and closing fees?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Bridge loans solve a real problem — timing the sale and purchase simultaneously. But they come with real costs and real risk. Only use one if your current home is highly marketable, you can qualify for both payments, and you have reserves to handle a delayed sale. The convenience is worth the cost only when the numbers support it.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

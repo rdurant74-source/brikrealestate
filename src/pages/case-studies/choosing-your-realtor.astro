@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Choosing your realtor: alignment, vision, and what to look for";
+const description = "The right agent isn't the one with the most yard signs. It's the one whose process matches how you think.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Priya is ready to buy and has three agents to choose from — a family referral, a highly-rated online agent, and one who reached out after she clicked an ad. She doesn't want to offend anyone, but she also knows this is one of the largest financial decisions of her life. She wants a framework for choosing the right person — not just the most convenient one.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Questions to ask every agent</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>How many buyers have you represented in my target area this year?</li>
+          <li>Walk me through how you approach pricing strategy on an offer.</li>
+          <li>What do you do when an inspection reveals major issues?</li>
+          <li>How do you communicate — calls, texts, email — and how fast do you respond?</li>
+          <li>Do you work with buyers who are in no rush, or do you prefer fast-moving clients?</li>
+          <li>What do you do when you disagree with what a buyer wants to offer?</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Red flags to watch for</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Pushes you toward urgency when your timeline is flexible</li>
+          <li>Discourages inspection contingencies to "stay competitive"</li>
+          <li>Only shows you homes at the top of your budget</li>
+          <li>Can't explain contract terms clearly when you ask</li>
+          <li>More focused on closing than on your long-term outcome</li>
+          <li>Doesn't ask about your goals — only your budget</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Interview at least two agents before committing — it's normal and expected.</li>
+        <li>Does this agent specialize in your price range, property type, and target area?</li>
+        <li>Are they full-time or part-time? Availability matters during a fast-moving deal.</li>
+        <li>Do they educate you or just direct you? The best agents explain the why.</li>
+        <li>Trust your gut — if something feels off in the first conversation, it won't get better under pressure.</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Your agent shapes every major decision in the transaction. Choose someone whose process, communication style, and values align with yours — not just someone who's available. The conversation you have before signing a buyer agreement tells you everything you need to know about how they'll operate when things get complicated.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

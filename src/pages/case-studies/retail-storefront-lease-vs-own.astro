@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Retail storefront: leasing vs owning your commercial space";
+const description = "Most small business owners lease forever. The ones who own build two assets at once.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Marcus has operated a barbershop in a leased retail space for six years. His current rent is $2,400/month and just renewed at a 12% increase. A building two blocks away with comparable square footage is for sale at $420,000. His SBA loan payment would be approximately $2,650/month at 10% down. For $250 more per month, he'd be building equity instead of paying rent — and his landlord couldn't raise his rate again.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Leasing — pros and cons</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Lower upfront cost — no large down payment</li>
+          <li>Flexibility to relocate if business needs change</li>
+          <li>Landlord handles structural maintenance</li>
+          <li>Rent increases are outside your control</li>
+          <li>No equity built — every payment is an expense</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Owning — pros and cons</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Payment builds equity — expense becomes asset</li>
+          <li>Rate stability — no landlord rent increases</li>
+          <li>Can lease unused space to offset mortgage</li>
+          <li>Building becomes a second exit strategy at retirement</li>
+          <li>Requires significant capital and stronger financials</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>SBA 504 and SBA 7(a) loans are designed for owner-occupied commercial real estate — explore both.</li>
+        <li>Your business must occupy at least 51% of the building for SBA owner-occupied financing.</li>
+        <li>What does the lease vs. own comparison look like over 10 years including rent increases?</li>
+        <li>Is the location truly right for your business long-term — or are you buying because the deal is good?</li>
+        <li>What is the condition of the building — commercial inspections are critical before purchase.</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Every rent payment is an expense. Every mortgage payment is partially an investment. For established businesses with stable cash flow, owning commercial space is one of the most powerful wealth-building moves available. The building you operate from today could fund your retirement tomorrow.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Salon suite ownership: buy the building your business lives in";
+const description = "Leasing your salon suite builds your landlord's equity. Owning it builds yours.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Dominique has operated her salon suite for four years, paying $1,800/month in rent to a franchise suite operator. She's built a loyal clientele, strong cash flow, and is ready to think bigger. She's considering buying a small commercial building — either a standalone space or a multi-suite property — where she operates one suite and leases the others. Her rent payment would become a mortgage payment building equity instead of someone else's.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Benefits of owning</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Monthly payment builds equity instead of paying rent</li>
+          <li>Lease income from other suites offsets mortgage</li>
+          <li>Control over build-out, rules, and environment</li>
+          <li>Business real estate can appreciate independently</li>
+          <li>SBA 504 loan may allow as little as 10% down</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">What changes when you own</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>You become the landlord — tenant management added to your plate</li>
+          <li>Maintenance and repairs are your responsibility</li>
+          <li>Commercial financing requires stronger financials than residential</li>
+          <li>Vacancy in suite spaces affects your cash flow</li>
+          <li>Zoning must permit your intended use — verify before buying</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Does the building cash flow if one suite sits vacant for 2–3 months?</li>
+        <li>What does SBA 504 financing look like for this property — have you spoken to an SBA lender?</li>
+        <li>Is the location right for your clientele — or are you optimizing for price over business health?</li>
+        <li>What is the condition of the building — and what will build-out for suites cost?</li>
+        <li>What are comparable lease rates in the market — can you charge competitive rent on the other suites?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Business owners who buy their commercial space stop paying someone else's mortgage and start building their own equity. For an established salon professional with strong cash flow, commercial ownership can be a powerful wealth-building move — if the building cash flows and the financing works. SBA programs exist specifically to help small business owners get there.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "High debt, low income: is homeownership possible right now?";
+const description = "DTI is the number most buyers don't think about — until the lender brings it up.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Marcus earns $58,000/year and has $14,000 saved. On paper he seems close to ready. But he has $480/month in student loan payments, a $410/month car payment, and $180/month in credit card minimums. That's $1,070/month in existing debt before a mortgage. His DTI before any housing payment is already 22%. Adding a $1,400/month mortgage brings him to 51% — above most conventional lender thresholds. He wasn't rejected because of his credit score. He was rejected because of his debt load.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Understanding DTI limits</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Conventional: typically 43-45% max DTI</li>
+          <li>FHA: up to 50% with compensating factors</li>
+          <li>VA: no hard cap but lenders apply their own overlays</li>
+          <li>Front-end ratio: housing costs only (28-31% guideline)</li>
+          <li>Back-end ratio: all debt including housing (43-50%)</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">How to improve DTI before buying</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Pay off smallest debts first to eliminate monthly obligations</li>
+          <li>Do not take on any new debt before applying</li>
+          <li>Increase income — side work counts if documented</li>
+          <li>Refinance high-payment debts to extend term and lower monthly</li>
+          <li>Target a lower purchase price to reduce proposed payment</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Calculate your current DTI before talking to a lender — know your number going in.</li>
+        <li>Which debts, if eliminated, would move your DTI below the threshold?</li>
+        <li>Is 12-18 months of focused debt reduction a realistic path to qualification?</li>
+        <li>Could a lower purchase price bring you within DTI guidelines at current debt levels?</li>
+        <li>Have you explored income-based repayment options on student loans to reduce the monthly obligation?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        High DTI is one of the most fixable barriers to homeownership — but it requires a real plan and real time. Eliminating even one or two monthly obligations can shift your qualification picture significantly. Run your numbers, identify the highest-impact debts to pay off, and build a timeline that gets you to a manageable DTI before you apply.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

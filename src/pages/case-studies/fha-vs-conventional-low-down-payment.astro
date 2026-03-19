@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Low down payment buyer: FHA vs conventional tradeoffs";
+const description = "Both programs can get you in the door. They don't cost the same over time.";
+---
+
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Simone is ready to buy a $260,000 home. She has $12,000 saved and a 638 credit score. Her lender tells her she qualifies for both FHA and conventional financing. FHA requires 3.5% down ($9,100). Conventional requires 5% down ($13,000) — slightly more than she has. Both have mortgage insurance. But they work very differently, and the long-term cost difference is significant.
+      </p>
+    </div>
+
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">FHA loan</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>3.5% down — lower cash requirement</li>
+          <li>Accepts credit scores as low as 580</li>
+          <li>Upfront MIP: 1.75% of loan added to balance</li>
+          <li>Annual MIP stays for life of loan if down payment under 10%</li>
+          <li>Property must meet FHA condition standards</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Conventional loan</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Requires stronger credit (typically 620+)</li>
+          <li>PMI required under 20% down</li>
+          <li>PMI can be removed once equity hits 20%</li>
+          <li>No upfront mortgage insurance premium</li>
+          <li>More flexible on property condition</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>FHA MIP on loans with less than 10% down stays for the life of the loan — conventional PMI can be removed.</li>
+        <li>What is your credit score — and is it worth waiting 3–6 months to improve it before applying?</li>
+        <li>Does the property you're targeting meet FHA condition requirements?</li>
+        <li>What is the monthly cost difference between the two programs?</li>
+        <li>How long do you plan to stay? Longer stays make the FHA MIP cost more significant.</li>
+        <li>Could a seller concession cover the gap to get to 5% down on conventional?</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Risks</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        FHA's lifetime MIP can add tens of thousands in cost over a 30-year loan. Many buyers choose FHA without fully understanding this — and end up paying mortgage insurance long after they've built significant equity. Conventional PMI, while still a cost, has a clear exit. FHA often requires a refinance to escape the insurance requirement.
+      </p>
+    </div>
+
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        FHA gets you in the door with less cash and lower credit requirements — but it has a long-term cost that most buyers don't see upfront. If you're close to conventional qualification, it's often worth the extra months to get there. If FHA is your only path right now, go in with eyes open about the insurance costs and plan your exit from it intentionally.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

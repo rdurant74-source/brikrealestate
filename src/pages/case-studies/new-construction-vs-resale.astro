@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "New construction vs resale: hidden tradeoffs";
+const description = "New doesn't always mean better — and the builder's contract isn't written in your favor.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Malik is deciding between a new construction home at $342,000 from a builder and a resale home two miles away at $318,000. The new home smells great and has fresh everything. The resale needs a kitchen refresh but is priced below market. The builder's agent is helpful and friendly. What Malik doesn't realize is that the builder's agent works for the builder — not for him.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">New construction pros/cons</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Everything is new — lower near-term repair risk</li>
+          <li>Builder warranties on structure and systems</li>
+          <li>Customization options during build</li>
+          <li>Builder contract favors builder — limited negotiation</li>
+          <li>Upgrades add up fast and aren't always worth it at resale</li>
+          <li>Delays are common — financing rate locks can expire</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Resale pros/cons</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Established neighborhood — you can see what you're getting</li>
+          <li>More negotiation flexibility on price and terms</li>
+          <li>Mature landscaping, known HOA history</li>
+          <li>May need updates — but priced accordingly</li>
+          <li>Inspection reveals known condition upfront</li>
+          <li>Your agent represents you, not the seller</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Always bring your own buyer's agent to a new construction purchase — the builder's agent works for the builder.</li>
+        <li>Read the builder contract carefully — cancellation terms, delay provisions, and upgrade policies matter.</li>
+        <li>Get an independent inspection on new construction — builders make mistakes too.</li>
+        <li>What is the builder's reputation? Research warranty claims and community reviews.</li>
+        <li>Will upgrades you're paying for actually add value at resale — or are they personal preference items?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        New construction can be a great choice — but go in informed. Bring your own agent, read the contract, inspect the home independently, and be honest about what the upgrades actually cost vs. what they return. The model home is a marketing tool. The contract is the real deal.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

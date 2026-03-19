@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "As-is purchase: what you're actually agreeing to";
+const description = "As-is doesn't mean uninspected. It means the seller won't fix anything.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Ray found a home listed as-is for $235,000 — priced $30,000 below similar homes. The seller is an estate — no one has lived there in two years. His agent says as-is listings can be deals, but Ray doesn't fully understand what he's agreeing to. He assumes as-is means he can't inspect. He's wrong — and that misunderstanding could cost him significantly.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">What as-is means</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Seller will not make repairs or offer credits</li>
+          <li>Buyer accepts the property in current condition</li>
+          <li>You can still inspect — you just can't ask for fixes</li>
+          <li>You can still walk away during due diligence</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">What as-is does NOT mean</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>You waive your right to inspect</li>
+          <li>You're locked in regardless of what you find</li>
+          <li>The seller has disclosed everything</li>
+          <li>You have no legal recourse for undisclosed defects</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Always inspect an as-is property — thoroughly. Hire specialists for HVAC, roof, foundation, sewer.</li>
+        <li>The discount should reflect the known and likely repair costs — do the math before you offer.</li>
+        <li>Estate sales and bank-owned properties are common as-is situations — plan accordingly.</li>
+        <li>Can you fund the repairs needed after closing — cash, HELOC, renovation loan?</li>
+        <li>Is the discount large enough to justify the risk and repair costs?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        As-is listings can be genuine opportunities — but only if the price reflects the real condition. Inspect everything, price the repairs honestly, and make sure you have the capital to execute. The deal only works if the discount outweighs what you're taking on.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

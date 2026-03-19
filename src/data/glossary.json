@@ -2,37 +2,463 @@
   {
     "term": "Earnest Money",
     "category": "Offers",
-    "definition": "A good-faith deposit that shows the seller you’re serious. It’s usually held by an attorney or brokerage and credited at closing.",
+    "definition": "A good-faith deposit that shows the seller you're serious. It's usually held by an attorney or brokerage and credited at closing.",
     "brikLink": "Think of it like reserving your seat — it signals commitment, and there are rules for how you get it back if the deal falls apart."
   },
   {
     "term": "Due Diligence",
     "category": "Process",
     "definition": "A defined window where the buyer investigates the property (inspections, disclosures, HOA docs) and can negotiate or terminate under the contract terms.",
-    "brikLink": "This is your ‘research phase.’ The better you use it, the calmer the rest of the deal feels."
+    "brikLink": "This is your 'research phase.' The better you use it, the calmer the rest of the deal feels."
   },
   {
     "term": "Appraisal",
     "category": "Financing",
     "definition": "An opinion of value used by the lender to confirm the property is worth the loan amount. If it comes in low, you may renegotiate, bring cash, or walk away depending on terms.",
-    "brikLink": "It’s the bank’s reality check — not a vibe check."
+    "brikLink": "It's the bank's reality check — not a vibe check."
   },
   {
     "term": "HOA",
     "category": "Ownership",
     "definition": "A Homeowners Association that may manage shared spaces, enforce rules, and collect dues. HOA rules and finances matter as much as the property itself.",
-    "brikLink": "You’re not just buying the unit — you’re buying into the community’s rules and financial health."
+    "brikLink": "You're not just buying the unit — you're buying into the community's rules and financial health."
   },
   {
     "term": "Special Assessment",
     "category": "Ownership",
-    "definition": "An additional HOA charge (often large) when reserves aren’t enough to cover major repairs like roofs, elevators, or structural work.",
-    "brikLink": "It’s the HOA saying: ‘We didn’t save enough — now everyone chips in.’"
+    "definition": "An additional HOA charge (often large) when reserves aren't enough to cover major repairs like roofs, elevators, or structural work.",
+    "brikLink": "It's the HOA saying: 'We didn't save enough — now everyone chips in.'"
   },
   {
     "term": "Contingency",
     "category": "Contracts",
     "definition": "A contract condition that must be met for the deal to move forward (financing, appraisal, inspection, sale of another home).",
-    "brikLink": "A contingency is your safety latch — it protects you if something doesn’t go as planned."
+    "brikLink": "A contingency is your safety latch — it protects you if something doesn't go as planned."
+  },
+  {
+    "term": "Appraisal Gap",
+    "category": "Financing",
+    "definition": "The difference between the agreed purchase price and the appraised value when the appraisal comes in lower. The buyer must cover the gap in cash or renegotiate.",
+    "brikLink": "You agreed to pay $50 but the bank's expert says it's worth $42. You're covering that $8 out of pocket — unless the contract says otherwise."
+  },
+  {
+    "term": "Pre-Approval",
+    "category": "Financing",
+    "definition": "A lender's written statement that you qualify for a mortgage up to a certain amount, based on a review of your credit, income, and assets.",
+    "brikLink": "Without it, you're window shopping. With it, you're a buyer."
+  },
+  {
+    "term": "Closing Costs",
+    "category": "Process",
+    "definition": "Fees and expenses paid at the end of a transaction — beyond the down payment. Typically 2–5% of the purchase price for buyers.",
+    "brikLink": "You budgeted for the car. Then you saw the dealer fees, title transfer, and taxes at the desk. Same thing happens at closing."
+  },
+  {
+    "term": "Down Payment",
+    "category": "Financing",
+    "definition": "The portion of the purchase price you pay upfront in cash. The rest is financed. Requirements vary by loan type — as low as 3% for some programs.",
+    "brikLink": "It's your skin in the game. The bigger the check you write upfront, the less you owe every month."
+  },
+  {
+    "term": "Escrow",
+    "category": "Process",
+    "definition": "A neutral third-party account that holds money and documents during a transaction until all conditions are met. Also used post-closing by lenders to collect taxes and insurance.",
+    "brikLink": "Escrow is the referee holding the ball. Nobody gets it until the game is officially over and the rules have been followed."
+  },
+  {
+    "term": "Title",
+    "category": "Ownership",
+    "definition": "Legal ownership of a property. When you buy real estate, title transfers from the seller to you via deed, then gets recorded with the county.",
+    "brikLink": "Title is the legal permission slip to own something. Without a clean one, someone else may have a claim on what you think you just bought."
+  },
+  {
+    "term": "Title Insurance",
+    "category": "Ownership",
+    "definition": "Insurance that protects against past title defects — undisclosed liens, recording errors, or ownership disputes — that could affect your legal right to own the property.",
+    "brikLink": "It covers things that already happened but haven't surfaced yet. One-time cost for lasting protection against someone else's old problem."
+  },
+  {
+    "term": "Deed",
+    "category": "Ownership",
+    "definition": "The legal document that officially transfers ownership of a property from one person to another. It must be signed, notarized, and recorded with the county.",
+    "brikLink": "The deed is the actual handoff. When you close, the seller signs it over. That paper filed with the county is what makes it legally yours."
+  },
+  {
+    "term": "Lien",
+    "category": "Ownership",
+    "definition": "A legal claim against a property for unpaid debt — from a contractor, tax authority, or judgment. Liens must be resolved before a clean sale can close.",
+    "brikLink": "A lien is a sticky note on the property that says 'this person owes money, and this building backs the claim.' It follows the property, not the owner."
+  },
+  {
+    "term": "LTV (Loan-to-Value)",
+    "category": "Financing",
+    "definition": "The percentage of the property's value you're borrowing. An $80,000 loan on a $100,000 property = 80% LTV. Affects your rate, PMI requirements, and loan eligibility.",
+    "brikLink": "LTV is how the bank scores how much cushion exists between what you owe and what the property is worth."
+  },
+  {
+    "term": "DTI (Debt-to-Income)",
+    "category": "Financing",
+    "definition": "The percentage of your gross monthly income that goes toward debt payments. Lenders use it to decide how much you can borrow. Most conventional lenders prefer 43% or lower.",
+    "brikLink": "DTI is the bank checking how stretched your paycheck already is. If 60 cents of every dollar is spoken for, they're not adding another big bill."
+  },
+  {
+    "term": "PMI",
+    "category": "Financing",
+    "definition": "Private Mortgage Insurance — required on conventional loans when you put down less than 20%. It protects the lender, not you. Can be removed once you reach 20% equity.",
+    "brikLink": "You pay the premium, but the lender gets the protection. It's the cost of coming in with less than 20% down."
+  },
+  {
+    "term": "FHA Loan",
+    "category": "Financing",
+    "definition": "A government-backed mortgage that allows lower down payments (3.5%) and accepts lower credit scores. Requires mortgage insurance regardless of down payment size.",
+    "brikLink": "The government co-signs so lenders will work with buyers who haven't built perfect credit or a big down payment yet — but you pay for that backing through insurance."
+  },
+  {
+    "term": "Conventional Loan",
+    "category": "Financing",
+    "definition": "A standard mortgage not backed by a government agency. Requires stronger credit and typically 3–20% down. PMI applies below 20% but can be removed once equity is reached.",
+    "brikLink": "No government guarantee, no extra programs — just you, your credit, your income, and the lender working out a deal."
+  },
+  {
+    "term": "Fixed-Rate Mortgage",
+    "category": "Financing",
+    "definition": "A home loan where the interest rate stays the same for the full loan term — typically 15 or 30 years. Your principal and interest payment never changes.",
+    "brikLink": "You and the bank agree on a rate, shake hands, and that number doesn't move. Predictability is the product."
+  },
+  {
+    "term": "Adjustable-Rate Mortgage (ARM)",
+    "category": "Financing",
+    "definition": "A mortgage with a fixed rate for an initial period (3, 5, 7, or 10 years), then adjusts periodically based on market rates. Can be lower upfront but carries future risk.",
+    "brikLink": "The low rate is real — but it has a clock on it. When it expires, the rate adjusts to wherever the market is."
+  },
+  {
+    "term": "Amortization",
+    "category": "Financing",
+    "definition": "The process of paying off a loan through regular monthly payments. Early payments are mostly interest; over time, more goes toward principal as the balance decreases.",
+    "brikLink": "In year one, most of your payment is the bank's cut. Your piece — the principal — grows slowly at first, then faster as the balance shrinks."
+  },
+  {
+    "term": "Credit Score",
+    "category": "Financing",
+    "definition": "A number (300–850) that summarizes your creditworthiness. Lenders use it to decide whether you qualify and at what rate. Scores above 740 get the best terms.",
+    "brikLink": "Your credit score is your financial reputation distilled into one number. A 40-point difference can mean thousands in extra interest over a 30-year loan."
+  },
+  {
+    "term": "Interest Rate",
+    "category": "Financing",
+    "definition": "The annual percentage the lender charges on your loan balance. Directly determines a major portion of your monthly payment and the total cost of borrowing.",
+    "brikLink": "Your rate is the price of renting money. Even a 0.5% difference on a $300,000 loan adds up to real money over 30 years."
+  },
+  {
+    "term": "Discount Points",
+    "category": "Financing",
+    "definition": "Upfront fees paid at closing to reduce your interest rate. One point = 1% of the loan amount. Whether it makes sense depends on how long you keep the loan.",
+    "brikLink": "You pay more now to pay less every month. If you leave early, you paid for a discount you never fully used."
+  },
+  {
+    "term": "Hard Money Loan",
+    "category": "Financing",
+    "definition": "A short-term, asset-based loan from a private lender — used by investors to move fast on distressed properties. Based on property value, not the borrower's credit. High rates, short terms.",
+    "brikLink": "The lender doesn't care much about you — they care about the property. They lend based on what it's worth and want their money back fast."
+  },
+  {
+    "term": "HELOC",
+    "category": "Financing",
+    "definition": "A Home Equity Line of Credit — a revolving credit line secured by your home's equity. Draw from it as needed during the draw period, repay during the repayment phase.",
+    "brikLink": "If you've built equity, the bank opens a credit line for you to draw from. Flexible capital — but your home backs it up. Treat it accordingly."
+  },
+  {
+    "term": "Cash-Out Refinance",
+    "category": "Financing",
+    "definition": "Replacing your existing mortgage with a larger one and taking the difference in cash. Used to access built-up equity without selling the property.",
+    "brikLink": "The bank values your property at its current higher worth, gives you a bigger loan, and hands you the difference. Your equity goes down, your liquidity goes up."
+  },
+  {
+    "term": "Inspection Period",
+    "category": "Process",
+    "definition": "A contractually defined window after going under contract where the buyer can have the property inspected and, depending on terms, renegotiate or walk away.",
+    "brikLink": "It's your test drive window. You're committed — but you still get to look under the hood before money changes hands."
+  },
+  {
+    "term": "Comparable Sales (Comps)",
+    "category": "Process",
+    "definition": "Recent sales of similar nearby properties used to estimate a home's market value. The foundation of pricing decisions for buyers, sellers, and appraisers.",
+    "brikLink": "Comps are the market's scoreboard. What similar homes actually sold for — not listed for — is the only number that matters."
+  },
+  {
+    "term": "Days on Market (DOM)",
+    "category": "Process",
+    "definition": "The number of days a property has been listed without going under contract. High DOM can indicate overpricing, property issues, or a slower market — and creates buyer leverage.",
+    "brikLink": "Every day a property sits unsold tells you something. Long DOM means the market said no — and that's worth asking why."
+  },
+  {
+    "term": "MLS",
+    "category": "Process",
+    "definition": "Multiple Listing Service — the shared database where agents list and search properties. Zillow, Redfin, and Realtor.com pull from the MLS. Agents work directly in the original.",
+    "brikLink": "Consumer portals are a copy of a copy. Agents work in the source — faster data, and sometimes access to listings before the public sees them."
+  },
+  {
+    "term": "Off-Market Property",
+    "category": "Process",
+    "definition": "A property being sold without being publicly listed on the MLS. Found through agent networks, direct outreach, or investor channels. Less competition, but less transparency.",
+    "brikLink": "Off-market is buying something before it hits the shelf. Sometimes that means a better price. Sometimes the seller is just testing what they can get without full exposure."
+  },
+  {
+    "term": "Seller Concessions",
+    "category": "Offers",
+    "definition": "Credits offered by the seller at closing to offset the buyer's closing costs. Negotiated in the contract. Lenders cap how much sellers can contribute based on loan type and LTV.",
+    "brikLink": "The price stays the same, but the seller kicks in cash at closing to cover your fees. It's not a discount on the home — it's help getting across the finish line."
+  },
+  {
+    "term": "Escalation Clause",
+    "category": "Offers",
+    "definition": "A contract provision that automatically increases your offer by a set amount above competing offers, up to a maximum price. Used in competitive multi-offer situations.",
+    "brikLink": "It's like bidding in an auction but setting your ceiling in advance. You'll beat other offers automatically — up to the point where you've decided to stop."
+  },
+  {
+    "term": "As-Is Sale",
+    "category": "Offers",
+    "definition": "A sale where the seller is unwilling to make repairs or offer credits. The buyer accepts the property in its current condition — though inspection rights may still apply.",
+    "brikLink": "As-is means the seller is done negotiating about condition. You can still inspect — you just can't ask for fixes. Know what you're buying."
+  },
+  {
+    "term": "Counter Offer",
+    "category": "Offers",
+    "definition": "A seller's response to a buyer's offer that changes one or more terms — price, closing date, contingencies. Each counter resets the negotiation.",
+    "brikLink": "A counter offer is the seller saying 'close, but not quite.' Every counter is a new offer — until someone says yes or walks away."
+  },
+  {
+    "term": "Multiple Offer Situation",
+    "category": "Offers",
+    "definition": "When a seller receives more than one offer at the same time. Buyers must compete on price, terms, and strength of offer. Sellers often set a deadline for 'best and final' submissions.",
+    "brikLink": "You're not negotiating with the seller anymore — you're competing against other buyers. Best price alone doesn't always win. Terms and certainty matter."
+  },
+  {
+    "term": "Market Value",
+    "category": "Process",
+    "definition": "The price a property would likely sell for in a fair, open market between a willing buyer and seller. Determined by comps, not by what an owner thinks it's worth.",
+    "brikLink": "The list price is an opinion. The comps are evidence. Market value lives in what similar properties actually sold for."
+  },
+  {
+    "term": "Single-Family Home",
+    "category": "Property Types",
+    "definition": "A standalone residential property on its own lot, designed for one household. The most common property type — and the most straightforward to buy, sell, and finance.",
+    "brikLink": "You own the building, you own the lot, and when the roof leaks, that's 100% your bill. Full control, full responsibility."
+  },
+  {
+    "term": "Duplex",
+    "category": "Property Types",
+    "definition": "A residential building with two separate units, each with its own entrance. You can live in one and rent the other — a strategy called house hacking.",
+    "brikLink": "A duplex is like a two-suite building where you live in one suite and a tenant pays rent in the other. Your tenant is helping you buy the building."
+  },
+  {
+    "term": "Townhome",
+    "category": "Property Types",
+    "definition": "A multi-story home that shares at least one wall with a neighbor. Owners typically hold their unit and a small outdoor space. Usually subject to an HOA.",
+    "brikLink": "A townhome is like a row of books on a shelf — each one is its own complete thing, but they're leaning on each other. You own your book, but the shelf rules still apply."
+  },
+  {
+    "term": "Condo",
+    "category": "Property Types",
+    "definition": "You own your individual unit inside a larger building, and share ownership of common areas. Governed by an HOA. Lenders have specific requirements for condo financing.",
+    "brikLink": "Owning a condo is like owning your apartment but with a vote on the building's rules. The hallways and roof belong to everyone — and everyone pays for them together."
+  },
+  {
+    "term": "Fourplex",
+    "category": "Property Types",
+    "definition": "A residential building with four separate units. The maximum number of units you can purchase with a residential mortgage — five or more requires commercial financing.",
+    "brikLink": "The fourplex is the last building you can buy with a standard home loan. Cross into five units and the whole financing rulebook changes."
+  },
+  {
+    "term": "Mixed-Use Property",
+    "category": "Property Types",
+    "definition": "A property that combines residential and commercial uses — like retail on the ground floor and apartments above. Financing and zoning vary based on the use mix.",
+    "brikLink": "A pizza parlor with apartments above it. The business pays rent downstairs, residents pay rent upstairs, and one owner collects both checks."
+  },
+  {
+    "term": "House Hacking",
+    "category": "Strategy",
+    "definition": "Buying a multi-unit property, living in one unit, and renting out the others to offset or eliminate your housing costs. A low-barrier entry into real estate investing.",
+    "brikLink": "You buy the building, live in one unit, and let your tenants cover the mortgage. Done right, your housing is free — and you're building equity at the same time."
+  },
+  {
+    "term": "Cap Rate",
+    "category": "Strategy",
+    "definition": "Net Operating Income divided by property value. A quick measure of a property's return potential — as if you paid all cash. Used to compare investment properties.",
+    "brikLink": "Cap rate is like the yield on a savings account, but for a building. It tells you how hard your money is working before you factor in the mortgage."
+  },
+  {
+    "term": "NOI (Net Operating Income)",
+    "category": "Strategy",
+    "definition": "Total rental income minus vacancy and operating expenses — before debt service. The foundation of any investment property analysis.",
+    "brikLink": "NOI is what the building earns before the bank gets paid. It's the property's paycheck — everything left after the costs of running the place."
+  },
+  {
+    "term": "Cash Flow",
+    "category": "Strategy",
+    "definition": "What's left each month after collecting rent and paying all expenses — including the mortgage. Positive means the property pays you. Negative means you pay the property.",
+    "brikLink": "Everyone gets paid first — the tenant's rent covers the mortgage and expenses. What's left is yours. That remainder is cash flow."
+  },
+  {
+    "term": "ARV (After Repair Value)",
+    "category": "Strategy",
+    "definition": "The estimated market value of a property after renovations are complete. Used by investors and lenders to evaluate value-add deals and determine maximum purchase price.",
+    "brikLink": "ARV is what the finished version is worth. The whole deal math starts there and works backward — what will it sell for when done, minus costs, equals your profit ceiling."
+  },
+  {
+    "term": "Equity",
+    "category": "Strategy",
+    "definition": "The portion of a property's value you actually own — the difference between what it's worth and what you owe. Grows through paydown, appreciation, and improvements.",
+    "brikLink": "If the house is worth $300,000 and you owe $200,000, you own $100,000 of it. That $100,000 grows as values rise and as you pay down the loan."
+  },
+  {
+    "term": "Appreciation",
+    "category": "Strategy",
+    "definition": "The increase in a property's value over time — driven by market demand, inflation, and location. Can be natural (market-driven) or forced (renovation-driven).",
+    "brikLink": "Appreciation is the rising tide. Real estate in most markets becomes more valuable over time. You benefit from it — but you shouldn't bet your whole strategy on it."
+  },
+  {
+    "term": "Depreciation (Tax)",
+    "category": "Strategy",
+    "definition": "A non-cash IRS deduction that lets investors write off the cost of a property over time — 27.5 years for residential. Reduces taxable income even while the property appreciates.",
+    "brikLink": "The IRS lets you pretend your building is losing value — even while it gains value. It's a paper loss that lowers your tax bill without costing real money."
+  },
+  {
+    "term": "BRRRR Method",
+    "category": "Strategy",
+    "definition": "Buy, Renovate, Rent, Refinance, Repeat. A strategy to recycle capital across multiple properties by pulling equity out through a cash-out refinance after stabilization.",
+    "brikLink": "You put cash in on one end (buy and renovate), the bank gives you most of it back through a refinance, and you send that same money into the next deal."
+  },
+  {
+    "term": "1031 Exchange",
+    "category": "Strategy",
+    "definition": "A tax strategy that lets investors defer capital gains taxes by reinvesting sale proceeds into a like-kind replacement property within strict IRS timelines.",
+    "brikLink": "Sell a building, roll the proceeds into a bigger one, and the tax bill waits. Keep exchanging and the tax may wait until your estate inherits the property."
+  },
+  {
+    "term": "GRM (Gross Rent Multiplier)",
+    "category": "Strategy",
+    "definition": "Purchase price divided by annual gross rent. A quick screen to compare rental property pricing. Lower GRM = more income relative to price. Doesn't account for expenses.",
+    "brikLink": "It's a back-of-the-napkin filter. Lower GRM generally means better income relative to the price — but you still have to look at what it costs to run the place."
+  },
+  {
+    "term": "Vacancy Rate",
+    "category": "Strategy",
+    "definition": "The percentage of time a rental unit sits empty. Prudent underwriting builds in 5–10% vacancy even if the property is currently full. Optimistic vacancy assumptions are a common mistake.",
+    "brikLink": "Every month a unit sits empty is a month of income you can't get back. Smart investors build vacancy into their numbers before they buy — not after they've been stung."
+  },
+  {
+    "term": "Operating Expenses",
+    "category": "Strategy",
+    "definition": "The ongoing costs to run a rental property — taxes, insurance, management, maintenance, repairs. Excludes mortgage payments. Used to calculate NOI.",
+    "brikLink": "Operating expenses are everything it costs to keep the lights on and the building running. What's left after these costs is your NOI."
+  },
+  {
+    "term": "CapEx (Capital Expenditure)",
+    "category": "Strategy",
+    "definition": "Large, infrequent expenses for major repairs or replacements — roof, HVAC, plumbing. Smart investors set aside a CapEx reserve monthly so the big bill doesn't hit as a surprise.",
+    "brikLink": "The roof won't last forever. Neither will the HVAC. Set money aside every month so that when the $15,000 bill arrives, it's already funded."
+  },
+  {
+    "term": "Property Management",
+    "category": "Strategy",
+    "definition": "The day-to-day operation of a rental — finding tenants, collecting rent, handling maintenance. Can be self-managed or outsourced at 8–12% of gross rents.",
+    "brikLink": "If you don't want midnight calls about broken heaters, you hire a manager. If you self-manage, you're still doing the work — you're just not paying someone else for it."
+  },
+  {
+    "term": "Zoning",
+    "category": "Commercial",
+    "definition": "Local government rules that define how land can be used — residential, commercial, industrial, mixed. Determines what you can legally build or operate on a property.",
+    "brikLink": "Zoning is the rulebook for a piece of land. It tells you what game you're allowed to play there. You can't open a warehouse in a residential zone without a fight."
+  },
+  {
+    "term": "Triple Net Lease (NNN)",
+    "category": "Commercial",
+    "definition": "A commercial lease where the tenant pays rent plus property taxes, insurance, and maintenance. Common in retail. Preferred by passive investors for predictable, low-management income.",
+    "brikLink": "The tenant drives the car, pays for gas, insurance, and repairs. The landlord just collects the check."
+  },
+  {
+    "term": "CAM Fees",
+    "category": "Commercial",
+    "definition": "Common Area Maintenance fees — charges passed to commercial tenants to cover shared spaces like parking lots, lobbies, and landscaping. Often reconciled annually.",
+    "brikLink": "CAM fees are the shared maintenance bill split among tenants. Five stores, one parking lot — everyone chips in for plowing, lighting, and landscaping."
+  },
+  {
+    "term": "Gross Lease",
+    "category": "Commercial",
+    "definition": "A commercial lease where the tenant pays one flat rent and the landlord covers operating expenses. Simpler for tenants, but landlords must accurately forecast their costs.",
+    "brikLink": "It's the commercial version of an all-inclusive resort. You pay one price and the landlord handles the rest — but they have to make sure that price covers everything."
+  },
+  {
+    "term": "Tenant Improvements (TI)",
+    "category": "Commercial",
+    "definition": "Build-out work done to a commercial space to prepare it for a specific tenant — funded by the landlord, tenant, or both. TI allowances are often negotiated as part of the lease.",
+    "brikLink": "The landlord builds out the space to fit the tenant's business. Who pays and how much is negotiable — it's part of the lease deal, not separate from it."
+  },
+  {
+    "term": "Letter of Intent (LOI)",
+    "category": "Commercial",
+    "definition": "A non-binding document that outlines proposed deal terms before a formal contract is drafted. Used to confirm mutual interest and key terms before investing in full due diligence.",
+    "brikLink": "An LOI is a handshake memo. It says 'here's what I'm proposing — let's agree on the big stuff before the lawyers get involved.'"
+  },
+  {
+    "term": "Net Lease",
+    "category": "Commercial",
+    "definition": "A lease where tenants pay base rent plus some operating expenses. Single net adds taxes; double net adds insurance; triple net adds maintenance. More nets = more tenant responsibility.",
+    "brikLink": "Net leases are like hotel rates where extras get added to your bill. The more 'nets,' the more the tenant handles."
+  },
+  {
+    "term": "Foreclosure",
+    "category": "Process",
+    "definition": "The legal process by which a lender takes possession of a property after the borrower stops making payments. Results in a forced sale to recover the loan balance.",
+    "brikLink": "Foreclosure is the bank calling in its collateral. For buyers, it can be a deal — but you're buying someone else's financial wreckage, which always comes with unknowns."
+  },
+  {
+    "term": "Short Sale",
+    "category": "Process",
+    "definition": "A sale where the property sells for less than what the owner owes, requiring lender approval. Can offer below-market pricing but involves longer, more uncertain timelines.",
+    "brikLink": "The lender agrees to accept less than the full loan balance rather than go through foreclosure. The buyer may get a deal — but the bank has to sign off on everything."
+  },
+  {
+    "term": "Seller's Market",
+    "category": "Process",
+    "definition": "A market condition where demand exceeds supply — few homes, many buyers. Sellers hold the leverage: prices rise, contingencies get waived, and competition intensifies.",
+    "brikLink": "In a seller's market, the seller sets the terms and buyers adjust. Knowing which market you're in changes your entire offer strategy."
+  },
+  {
+    "term": "Buyer's Market",
+    "category": "Process",
+    "definition": "A market condition where supply exceeds demand — many homes, fewer buyers. Buyers have more leverage: prices soften, sellers negotiate, and days on market increase.",
+    "brikLink": "In a buyer's market, you have time, options, and negotiating room. Don't rush. The inventory is working in your favor."
+  },
+  {
+    "term": "Bridge Loan",
+    "category": "Financing",
+    "definition": "A short-term loan used to 'bridge' the gap between buying a new property and selling an existing one. Higher rates, short terms, typically 6–12 months.",
+    "brikLink": "A bridge loan is the financial equivalent of buying a new house before your old one sells. You're carrying two mortgages briefly — and paying for the privilege."
+  },
+  {
+    "term": "Debt Service Coverage Ratio (DSCR)",
+    "category": "Financing",
+    "definition": "A lender metric that compares a property's NOI to its annual mortgage payment. A DSCR above 1.25 means the property earns more than it costs to finance.",
+    "brikLink": "DSCR tells the lender whether the building pays for itself. Above 1.25 and you're in good shape. Below 1.0 means the income doesn't cover the debt."
+  },
+  {
+    "term": "Rate Lock",
+    "category": "Financing",
+    "definition": "A lender's commitment to hold a specific interest rate for a defined period — typically 30–60 days — while your loan processes. Protects against rate increases before closing.",
+    "brikLink": "A rate lock is insurance against the clock. Once locked, your rate doesn't move — even if the market rises before you close."
+  },
+  {
+    "term": "Reserves",
+    "category": "Financing",
+    "definition": "Cash savings required by lenders (and smart buyers) beyond the down payment and closing costs. Demonstrates you can cover the mortgage during vacancies or emergencies.",
+    "brikLink": "Reserves are your financial cushion. The lender wants to know you can survive a slow month. So should you."
+  },
+  {
+    "term": "Highest and Best Use",
+    "category": "Strategy",
+    "definition": "The most productive legal use of a property that is physically possible, financially feasible, and maximally profitable. A core concept in appraisal and investment analysis.",
+    "brikLink": "A lot zoned for four units but sitting with one house isn't at its highest and best use. Understanding this gap is where opportunity lives."
   }
 ]

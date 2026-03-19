@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Agricultural land: what changes when land is zoned farm or rural";
+const description = "Farm-zoned land comes with unique tax benefits, financing challenges, and use restrictions most buyers don't anticipate.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Devon found 12 acres of farm-zoned land in a rural Georgia county for $85,000 — a price that looks like a steal compared to suburban lots. He wants to build a home, keep some land, and potentially rent the rest for farming. What he doesn't yet understand is that agricultural zoning comes with restrictions on residential development, specialized financing requirements, unique tax structures, and conditions attached to changing the land's use.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Agricultural zoning — what it means</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Primarily intended for farming, timber, or rural uses</li>
+          <li>Residential use may be permitted — but often limited to one home</li>
+          <li>Subdivision for multiple homes typically requires rezoning</li>
+          <li>Minimum acreage requirements vary by county</li>
+          <li>Commercial agricultural activity may be exempt from some local regulations</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Tax and financial implications</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Georgia Conservation Use Assessment — significantly lower property taxes if land is actively farmed</li>
+          <li>Changing use or selling may trigger rollback taxes on past savings</li>
+          <li>USDA Farm Service Agency loans available for qualified agricultural buyers</li>
+          <li>Standard residential mortgages generally won't cover raw agricultural land</li>
+          <li>Farm credit lenders specialize in agricultural real estate financing</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Can you legally build a home on this agricultural parcel — and how many dwellings are permitted?</li>
+        <li>Is the land enrolled in a conservation use program — and what are the conditions of that enrollment?</li>
+        <li>What are the rollback tax implications if you change the use or sell within the covenant period?</li>
+        <li>What financing is available — have you spoken with a farm credit lender or USDA?</li>
+        <li>What is the soil quality, water access, and infrastructure situation on the specific parcel?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Agricultural land can be a smart long-term asset — but it operates under a different set of rules than residential or commercial real estate. Verify permitted uses, understand the tax structure, and find the right lender before committing. The lower price often reflects complexity that standard residential buyers aren't prepared for.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

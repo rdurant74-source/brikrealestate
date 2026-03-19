@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Townhome vs condo: what the deed actually says";
+const description = "They look similar from the outside. The ownership structure, costs, and flexibility are very different.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Maya is comparing two attached properties in the same neighborhood — a $285,000 townhome and a $275,000 condo. Both have two floors, similar square footage, and similar HOA fees. From the outside they look nearly identical. But the deed tells a different story. One gives Maya ownership of the structure and the land beneath it. The other gives her ownership of the interior air space only. That distinction affects her insurance, her financing options, her renovation rights, and her ability to rent it out.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Townhome ownership</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Typically fee-simple — you own the structure and the land</li>
+          <li>Responsible for exterior maintenance of your unit</li>
+          <li>HOA may maintain common areas but less of the building</li>
+          <li>More renovation flexibility — you own the walls</li>
+          <li>Easier to finance — fewer lender restrictions than condos</li>
+          <li>More like owning a house than an apartment</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Condo ownership</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>You own the interior unit — walls, floors, ceiling are shared</li>
+          <li>HOA owns and maintains the building exterior and common areas</li>
+          <li>Less maintenance responsibility but less control</li>
+          <li>Lender restrictions — warrantability affects financing options</li>
+          <li>Rental restrictions common — review CC&Rs carefully</li>
+          <li>FHA/VA approval status affects your buyer pool at resale</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Read the deed — it will specify exactly what you own. "Townhome style" is a description, not a legal ownership type.</li>
+        <li>Some properties marketed as townhomes are legally condos — the HOA structure and deed type confirm which it is.</li>
+        <li>Is the condo FHA-approved? This affects your financing options now and your resale pool later.</li>
+        <li>What are the rental restrictions? Can you rent month-to-month or long-term if needed?</li>
+        <li>What does the HOA cover — just common areas, or also the roof, exterior walls, and windows?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        The word "townhome" describes a style of living — not a legal ownership structure. Always read the deed and the HOA documents to understand exactly what you own, what you're responsible for, and what restrictions apply. Two units that look identical from the outside can have very different ownership realities.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Seller concessions: how to use them strategically";
+const description = "Seller concessions can reduce your cash to close — if you know how to ask for them correctly.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Nina is purchasing a $255,000 home. She has enough for the down payment but is tight on closing costs — she's about $4,000 short of what she needs at the table. Her agent suggests asking the seller for a concession. The seller isn't dropping the price, but agreeing to cover $4,000 of Nina's closing costs keeps the deal alive without either party feeling like they lost.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">How concessions work</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Seller credits buyer a set amount at closing</li>
+          <li>Applied toward buyer's closing costs and prepaids</li>
+          <li>Price stays the same — cash changes hands differently</li>
+          <li>Must be disclosed to and approved by the lender</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Lender limits by loan type</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Conventional (LTV over 90%): max 3% of price</li>
+          <li>Conventional (LTV 75–90%): max 6%</li>
+          <li>FHA: max 6% of purchase price</li>
+          <li>VA: max 4% plus reasonable closing costs</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>In a buyer's market, concessions are easier to negotiate. In a seller's market, asking may cost you the deal.</li>
+        <li>Some buyers inflate the offer price to cover a concession — confirm with your lender this is acceptable.</li>
+        <li>Concessions cannot exceed your actual closing costs — unused amounts don't come back to you as cash.</li>
+        <li>What matters to the seller — net proceeds. Show them the concession doesn't reduce their bottom line significantly.</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Seller concessions are a legitimate tool — not a loophole. They let cash-constrained buyers get to the table without the seller reducing their net price. Know the limits, disclose everything to your lender, and use them strategically when the market conditions support the ask.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "House hacking a duplex: real numbers walkthrough";
+const description = "House hacking works when the math works. Here's how to actually run it.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Priya earns $85,000/year and pays $1,600/month in rent. She has $35,000 saved and a 730 credit score. She's found a duplex listed at $320,000. Unit B is currently rented at $1,350/month on a month-to-month lease. Her PITI at FHA financing would be approximately $2,400/month. After rent from Unit B, her net housing cost would be around $1,050 — $550 less than she currently pays in rent. The numbers look good. But she wants to stress-test them before committing.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Monthly numbers at full occupancy</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>PITI (mortgage + taxes + insurance): ~$2,400</li>
+          <li>Unit B rent: $1,350</li>
+          <li>Net housing cost: ~$1,050/month</li>
+          <li>Savings vs current rent: $550/month</li>
+          <li>Annual savings: $6,600</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Stress test at vacancy</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>If Unit B sits empty: full $2,400 is on Priya</li>
+          <li>She needs 2+ months of reserves for this scenario</li>
+          <li>At 8% vacancy: ~1 month/year factored in</li>
+          <li>Effective annual rent income: $1,350 × 11 = $14,850</li>
+          <li>Net annual housing cost: ~$14,000 (~$1,167/month)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Verify market rents with active listings — is $1,350 accurate for this area and unit size?</li>
+        <li>Is the current tenant strong — credit, income, history? You inherit this lease at purchase.</li>
+        <li>FHA requires owner-occupancy for at least one year — plan accordingly.</li>
+        <li>Do you have reserves to cover both units' expenses during a vacancy?</li>
+        <li>Are you emotionally prepared to be a landlord to someone who lives next door?</li>
+        <li>What does the property need in repairs near-term — factor that into your cash position.</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        House hacking is one of the most powerful first moves in real estate — but only when the numbers actually work at realistic assumptions. Model it at 90% occupancy, not 100%. Know your tenant. Have your reserves. And make sure the lifestyle trade-off of shared-building living is one you can genuinely live with.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

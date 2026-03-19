@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Building layout analysis: does the floor plan support the value you're chasing?";
+const description = "A bad floor plan can cap your ARV no matter how good the finishes are.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Angela is evaluating a 3BR/1BA house in a neighborhood where renovated 3BR/2BA homes sell for $215,000. The property is priced right and the bones look solid. But there's a problem — the only bathroom is off the primary bedroom, accessible only by walking through it. Adding a second bathroom would require significant structural work. The layout isn't just awkward — it's actively suppressing the ARV, and no amount of granite countertops will fix it.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Floor plan factors that affect value</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Bedroom count and accessibility — can all bedrooms be reached without walking through another?</li>
+          <li>Bathroom placement — shared, private, or awkwardly positioned?</li>
+          <li>Kitchen location and flow — open concept commands premium in most markets</li>
+          <li>Living space functionality — is the layout how buyers actually live?</li>
+          <li>Natural light and ceiling height — hard to change, big impact on value</li>
+          <li>Storage — lack of closets and storage is a consistent buyer complaint</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Layout problems and their costs</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Adding a bathroom: $8,000–$20,000+ depending on location and plumbing</li>
+          <li>Opening a wall for open concept: $3,000–$15,000 (load-bearing = more)</li>
+          <li>Adding a bedroom: $15,000–$40,000+ depending on scope</li>
+          <li>Relocating kitchen: $20,000–$50,000+ — rarely worth it on a flip</li>
+          <li>Some layouts simply can't be fixed at a price that makes the deal work</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>What do the renovated comps in this neighborhood look like — and do they share this floor plan's limitations?</li>
+        <li>Can you achieve the target ARV with the existing layout, or does the layout suppress it?</li>
+        <li>What would it cost to fix the layout issues — and does the deal still work at that cost?</li>
+        <li>Are buyers in this market and price range willing to accept this layout, or is it a consistent objection?</li>
+        <li>Walk the property as a buyer, not an investor — would you buy this layout at the ARV you're projecting?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Finishes are replaceable. Floor plans are structural. A bad layout that can't be cost-effectively fixed will cap your ARV regardless of how well you renovate everything else. Evaluate the floor plan against your comp set before you price the deal — not after you've already bought it.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Divorce and real estate: what happens to the house";
+const description = "The house is often the largest asset and the most complicated part of a divorce. Here's how to think about it.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Marcus and Diane are divorcing after 8 years. They own a home worth $380,000 with $210,000 remaining on the mortgage — roughly $170,000 in equity. Both names are on the deed and the loan. They have three options and no idea which is best. Their attorneys are focused on the legal split. Nobody is helping them understand the real estate side of this decision.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Option A: Sell and split equity</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Cleanest exit — both parties move on</li>
+          <li>Equity split is negotiable in the divorce settlement</li>
+          <li>Capital gains exclusion: $250K per person if both occupied 2 of last 5 years</li>
+          <li>Both names removed from mortgage — credit clean</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Option B: One spouse buys out the other</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Staying spouse must refinance into their name alone</li>
+          <li>Must qualify for the mortgage on their income only</li>
+          <li>Buyout value based on agreed appraised value</li>
+          <li>Departing spouse gets equity payout and is removed from title and loan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>If one spouse stays but doesn't refinance, the departing spouse remains on the mortgage — affecting their credit and borrowing capacity.</li>
+        <li>A quitclaim deed transfers ownership but does not remove someone from the mortgage.</li>
+        <li>Work with a real estate attorney and a Realtor who handles divorce transactions — the process is different.</li>
+        <li>If neither party can qualify alone, selling is often the only clean path.</li>
+        <li>Emotional attachment to the home is real — but decisions should be made on financial terms, not sentiment.</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        The house is not just an asset — it's a liability until it's in one person's name or sold. Get clarity on the financial realities before making emotional decisions. The cleanest outcomes come from treating the real estate side like the business transaction it is, even when the circumstances are anything but simple.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

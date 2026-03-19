@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Office condo: is owning your workspace smarter than leasing?";
+const description = "Professional service businesses often overlook office ownership. The math can be compelling.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Marcus has run his financial planning practice from a leased office suite for eight years. His rent is $2,800/month and just increased 9%. A comparable office condo two blocks away is listed at $380,000. An SBA loan at 10% down would put his mortgage payment at approximately $2,650/month — less than his current rent. He'd own an appreciating asset instead of paying into someone else's mortgage. The question is whether he can qualify and whether the timing is right.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Why office ownership makes sense</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Fixed payment vs unpredictable rent increases</li>
+          <li>Equity builds in a business asset over time</li>
+          <li>Depreciation provides tax shelter for the business</li>
+          <li>Building can be sold or leased when you retire</li>
+          <li>SBA loans designed specifically for owner-occupied commercial real estate</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">What to evaluate before buying</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Is your business income stable enough to qualify for commercial financing?</li>
+          <li>How long do you plan to operate from this location?</li>
+          <li>What is the condo association's health — reserve fund, maintenance history?</li>
+          <li>Can you lease the space if your business needs change?</li>
+          <li>What are the CAM fees and HOA costs on top of the mortgage?</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>SBA 504 loans allow as little as 10% down for owner-occupied commercial real estate — speak to an SBA lender.</li>
+        <li>Your business must typically occupy at least 51% of the space for SBA owner-occupied financing.</li>
+        <li>Commercial real estate transactions move slower than residential — build in 60-90 days for due diligence and closing.</li>
+        <li>Get a commercial inspection and review association financials thoroughly before committing.</li>
+        <li>What is the exit strategy — lease it, sell it, or pass it to a successor?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        For established professional service businesses, owning office space can be one of the best financial decisions available — converting a recurring expense into an asset. The SBA makes it accessible with low down payments. The key is confirming you'll be in that space long enough for the move to make financial sense.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Buying raw land: what due diligence actually looks like";
+const description = "Land has no roof to inspect and no appliances to break. But the due diligence is more complex, not less.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Jerome found a 2-acre lot listed for $45,000 in a growing suburban county. It looks perfect for a future home build. There are no structures, so he assumes the due diligence is straightforward. What he doesn't yet know is that the lot is in a flood zone, has no road frontage, isn't connected to public utilities, and the zoning may not permit the use he intends. The land is cheap for a reason.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Critical due diligence items</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Zoning — what is legally permitted on this parcel?</li>
+          <li>Survey — exact boundaries, easements, encroachments</li>
+          <li>Flood zone status — FEMA flood map check</li>
+          <li>Soil test — percolation test if septic is needed</li>
+          <li>Utilities — water, sewer, electric, gas available?</li>
+          <li>Road access — public or private road frontage?</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Permit and approval process</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Building permit required before any construction</li>
+          <li>Septic permit if not on public sewer</li>
+          <li>Driveway/access permit from county</li>
+          <li>Environmental review if near wetlands or streams</li>
+          <li>HOA or deed restrictions may further limit use</li>
+          <li>Variance may be needed if lot doesn't meet current zoning minimums</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Land financing is harder than home financing — expect 20–50% down and higher rates.</li>
+        <li>Cheap land is often cheap for a reason — always find out why before buying.</li>
+        <li>What will it cost to bring utilities to the site if they're not already there?</li>
+        <li>What is the timeline and cost to get permits approved for your intended use?</li>
+        <li>Is there road frontage — or will you need an easement across someone else's property?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Raw land looks simple. The due diligence is anything but. Zoning, utilities, access, soil, flood risk, and permits all determine whether a parcel is actually usable for your purpose — and at what cost. Cheap land with expensive problems is not a deal. Know what you're buying before you commit.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

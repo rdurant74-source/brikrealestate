@@ -1,29 +1,54 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-const title = "Pre-approval basics: the 5 numbers that matter";
-const description = "Budget clarity: what you can afford vs what you should buy.";
+const title = "Pre-approval basics: the 5 numbers that actually matter";
+const description = "Your pre-approval letter has one number on it. You need to understand five.";
 ---
-
 <BaseLayout title={`${title} | BRIK`} description={description}>
   <section style="padding:28px 0 10px">
     <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
     <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
-
     <div class="card">
-      <h3 style="margin:0 0 8px">The 5 numbers</h3>
-      <ol style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
-        <li><strong>Purchase price range</strong> (not just the max)</li>
-        <li><strong>Monthly payment target</strong> (comfortable, not “possible”)</li>
-        <li><strong>Cash to close</strong> (down payment + closing costs + reserves)</li>
-        <li><strong>Rate / loan type</strong> (FHA/Conventional/VA/USDA impacts)</li>
-        <li><strong>Debt-to-income reality</strong> (how tight your budget will feel)</li>
-      </ol>
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Kevin got pre-approved for $310,000 and printed the letter. He thinks he's ready to buy. But when his agent asks him what his monthly payment would be, what rate he was quoted, what his DTI is, and how much cash he needs at closing — he doesn't know any of it. The pre-approval letter is a starting point, not a complete picture. These are the five numbers every buyer needs to understand before making an offer.
+      </p>
     </div>
-
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">The 5 numbers</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li><strong style="color:var(--text)">1. Max loan amount</strong> — what you qualify for, not what you should spend</li>
+          <li><strong style="color:var(--text)">2. Interest rate</strong> — quoted rate vs locked rate vs APR</li>
+          <li><strong style="color:var(--text)">3. Monthly PITI</strong> — principal, interest, taxes, insurance (not just P&I)</li>
+          <li><strong style="color:var(--text)">4. Cash to close</strong> — down payment + closing costs + prepaid items</li>
+          <li><strong style="color:var(--text)">5. DTI</strong> — your current ratio and how much room you have</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">What most buyers miss</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Taxes and insurance can add $300–$800/month to your payment</li>
+          <li>Closing costs are 2–5% of the purchase price — on top of down payment</li>
+          <li>PMI may apply — adds $100–$250/month until 20% equity</li>
+          <li>HOA fees are not included in pre-approval calculations</li>
+          <li>Rate quotes are not locks — rates can move before closing</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Ask your lender for a Loan Estimate on a specific property — this shows the full real monthly payment.</li>
+        <li>What is your comfortable payment ceiling — not your maximum qualification ceiling?</li>
+        <li>Have you confirmed your cash-to-close number includes reserves after closing?</li>
+        <li>Is your pre-approval a full underwrite or a soft pull? Full underwrite = stronger commitment.</li>
+        <li>Have you compared at least two lenders? Rate and fee differences can be significant.</li>
+      </ul>
+    </div>
     <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
       <h3 style="margin:0 0 8px">BRIK takeaway</h3>
       <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
-        “Approved for” and “should buy” are different. We align the numbers to your lifestyle so you don’t become house-poor.
+        A pre-approval letter tells you what you qualify for. It doesn't tell you what you can comfortably afford, what the full monthly payment looks like, or how much cash you actually need at closing. Know all five numbers before you make your first offer.
       </p>
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
         <a class="pill" href="/case-studies">Back to Case Studies</a>

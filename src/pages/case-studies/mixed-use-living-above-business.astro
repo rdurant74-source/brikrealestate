@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Mixed-use building: living above your business";
+const description = "Own the building, live upstairs, operate below. One asset, two functions — if the zoning and financing allow it.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Dominique runs a boutique clothing store and currently rents both her storefront ($2,100/month) and her apartment ($1,450/month). She's found a mixed-use building for sale at $485,000 — retail on the ground floor and a 2BR apartment above. Her combined rent payment exceeds what an SBA-assisted mortgage would cost. She's intrigued but uncertain about the financing, zoning, and operational realities of owning a building she both lives and works in.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Advantages of mixed-use ownership</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Eliminate both rent payments simultaneously</li>
+          <li>One mortgage replaces two rent checks</li>
+          <li>Business and residential equity build in one asset</li>
+          <li>No commute — live where you work</li>
+          <li>Potential to lease one unit if business or living situation changes</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Complications to understand</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Financing is complex — use mix affects loan type eligibility</li>
+          <li>Residential mortgage lenders won't finance significant commercial use</li>
+          <li>SBA or commercial financing likely required</li>
+          <li>Zoning must permit both residential and commercial uses</li>
+          <li>Work-life separation becomes a personal discipline challenge</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>What is the current zoning — does it explicitly permit mixed residential and commercial use?</li>
+        <li>What loan product fits this purchase — SBA 504, SBA 7(a), or conventional commercial?</li>
+        <li>What percentage of the building is commercial vs residential — this affects financing options.</li>
+        <li>If the business closes or relocates, can the commercial space be leased to someone else?</li>
+        <li>What is the condition of both units — commercial build-out needs and residential habitability?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Mixed-use ownership is one of the most efficient real estate structures available to small business owners — one asset, two functions, two rent payments eliminated. But the financing and zoning complexity requires expert guidance. Verify the permitted uses, find the right lender, and make sure the building works for both your business and your life long-term.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

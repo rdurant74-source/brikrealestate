@@ -1,0 +1,69 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Long-term rental analysis: does this property cash flow?";
+const description = "The rent number on a listing is marketing. The cash flow number is what matters.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Angela is evaluating a single-family rental listed at $225,000 in a suburban Atlanta market. The listing claims it rents for $1,800/month. Her lender pre-approved her for an investment property at 25% down. Before she makes an offer, she needs to run the actual numbers — not the seller's version of them.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Income side</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Gross rent: $1,800/month ($21,600/year)</li>
+          <li>Less 8% vacancy: -$1,728/year</li>
+          <li>Effective gross income: ~$19,872/year</li>
+          <li>Verify with active rental comps — not seller claims</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Expense side</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Property taxes: ~$2,400/year</li>
+          <li>Insurance: ~$1,200/year</li>
+          <li>Property management (10%): ~$1,980/year</li>
+          <li>Maintenance reserve (8%): ~$1,590/year</li>
+          <li>Total operating expenses: ~$7,170/year</li>
+          <li>NOI: ~$12,702/year</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Financing and cash flow</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>25% down: $56,250 — loan: $168,750</li>
+        <li>Monthly PITI at 7.5%: ~$1,180/month ($14,160/year)</li>
+        <li>Annual cash flow: NOI ($12,702) - debt service ($14,160) = -$1,458/year</li>
+        <li>This property does not cash flow at list price with current financing</li>
+        <li>At $210,000: monthly payment drops, cash flow turns slightly positive</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Negative cash flow isn't always a deal-killer — but you must budget for it intentionally.</li>
+        <li>What is the cap rate at this price? ($12,702 / $225,000 = 5.6%) — is that acceptable for this market?</li>
+        <li>What is the long-term appreciation outlook for this area?</li>
+        <li>Can you negotiate the price to a point where cash flow is at least neutral?</li>
+        <li>What happens to your cash flow if rates drop and you refinance in 2–3 years?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Build your own pro forma — don't use the seller's numbers. Start with realistic rents verified by active comps, subtract real vacancy and expenses, then layer in financing. Cash flow last, not first. If the deal doesn't work at conservative assumptions, negotiate the price or move on.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

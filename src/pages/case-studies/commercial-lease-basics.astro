@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Commercial lease basics: what every small business owner should know before signing";
+const description = "A commercial lease is not like a residential lease. The terms are more complex and the stakes are higher.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Tanya is opening her first retail location and has found the perfect space. The landlord's agent sent her a 47-page lease. She's excited and wants to sign quickly before losing the space. Her business attorney tells her to slow down — there are clauses in the lease that could significantly affect her costs, flexibility, and exit options over the next five years. Most first-time commercial tenants sign leases they don't fully understand. This is what they miss.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Key lease terms to understand</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Base rent vs gross rent vs NNN — what exactly are you paying?</li>
+          <li>CAM charges — what's included and how are they reconciled annually?</li>
+          <li>Rent escalation clauses — how much can rent increase and when?</li>
+          <li>Personal guarantee — are you personally liable if the business fails?</li>
+          <li>Permitted use clause — what are you actually allowed to do in the space?</li>
+          <li>Exclusivity clause — can the landlord lease to a competitor?</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Negotiable items most tenants don't ask for</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Tenant improvement allowance — landlord funds your build-out</li>
+          <li>Rent-free period during build-out</li>
+          <li>Cap on CAM increases year-over-year</li>
+          <li>Option to renew at defined rate</li>
+          <li>Sublease and assignment rights</li>
+          <li>Early termination option with defined penalty</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Always have a commercial real estate attorney review the lease before signing.</li>
+        <li>The landlord's lease template is written to protect the landlord — everything is negotiable.</li>
+        <li>What is your exit if the business struggles — can you sublease, assign, or terminate early?</li>
+        <li>What does the personal guarantee mean for you if the business closes?</li>
+        <li>Get the TI allowance in writing with specific amounts and timelines — verbal commitments mean nothing.</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        A commercial lease is a multi-year financial commitment that can make or break a small business. Don't sign one without legal review. Don't accept the first version as final — almost everything is negotiable. And understand every cost you're committing to before you hand over the deposit.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

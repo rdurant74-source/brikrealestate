@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Credit score not ready: build now vs buy later";
+const description = "A 40-point difference in your credit score can mean thousands of dollars over the life of a loan.";
+---
+
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        DeShawn wants to buy a home in the next 12 months. His credit score is 612. His lender says he technically qualifies for an FHA loan but his rate will be higher because of his score. A friend with a 700 score is getting quoted 0.75% lower on the same loan amount. On a $280,000 loan, that difference costs DeShawn over $45,000 in additional interest over 30 years. He's wondering if it's worth pausing 6 months to improve his score first.
+      </p>
+    </div>
+
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Buy now at 612</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Higher interest rate — more paid over time</li>
+          <li>Starts building equity immediately</li>
+          <li>Locks in current home prices</li>
+          <li>Avoids 6 more months of rent</li>
+          <li>Limited loan program options</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Wait 6 months, improve to 680+</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Better rate — meaningful long-term savings</li>
+          <li>More loan programs available</li>
+          <li>Stronger negotiating position with lenders</li>
+          <li>Costs ~6 months of rent to get there</li>
+          <li>Prices may shift during the wait</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">How to improve your score fast</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Pay down credit card balances below 30% utilization — this alone can move scores 20–40 points</li>
+        <li>Dispute any errors on your credit report (pull from AnnualCreditReport.com)</li>
+        <li>Do not open any new credit accounts or make large purchases</li>
+        <li>Stay current on all existing accounts — no late payments</li>
+        <li>Ask your lender about rapid rescore options if you're close to a threshold</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>What is the actual monthly payment difference between your current score and a 680+ score?</li>
+        <li>How realistic is a 40–60 point improvement in 6 months given your current profile?</li>
+        <li>What is your market doing — are prices rising fast enough to erase the rate savings?</li>
+        <li>Can you refinance later if rates improve — making the current rate less permanent?</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Credit score improvement is one of the highest-return actions a buyer can take before purchasing. Even a 40-point gain can unlock a significantly lower rate. Whether the wait is worth it depends on how fast your score can realistically improve, what your market is doing, and how much the rate difference actually costs you monthly. Run the real numbers before deciding.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

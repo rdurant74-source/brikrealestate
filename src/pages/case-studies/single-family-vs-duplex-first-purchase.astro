@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Single-family vs duplex for a first purchase";
+const description = "Your first home doesn't have to be just a place to live — it can work for you financially from day one.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Chris is buying his first home and has $28,000 saved. He can buy a single-family home at $265,000 or a duplex at $295,000. The duplex is $30,000 more — but Unit B rents for $1,200/month. His agent says the duplex is the smarter financial move. Chris isn't sure he's ready to be a landlord. Both are reasonable perspectives. The right answer depends on his goals and risk tolerance.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Single-family home</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Simpler — one household, one set of systems</li>
+          <li>No landlord responsibilities</li>
+          <li>Full privacy, full control</li>
+          <li>No rental income to offset mortgage</li>
+          <li>Easier to finance and sell</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Duplex with house hacking</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Rental income offsets or eliminates housing cost</li>
+          <li>Builds investor experience with residential financing</li>
+          <li>Equity built in both units simultaneously</li>
+          <li>Requires landlord mindset and responsibilities</li>
+          <li>Shared building — less privacy than SFR</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Do the duplex numbers work if Unit B sits vacant for 2 months?</li>
+        <li>Are you comfortable managing a tenant who lives next door?</li>
+        <li>What is the current lease on Unit B — is it month-to-month or locked in?</li>
+        <li>What are market rents in the area — is $1,200 accurate?</li>
+        <li>Does the extra $30,000 in purchase price make sense given the rental income?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        A duplex can be a wealth-accelerator — but only if the math works and you're prepared for what ownership of a rental unit actually involves. If you're not ready for that, a well-priced single-family home is a strong first move. There's no universally right answer — only the one that fits where you are right now.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

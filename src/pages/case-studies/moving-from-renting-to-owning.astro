@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Moving from renting to owning: what nobody tells you";
+const description = "The mortgage payment is just the beginning. Here's what actually changes.";
+---
+
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Alexis has rented her whole adult life. She's buying her first home at 34 — a 3BR/2BA in a suburb of Atlanta for $279,000. Her mortgage payment is $1,920/month, which is only $220 more than her current rent. She feels prepared. Three months in, the water heater fails ($1,100), the gutters need cleaning ($200), and her utility bills are running $180/month higher than her apartment. Nobody warned her about any of this.
+      </p>
+    </div>
+
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">What renters don't pay for</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Appliance repairs and replacements</li>
+          <li>Roof, HVAC, plumbing failures</li>
+          <li>Pest control and lawn maintenance</li>
+          <li>Property taxes (built into rent, invisible)</li>
+          <li>HOA fees (in managed communities)</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">What owners absorb immediately</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>All maintenance — scheduled and surprise</li>
+          <li>Higher utilities (more space, older systems)</li>
+          <li>Homeowner's insurance</li>
+          <li>Capital reserve fund (roof, HVAC eventual replacement)</li>
+          <li>Tools, supplies, and setup costs</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Budget 1–2% of the home's value annually for maintenance and repairs.</li>
+        <li>Ask the seller for records on appliance ages and last service dates during due diligence.</li>
+        <li>Get a sewer scope and HVAC inspection even if the general inspector doesn't flag anything.</li>
+        <li>What is the age of the roof, water heater, and HVAC? These are your three biggest near-term expenses.</li>
+        <li>Do you have a reserve fund of at least $5,000–$10,000 after closing for surprises?</li>
+        <li>What are utility costs for the specific property — ask the seller for 12 months of bills.</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Risks</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Underestimating ownership costs is one of the most common mistakes first-time buyers make. The mortgage payment is not the cost of owning — it's the floor. Buyers who don't build maintenance reserves into their budget often end up using credit cards for home repairs, which compounds the financial stress of ownership.
+      </p>
+    </div>
+
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Homeownership is a wealth-building tool — but only if you can afford to own, not just to close. The goal isn't just to get the keys. It's to own the home peacefully without financial emergencies turning into financial crises. Know your true cost of ownership before you commit, not after.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

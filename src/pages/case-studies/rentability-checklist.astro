@@ -1,36 +1,56 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 const title = "Rentability checklist: what makes a property easy to rent later";
-const description = "Even if you buy to live, this protects your future flexibility.";
+const description = "Even if you plan to live there, buying with rentability in mind protects your future flexibility.";
 ---
-
 <BaseLayout title={`${title} | BRIK`} description={description}>
   <section style="padding:28px 0 10px">
     <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
     <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
-
     <div class="card">
-      <h3 style="margin:0 0 8px">Why it matters</h3>
+      <h3 style="margin:0 0 8px">Scenario</h3>
       <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
-        “Owner-occupant today” can become “rental tomorrow.” A rentable home protects you if life changes.
+        Keisha is buying her first home and plans to live in it for 5-7 years. Her agent asks if she's considered rentability — what happens if she needs to relocate, gets a job offer in another city, or wants to buy her next home before selling this one. Keisha hadn't thought about it. She's buying a primary residence, not a rental. But the properties that rent easily and command market rents share specific characteristics — and buying one doesn't cost more upfront.
       </p>
     </div>
-
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">High-rentability factors</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>3+ bedrooms — broadest tenant pool</li>
+          <li>2+ bathrooms — strong preference among renters</li>
+          <li>Washer/dryer hookups or in-unit laundry</li>
+          <li>Garage or dedicated parking</li>
+          <li>Proximity to employment centers, schools, transit</li>
+          <li>Neutral finishes — easy to maintain, broadly appealing</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Factors that reduce rentability</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>HOA with strict rental restrictions or caps</li>
+          <li>Location far from employment or amenities</li>
+          <li>Unusual or highly personalized finishes</li>
+          <li>No parking or very limited parking</li>
+          <li>1 bedroom only — narrow tenant pool</li>
+          <li>High HOA fees that compress rental yield</li>
+        </ul>
+      </div>
+    </div>
     <div class="card" style="margin-top:14px">
-      <h3 style="margin:0 0 8px">Rentability checklist</h3>
+      <h3 style="margin:0 0 8px">Things to consider</h3>
       <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
-        <li>Location fundamentals: access, jobs, demand</li>
-        <li>Layout: practical bedrooms/baths (not just “cool”)</li>
-        <li>Parking + laundry (big renter magnets)</li>
-        <li>HOA rules: rental caps, approvals, STR bans</li>
-        <li>Condition: low-maintenance wins long-term</li>
+        <li>What are comparable rentals in this area going for — does this property support market rent?</li>
+        <li>If you had to move in two years, could this property rent for enough to cover the mortgage?</li>
+        <li>Does the HOA allow rentals — and are there caps or approval processes that complicate it?</li>
+        <li>What is the vacancy rate in this neighborhood for comparable rentals?</li>
+        <li>Buying a rentable property doesn't mean you have to rent it — it means you have the option.</li>
       </ul>
     </div>
-
     <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
       <h3 style="margin:0 0 8px">BRIK takeaway</h3>
       <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
-        You don’t need to be an investor to think smart. We use rentability as a “future-proofing” filter while still prioritizing your lifestyle.
+        Rentability is optionality. Buying a property that rents well doesn't mean you'll ever rent it — it means you have the flexibility to if life requires it. All else being equal, two similar properties at similar prices, the one with better rentability characteristics is the smarter buy.
       </p>
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
         <a class="pill" href="/case-studies">Back to Case Studies</a>

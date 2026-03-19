@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "What to expect from your realtor: roles, responsibilities, and red flags";
+const description = "Most buyers don't know what their agent is actually supposed to do — until something goes wrong.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Devon signed a buyer representation agreement and started working with an agent three weeks ago. He's toured four homes and submitted one offer. He has no idea what his agent is doing between showings, doesn't know how the commission structure works, and isn't sure what he's entitled to ask for. Most buyers are exactly where Devon is — and that information gap costs them.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">What your buyer's agent should do</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Educate you on the market, process, and contract terms</li>
+          <li>Run comparable sales analysis before every offer</li>
+          <li>Negotiate on your behalf — price, terms, repairs, timeline</li>
+          <li>Coordinate inspections, appraisal, and closing logistics</li>
+          <li>Communicate proactively — not just when you reach out</li>
+          <li>Represent your interests, not the transaction</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">What your agent cannot do</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Guarantee a specific outcome on price or timeline</li>
+          <li>Disclose information that violates fair housing law</li>
+          <li>Give legal or tax advice — refer you to appropriate professionals</li>
+          <li>Control the seller's decision-making</li>
+          <li>Override your decisions — they advise, you decide</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Read your buyer representation agreement — understand the duration, exclusivity, and compensation terms.</li>
+        <li>Ask your agent to walk you through every section of the purchase contract before you sign.</li>
+        <li>If your agent isn't communicating, it's okay to ask for a status update — that's your right.</li>
+        <li>Commission is paid by the seller in most transactions — but understand how it's disclosed.</li>
+        <li>If you feel your interests aren't being represented, you can address it directly or seek a new agent.</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        A good buyer's agent is your advocate, your educator, and your negotiator. They should be explaining things, not just directing you. If you don't understand something — ask. If you're not getting answers — that's information too.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

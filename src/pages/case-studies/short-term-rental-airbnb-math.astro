@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Short-term rental potential: what Airbnb math actually looks like";
+const description = "STR income is real — but the numbers on the listing aren't the numbers you'll see.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Tanya is considering buying a 2BR/2BA condo near a popular Atlanta destination for $285,000. A seller's agent shows her an AirDNA report claiming the property averages $3,800/month in gross STR income. Tanya's mortgage would be $1,950/month. She thinks she's found a cash cow. What she hasn't priced in is platform fees, management, furnishing, turnover, taxes, and what happens when STR regulations change.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">STR income reality check</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Gross revenue: $3,800/month (seller's claim)</li>
+          <li>Platform fees (Airbnb ~3%, guest fees vary): -$114</li>
+          <li>Management fee if outsourced (20–30%): -$760</li>
+          <li>Cleaning per turnover (~$120 × 8 turns/month): -$960</li>
+          <li>Supplies, maintenance, HOA, utilities: -$400</li>
+          <li>Net income before mortgage: ~$1,566/month</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Risks unique to STR</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>HOA or municipality may restrict or ban STR</li>
+          <li>Seasonality — not all months perform equally</li>
+          <li>Market saturation affects occupancy and rates</li>
+          <li>Guest damage, bad reviews, platform deactivation</li>
+          <li>STR income is taxed differently — self-employment tax may apply</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Verify the HOA rules — can you legally STR this property?</li>
+        <li>Check local municipality STR licensing requirements and restrictions.</li>
+        <li>Run the numbers at 60% occupancy, not the best-case scenario.</li>
+        <li>What does this property cash flow as a long-term rental if STR stops working?</li>
+        <li>Do you have the bandwidth to manage bookings, turnovers, and guest issues?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        STR income can be strong — but gross revenue is not cash flow. Model the deal with realistic expenses, realistic occupancy, and a backup plan if regulations change. The best STR investments also work as long-term rentals at a minimum — so you're never forced to sell if the short-term market shifts.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Construction loan basics: build vs buy existing";
+const description = "Building a home sounds like the dream. The financing is more complex than most buyers expect.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Andre owns a lot and wants to build a custom home. He has $60,000 saved and a stable income of $110,000/year. He assumed he could get a regular mortgage to build. What he finds out is that construction financing works differently — it's a short-term loan that funds the build in draws, then converts to a permanent mortgage at completion. The process is longer, more complex, and requires more cash reserves than buying an existing home.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">How construction loans work</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Short-term loan (typically 12 months) funds the build</li>
+          <li>Funds released in draws as construction milestones are met</li>
+          <li>Interest-only payments during construction phase</li>
+          <li>Converts to permanent mortgage at completion (construction-to-perm)</li>
+          <li>Or: get a separate construction loan then refinance into a mortgage</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">What makes it harder than a regular mortgage</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Requires detailed plans, permits, and builder contracts upfront</li>
+          <li>Higher down payment — typically 20–25%</li>
+          <li>Builder must be approved by lender</li>
+          <li>Appraisal based on plans and comps — not an existing structure</li>
+          <li>Cost overruns are your responsibility, not the lender's</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Do you have the cash reserves to cover construction delays and cost overruns — they are almost universal?</li>
+        <li>Where will you live during the build — and have you budgeted for that cost?</li>
+        <li>Is your builder licensed, insured, and experienced with lender draw processes?</li>
+        <li>Have you gotten a fixed-price contract from your builder — not a cost-plus arrangement?</li>
+        <li>What is the timeline realistically — and what does a 3-month delay cost you in carrying expenses?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Building a custom home is achievable — but it requires more capital, more patience, and more planning than buying existing. Go in with accurate cost estimates, a vetted builder, and reserves for the unexpected. The dream home becomes a nightmare when undercapitalized buyers run out of money mid-build.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

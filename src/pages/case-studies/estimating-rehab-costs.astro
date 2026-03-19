@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Estimating rehab costs: the framework that keeps budgets honest";
+const description = "Rehab budgets that are too optimistic kill deals. Here's how to build one that holds up.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Tanya is evaluating a distressed property and needs to estimate the rehab cost before she can make an offer. She walks the property, makes a mental note of everything that looks rough, and guesses $35,000. Her contractor bids $67,000. The gap isn't incompetence — it's the difference between a visual impression and a systematic line-item scope. Learning to estimate accurately is one of the most valuable skills in real estate investing.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">The line-item approach</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Roof — age, condition, estimated replacement cost</li>
+          <li>HVAC — age, condition, replacement or service cost</li>
+          <li>Plumbing — visible issues, water pressure test, drain test</li>
+          <li>Electrical — panel age, wiring type, code compliance</li>
+          <li>Foundation/structure — cracks, settlement, moisture</li>
+          <li>Interior — flooring, drywall, paint, fixtures, appliances</li>
+          <li>Exterior — siding, windows, doors, landscaping, drainage</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Budget padding rules</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Add 10-15% contingency to every estimate</li>
+          <li>If you've never done this scope — add 20-25%</li>
+          <li>Older homes (pre-1980) — add extra for hidden issues</li>
+          <li>Any item you can't fully see — assume worst case</li>
+          <li>Get three contractor bids — use the middle, not the lowest</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Walk every property with a written checklist — not mental notes that fade by the time you sit down to budget.</li>
+        <li>Price each line item using local contractor costs — not national averages from the internet.</li>
+        <li>What can't you see? Crawl spaces, attics, inside walls, and behind fixtures all hide surprises.</li>
+        <li>Is your deal still profitable if the rehab comes in 25% over your estimate?</li>
+        <li>Use your contractor bids to validate your estimate — if they're consistently higher, revisit your methodology.</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Accurate rehab budgets are built line-item by line-item — not guessed at from the front door. The investors who consistently make money on renovation projects are the ones who know their numbers before they commit capital. Build the habit of systematic estimation early, and your deal analysis will never be built on wishful thinking.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

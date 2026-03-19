@@ -1,0 +1,71 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Inherited property: sell, rent, or move in?";
+const description = "Inheriting property feels like a gift. The decision of what to do with it is more complex than it looks.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Keisha's grandmother passed away and left her a paid-off home worth approximately $210,000 in a suburban Atlanta neighborhood. Keisha currently rents an apartment for $1,400/month. She has three choices: sell it, move into it, or rent it out. Each option has different tax implications, financial outcomes, and emotional considerations. She needs to make this decision within 90 days to settle the estate.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Sell</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Step-up in basis — capital gains reset to date of death value</li>
+          <li>If sold quickly, little to no capital gains tax</li>
+          <li>Cash proceeds can be invested or used for other goals</li>
+          <li>Cleanest exit — no ongoing management responsibility</li>
+          <li>Best if property needs significant updates</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Move in</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Eliminates $1,400/month rent immediately</li>
+          <li>Converts inherited equity into personal wealth</li>
+          <li>Property taxes, insurance, maintenance now your responsibility</li>
+          <li>Location must actually fit your life</li>
+          <li>Future sale may have capital gains if value rises significantly</li>
+        </ul>
+      </div>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 12">
+        <h3 style="margin:0 0 8px">Rent it out</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>No mortgage — high cash flow potential on a paid-off asset</li>
+          <li>Generates income while preserving the asset</li>
+          <li>Depreciation provides tax benefits</li>
+          <li>Requires landlord management — or hiring a property manager</li>
+          <li>Property condition may require investment before renting</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>The step-up in basis is a critical tax advantage — consult a CPA before making any decision.</li>
+        <li>If other heirs are involved, all parties must agree on the path — document everything.</li>
+        <li>What condition is the property in? Deferred maintenance may affect all three options differently.</li>
+        <li>What are your own housing needs right now — does this property actually fit your life?</li>
+        <li>A paid-off rental property is a rare asset — don't make a rushed emotional decision.</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Inherited property is one of the most significant financial events many people experience. The right move depends on your tax situation, your housing needs, the property's condition, and your long-term goals. Don't make this decision in the middle of grief without proper financial and legal guidance. The step-up in basis alone can save you tens of thousands — but only if you act strategically.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

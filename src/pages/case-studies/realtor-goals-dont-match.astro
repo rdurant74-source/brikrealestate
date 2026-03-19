@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "When your realtor and your goals don't match";
+const description = "Not every agent relationship works. Knowing when and how to address the misalignment matters.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Devon signed a buyer agreement with an agent three months ago. He's toured eleven homes and made two offers. He feels like the agent is pushing him toward properties at the top of his budget, discouraging him from making lower offers, and not fully explaining the contracts before he signs. He's not sure if he's being too demanding or if his instincts are right. The relationship feels off — and that feeling deserves to be taken seriously.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Signs of misalignment</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Agent consistently pushes top of your budget</li>
+          <li>Discourages contingencies to "stay competitive"</li>
+          <li>Doesn't explain contract terms when you ask</li>
+          <li>Feels more focused on closing than on your outcome</li>
+          <li>Communication is reactive — only responds when you initiate</li>
+          <li>Doesn't push back on your ideas — just agrees with everything</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">How to handle it</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Have a direct conversation — state your concerns clearly</li>
+          <li>A good agent will welcome the feedback and adjust</li>
+          <li>Review your buyer agreement — what are the termination terms?</li>
+          <li>Most agreements allow termination if both parties agree</li>
+          <li>If the relationship can't be repaired, request a release in writing</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Are your concerns about the agent's process, or about the market itself being hard?</li>
+        <li>Have you communicated your priorities clearly — or assumed they were understood?</li>
+        <li>What does your buyer agreement say about termination and duration?</li>
+        <li>Is there a broker above your agent you could escalate to if the conversation goes poorly?</li>
+        <li>What do you need from an agent — and have you stated that explicitly?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        You deserve an agent who is working for your interests — not just working toward a closing. If the relationship isn't serving you, address it directly first. If it can't be fixed, the buyer agreement is a contract — review the terms and pursue a release. The right agent relationship makes every part of the process better.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

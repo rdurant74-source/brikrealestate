@@ -1,37 +1,57 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 const title = "First-year ownership costs: repairs, reserves, and reality";
-const description = "The hidden costs nobody budgets for — and how to plan correctly.";
+const description = "The mortgage payment is what you planned for. Here's everything you didn't.";
 ---
-
 <BaseLayout title={`${title} | BRIK`} description={description}>
   <section style="padding:28px 0 10px">
     <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
     <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
-
     <div class="card">
       <h3 style="margin:0 0 8px">Scenario</h3>
       <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
-        You can afford the mortgage — but the first year still hits you with expenses you didn’t expect.
+        Marcus closed on his first home in January. His mortgage payment is $1,780/month — $280 more than his old rent, but manageable. By December he's spent an additional $9,400 on things he didn't budget for: a water heater replacement ($1,100), HVAC service and minor repair ($680), gutter cleaning and minor roof repair ($540), pest control ($320), lawn equipment ($480), new locks and minor security upgrades ($290), and a slow kitchen faucet leak that became a plumber visit ($410). Plus utilities that ran $190/month higher than his apartment. The mortgage was the plan. The rest was reality.
       </p>
     </div>
-
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Year-one costs most buyers underestimate</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Appliance repairs and replacements</li>
+          <li>HVAC service and minor repairs</li>
+          <li>Plumbing issues — faucets, toilets, water heater</li>
+          <li>Pest control — often quarterly</li>
+          <li>Lawn care equipment and maintenance</li>
+          <li>Higher utilities — more space, older systems</li>
+          <li>Move-in improvements — paint, fixtures, hardware</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">How to budget for year one</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Budget 1-2% of home value annually for maintenance</li>
+          <li>Keep $5,000-$10,000 in reserve after closing</li>
+          <li>Ask seller for appliance and system ages at inspection</li>
+          <li>Request 12 months of utility bills from seller</li>
+          <li>Get HVAC serviced immediately after closing</li>
+          <li>Don't spend reserves on cosmetic upgrades until you've owned 12 months</li>
+        </ul>
+      </div>
+    </div>
     <div class="card" style="margin-top:14px">
-      <h3 style="margin:0 0 8px">What shows up in Year 1</h3>
+      <h3 style="margin:0 0 8px">Things to consider</h3>
       <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
-        <li>Repairs: plumbing leaks, electrical fixes, appliances</li>
-        <li>Maintenance: HVAC service, gutter cleaning, pest control</li>
-        <li>Utilities: often higher than renting</li>
-        <li>Tools & setup: lawn care, small upgrades, security</li>
-        <li>Reserve fund: the “oh no” budget</li>
+        <li>What is the age of the roof, HVAC, water heater, and major appliances — these are your three-year risk items.</li>
+        <li>What will your utility costs actually be — ask for bills, don't guess.</li>
+        <li>Do you have a reserve fund that stays intact after closing for the inevitable surprises?</li>
+        <li>Are you buying a home where the previous owner deferred maintenance — expect acceleration of issues.</li>
+        <li>Budget for the unsexy stuff first — tools, maintenance, pest control — before the fun upgrades.</li>
       </ul>
     </div>
-
     <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
       <h3 style="margin:0 0 8px">BRIK takeaway</h3>
       <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
-        The goal is not “can you close.” The goal is “can you own peacefully.”
-        We’ll plan cash-to-close plus reserves so ownership doesn’t become stress.
+        The goal isn't just to close on a home — it's to own it without financial stress. Budget for the full cost of ownership from day one: mortgage, taxes, insurance, utilities, maintenance, and a reserve fund for the unexpected. The buyers who thrive in year one are the ones who prepared for more than just the mortgage payment.
       </p>
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
         <a class="pill" href="/case-studies">Back to Case Studies</a>

@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Finding the right contractor: vetting, contracts, and red flags";
+const description = "The wrong contractor can turn a profitable deal into a financial disaster. Here's how to avoid them.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Tanya bought a distressed property for $95,000 and budgeted $45,000 for renovation. She found a contractor through a Facebook group who quoted $38,000 and promised a 6-week timeline. She paid him $20,000 upfront. Three weeks later, work has barely started, he's stopped returning calls, and the materials he claimed to have ordered haven't arrived. Tanya's deal is now in serious jeopardy — and her contractor situation is one of the most common stories in real estate investing.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">How to vet a contractor</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Verify license and insurance — ask for certificates directly</li>
+          <li>Check reviews on Google, BBB, and Houzz</li>
+          <li>Ask for references from recent, similar projects</li>
+          <li>Visit a current or recently completed job site</li>
+          <li>Get at least 3 bids — outliers (high or low) need explanation</li>
+          <li>Ask who actually does the work — them or subcontractors?</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Contract essentials</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Detailed scope of work — line item by line item</li>
+          <li>Fixed price or not-to-exceed amount</li>
+          <li>Payment schedule tied to milestones — not time</li>
+          <li>Start date and completion date with penalty clause</li>
+          <li>Materials specified — brand, grade, model where relevant</li>
+          <li>Lien waiver requirement on each payment</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Red flags</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Requests large upfront payment (over 10–15%) before work begins</li>
+        <li>Can't provide proof of license or insurance</li>
+        <li>No written contract — "we'll figure it out as we go"</li>
+        <li>Quote significantly lower than all other bids without explanation</li>
+        <li>Vague scope — no line items, just a total number</li>
+        <li>Pressure to decide immediately or "lose the slot"</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Your contractor is one of the most important relationships in a renovation deal. A bad one can derail your timeline, destroy your budget, and kill your profit. Vet thoroughly, contract precisely, and never pay ahead of completed milestones. The best investors have reliable contractor relationships they've built over years — start building yours intentionally.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

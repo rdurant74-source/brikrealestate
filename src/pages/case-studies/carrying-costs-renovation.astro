@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Carrying costs: what the property costs you while you renovate";
+const description = "Every day a renovation runs long is money out of your profit. Most investors don't budget for it correctly.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Marcus projected a 3-month renovation on a property purchased with hard money at 12% interest. His contractor took 5 months. The two-month delay didn't just push his timeline — it cost him an additional $4,200 in loan interest, $800 in insurance, $600 in utilities, and $400 in property taxes. That's $6,000 in carrying costs he didn't budget for. His projected $28,000 profit became $22,000. Carrying costs are real — and they compound with every delay.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Monthly carrying cost components</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Hard money or financing interest</li>
+          <li>Property taxes (prorated monthly)</li>
+          <li>Insurance — vacant property coverage</li>
+          <li>Utilities (minimal but real)</li>
+          <li>HOA fees if applicable</li>
+          <li>Security costs if needed</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">How to factor carrying costs into your deal</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Calculate total monthly carrying cost</li>
+          <li>Budget for projected timeline plus 30–60 day buffer</li>
+          <li>Include carrying costs as a line item in your total project cost</li>
+          <li>Model your deal at both the projected and extended timeline</li>
+          <li>If the deal breaks at +60 days, it needs better pricing</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Hard money at 12% interest on a $150,000 loan = $1,500/month in interest alone.</li>
+        <li>A 2-month delay at that rate plus other carrying costs can easily exceed $3,500–$5,000.</li>
+        <li>What is your break-even point — at what total cost does the deal stop making sense?</li>
+        <li>Does your profit projection account for the full timeline including listing and closing after renovation?</li>
+        <li>What incentives does your contractor have to finish on time — is there a completion bonus or penalty in the contract?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Carrying costs are not a rounding error. On a hard money deal, they can consume months of projected profit in a matter of weeks. Budget for them explicitly, model your deal at an extended timeline, and structure your contractor agreement to create completion incentives. Time is money — and in a renovation, it's your money.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

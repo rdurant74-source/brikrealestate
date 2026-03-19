@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Permit pulls and inspections: what you can't skip even if you want to";
+const description = "Unpermitted work creates title problems, resale complications, and legal liability. Here's what you need to know.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Devon renovated a flip property and his contractor suggested skipping the electrical permit to "save time and money." Devon agreed. When he listed the property, the buyer's inspector noted the panel work appeared unpermitted. The buyer's lender required proof of permits before closing. Devon had to pull a retroactive permit, have the work inspected, and make $3,200 in corrections — costing more time and money than the permit would have cost originally.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Work that typically requires permits</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Structural changes — adding, removing, or altering walls</li>
+          <li>Electrical panel upgrades and new circuits</li>
+          <li>Plumbing changes beyond fixture replacement</li>
+          <li>HVAC installation or replacement</li>
+          <li>Additions, garages, or new structures</li>
+          <li>Decks, pools, and major exterior work in most jurisdictions</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Consequences of unpermitted work</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Buyer's lender may require permits before closing</li>
+          <li>Title insurance may not cover claims from unpermitted work</li>
+          <li>County can require removal or correction of unpermitted work</li>
+          <li>Homeowner's insurance may deny claims for unpermitted areas</li>
+          <li>Retroactive permits are expensive and not always possible</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Always pull permits for work that requires them — the short-term savings are not worth the long-term risk.</li>
+        <li>If buying a renovated property, ask for permit records on any improvements — a responsible seller will have them.</li>
+        <li>Unpermitted additions may not count toward the legal square footage of the home.</li>
+        <li>Your contractor should be pulling permits — if they suggest skipping it, that is a red flag about their overall practices.</li>
+        <li>Check your county's permit portal — most are searchable online and will show you permit history on any property.</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Permits exist to protect the people who live in and buy properties. Skipping them is a short-term shortcut with long-term consequences. Pull the permits, pass the inspections, and sell a clean property that no buyer or lender will have questions about.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

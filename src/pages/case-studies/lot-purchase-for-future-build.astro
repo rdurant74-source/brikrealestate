@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Lot purchase for future build: timeline, costs, and what can go wrong";
+const description = "Buying land now to build later seems like smart planning. The reality has more moving parts.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Andre wants to buy a 1.2-acre lot in a developing area for $52,000 and build his dream home in 3-5 years when he has more savings. The plan sounds straightforward — buy land now, build later. What he hasn't accounted for is the land loan carrying costs during the wait, the possibility that zoning or permit requirements change, infrastructure costs to make the lot build-ready, and the reality that construction loans look very different when you own the land separately vs buying lot and building simultaneously.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Costs during the holding period</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Land loan interest — typically higher than home loan rates</li>
+          <li>Property taxes on the land annually</li>
+          <li>Insurance (liability coverage on vacant land)</li>
+          <li>Maintenance — mowing, clearing, security if needed</li>
+          <li>Opportunity cost of capital tied up in the land</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">What can change during the wait</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Zoning regulations can change, restricting intended use</li>
+          <li>Construction costs can rise significantly (as they did 2020-2023)</li>
+          <li>Your financing situation may change — income, debt, credit</li>
+          <li>The neighborhood trajectory may shift positively or negatively</li>
+          <li>Permit requirements may become more complex or expensive</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>What is the total carrying cost over 3-5 years — and does the land appreciation justify it?</li>
+        <li>Could you build sooner using a construction-to-perm loan that incorporates the land purchase?</li>
+        <li>Have you verified current zoning and permitting requirements with the county — before buying?</li>
+        <li>What infrastructure does the lot need — road access, utilities, grading — and what will that cost?</li>
+        <li>Is the long-term hold plan actually solid — or might life circumstances change the timeline?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Buying land to build later can be a smart move — or an expensive holding pattern. The difference is preparation. Verify zoning, understand your carrying costs, confirm infrastructure needs, and have a realistic build timeline before committing capital to a lot. The best land purchases have a clear path from acquisition to construction.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

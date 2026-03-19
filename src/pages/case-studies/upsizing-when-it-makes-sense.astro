@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Upsizing: when does it make financial sense?";
+const description = "More house costs more than just a bigger mortgage. Here's how to evaluate the full picture.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Jerome and his wife own a 3BR home they bought for $245,000 six years ago. It's now worth $340,000. They have two kids, need more space, and are pre-approved for a $520,000 home. The jump feels manageable because their equity covers most of the new down payment. What they haven't fully modeled is how the new payment, higher taxes, higher insurance, and higher maintenance costs will affect their monthly budget — and whether the lifestyle gain is worth the financial cost.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">True cost of upsizing</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Higher mortgage payment on the new purchase</li>
+          <li>Higher property taxes on a more valuable home</li>
+          <li>Higher homeowner's insurance</li>
+          <li>More square footage = more to heat, cool, and maintain</li>
+          <li>Transaction costs on both sides: selling and buying (typically 8-10% combined)</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">When upsizing makes sense</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Income has grown significantly since original purchase</li>
+          <li>Equity covers substantial down payment on new home</li>
+          <li>The space need is genuine and long-term — not a phase</li>
+          <li>New payment is comfortably within 28-30% of gross income</li>
+          <li>Plan to stay 7+ years — transaction costs need time to amortize</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>What is the full monthly cost difference — mortgage, taxes, insurance, utilities, maintenance?</li>
+        <li>What are the transaction costs to sell and buy — and how long before the move pays for itself?</li>
+        <li>Could renovating or adding to your current home solve the space problem at lower cost?</li>
+        <li>What happens to your retirement and savings rate at the higher payment?</li>
+        <li>Is the lifestyle upgrade worth the financial tradeoff — be honest about this question.</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Upsizing is a lifestyle decision with a financial price tag. The question isn't whether you can afford the new payment — it's whether the total cost of upsizing serves your life and your long-term financial picture. Run the full numbers, including transaction costs and the all-in monthly difference, before you decide.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "VA loan deep dive: benefits, eligibility, and how to use it strategically";
+const description = "The VA loan is one of the most powerful home financing tools available — and one of the most underused.";
+---
+
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Marcus served 6 years in the Army and was honorably discharged. He's now 31, working in Atlanta, and ready to buy his first home. His coworker told him to get an FHA loan. His mom said to save 20% first. What nobody told him is that his VA benefit likely entitles him to buy a home with zero down payment, no PMI, and competitive interest rates — one of the most significant financial benefits available to veterans, and he almost missed it entirely.
+      </p>
+    </div>
+
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">VA loan advantages</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Zero down payment required</li>
+          <li>No private mortgage insurance (PMI)</li>
+          <li>Competitive interest rates — often below conventional</li>
+          <li>Limited closing costs — seller can pay all of them</li>
+          <li>No prepayment penalty</li>
+          <li>Can be used multiple times</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">What to know upfront</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>VA funding fee applies (1.25–3.3% of loan, can be financed)</li>
+          <li>Property must meet VA Minimum Property Requirements (MPRs)</li>
+          <li>Must be primary residence — not investment or vacation</li>
+          <li>Requires Certificate of Eligibility (COE) from VA</li>
+          <li>Some sellers are less familiar with VA offers — work with a VA-experienced agent</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Who is eligible</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Active duty service members (90 continuous days)</li>
+        <li>Veterans with honorable, general, or other-than-dishonorable discharge</li>
+        <li>National Guard and Reserve members (6 years of service or 90 days active duty)</li>
+        <li>Surviving spouses of veterans who died in service or from service-related disability</li>
+        <li>Get your COE at VA.gov or through your lender</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>The funding fee can be waived entirely if you have a service-connected disability — verify your status.</li>
+        <li>Zero down is powerful but you still need reserves for closing costs, moving, and maintenance.</li>
+        <li>VA appraisals can be slower and stricter — factor this into your offer timeline.</li>
+        <li>Work with a lender who specializes in VA loans — they navigate the process faster.</li>
+        <li>Your entitlement can be restored after paying off a VA loan — you can use it again.</li>
+        <li>Bonus entitlement allows purchases above the standard loan limit in high-cost markets.</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        The VA loan benefit exists because service members earned it. If you've served and you're buying a home, there is almost no reason not to use it. No down payment, no PMI, and competitive rates represent tens of thousands of dollars in savings compared to conventional financing. Get your Certificate of Eligibility, work with a VA-experienced lender, and use what you've earned.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

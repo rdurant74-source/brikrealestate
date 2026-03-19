@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "HOA deep dive: what to read before you sign";
+const description = "The HOA documents are boring. Not reading them is expensive.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Diane bought a condo in a well-maintained complex. Eight months after closing, the HOA issued a $4,200 special assessment for roof repairs. Diane was shocked. If she had read the reserve study included in the HOA documents, she would have seen the roof replacement was flagged as underfunded two years prior. The information was available. She just didn't know to look for it.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Documents to request and review</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>CC&Rs — rules you must follow as an owner</li>
+          <li>Bylaws — how the association is governed</li>
+          <li>Reserve study — is the HOA saving for future repairs?</li>
+          <li>Last 2 years of meeting minutes — what issues are being discussed?</li>
+          <li>Current budget and financial statements</li>
+          <li>Special assessment history — have they issued any in the past 5 years?</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Red flags in HOA documents</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Reserve fund below 70% of recommended funding level</li>
+          <li>Pending litigation against the association</li>
+          <li>Recent or upcoming special assessments</li>
+          <li>High delinquency rate among owners — affects association finances</li>
+          <li>Rental restrictions that limit your flexibility</li>
+          <li>Major capital items (roof, elevator, pool) approaching end of life</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>In Georgia, sellers must provide HOA documents — you have a right to review them before closing.</li>
+        <li>A reserve study tells you if the HOA has saved enough money for future major repairs.</li>
+        <li>Low HOA dues can be a red flag — they may be underfunding reserves to appear affordable.</li>
+        <li>Can you rent the unit? Some HOAs cap the percentage of rentals in the complex.</li>
+        <li>Is the building FHA or VA approved? This affects your financing options and future resale pool.</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        When you buy into an HOA, you're buying into the association's financial health too. A well-run HOA with funded reserves is an asset. An underfunded one with deferred maintenance is a liability. Read the documents — all of them — before you close.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

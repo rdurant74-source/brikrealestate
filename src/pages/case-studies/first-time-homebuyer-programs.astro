@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "First-time homebuyer programs: what's available and who qualifies";
+const description = "There's money on the table most buyers don't know exists. Here's how to find it.";
+---
+
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Maya earns $54,000/year, has a 672 credit score, and has been saving for two years. She has $9,500 saved but needs roughly $14,000 for a down payment and closing costs on a $220,000 home. She's $4,500 short and doesn't know what to do. What she doesn't know is that Georgia and her county both have programs that could cover that gap — and potentially more.
+      </p>
+    </div>
+
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Georgia Dream program</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Georgia's primary first-time buyer program</li>
+          <li>Offers down payment assistance of $10,000+</li>
+          <li>Must use a Georgia Dream approved lender</li>
+          <li>Income and purchase price limits apply</li>
+          <li>Requires homebuyer education course</li>
+          <li>DPA is a second mortgage — forgiven or repaid at sale</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Other programs to investigate</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Local county or city down payment grants</li>
+          <li>Employer-assisted housing programs</li>
+          <li>Fannie Mae HomeReady (3% down, reduced PMI)</li>
+          <li>Freddie Mac Home Possible (similar benefits)</li>
+          <li>USDA loan (0% down in eligible rural areas)</li>
+          <li>HUD-approved housing counseling (often free)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Most programs define "first-time buyer" as not having owned in the past 3 years — you may qualify even if you've owned before.</li>
+        <li>Income limits are often higher than people expect — don't assume you make too much without checking.</li>
+        <li>DPA programs often require you to stay in the home for a set period — understand the repayment terms.</li>
+        <li>Some programs require a specific lender — make sure that lender is competitive on rate before committing.</li>
+        <li>Homebuyer education courses (required by many programs) are genuinely useful — not just a checkbox.</li>
+        <li>Programs run out of funding — apply early and don't wait.</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Risks</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        DPA second mortgages can complicate refinancing or selling if the home doesn't appreciate enough to cover the repayment. Read the terms carefully — some programs require repayment of the full assistance amount if you sell within 5–10 years.
+      </p>
+    </div>
+
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        There is more help available for first-time buyers than most people realize. Georgia Dream, local grants, and federal loan programs can combine to significantly reduce what you need at closing. The key is knowing they exist, understanding the terms, and working with a lender and agent who know how to use them. Don't leave money on the table because you didn't ask.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

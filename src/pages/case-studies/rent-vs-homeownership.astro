@@ -1,0 +1,88 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Rent vs homeownership: an honest look at both sides";
+const description = "Neither is universally better. The right answer depends on your life, not your landlord's opinion.";
+---
+
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Jordan is 29 and feels social pressure from every direction to buy a home. His parents say renting is wasting money. His coworkers are all buying. But Jordan's job may require relocation in 18 months, his savings are modest, and he actually likes the flexibility of renting. He wants an honest framework — not a sales pitch in either direction.
+      </p>
+    </div>
+
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Renting — the real pros</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Mobility — move without transaction costs</li>
+          <li>Predictable monthly cost with no surprise repairs</li>
+          <li>Capital stays available for other opportunities</li>
+          <li>No property tax, insurance, or maintenance liability</li>
+          <li>Lower financial risk during life transitions</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Renting — the real cons</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>No equity built — payments don't compound</li>
+          <li>Rent increases are outside your control</li>
+          <li>No ability to customize or improve the space</li>
+          <li>Landlord can sell or reclaim the property</li>
+          <li>No tax advantages on rent payments</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Owning — the real pros</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Every payment builds equity</li>
+          <li>Appreciation grows net worth over time</li>
+          <li>Fixed-rate payment doesn't rise with inflation</li>
+          <li>Stability — nobody can raise your rent or evict you</li>
+          <li>Tax deductions on mortgage interest</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Owning — the real cons</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Illiquid asset — hard to access equity quickly</li>
+          <li>Full maintenance responsibility</li>
+          <li>Transaction costs make short holds expensive</li>
+          <li>Market risk — values can decline</li>
+          <li>Ties you to a location</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>How long are you planning to stay? Under 3 years often favors renting due to closing costs.</li>
+        <li>Is your income stable enough to carry a fixed payment for 5+ years?</li>
+        <li>What is the price-to-rent ratio in your market? A ratio above 20 often favors renting.</li>
+        <li>Do you have adequate reserves to handle ownership costs beyond the mortgage?</li>
+        <li>What do you value more right now — flexibility or stability?</li>
+        <li>Is buying a social expectation or a genuine financial decision for you?</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Renting is not failing. Buying is not automatically winning. The right choice depends on your timeline, your income stability, your market, and your life goals. Make the decision based on your actual situation — not social pressure. Both paths can build wealth when executed intentionally.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

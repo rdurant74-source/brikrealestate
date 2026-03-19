@@ -1,38 +1,54 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-const title = "Special assessments: what they are + how to protect yourself";
-const description = "What to check before buying into an HOA to avoid ugly surprises.";
+const title = "Special assessments: what they are and how to protect yourself";
+const description = "A special assessment can arrive without warning and cost thousands. Here's how to see them coming.";
 ---
-
 <BaseLayout title={`${title} | BRIK`} description={description}>
   <section style="padding:28px 0 10px">
     <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
     <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
-
     <div class="card">
-      <h3 style="margin:0 0 8px">What it means</h3>
+      <h3 style="margin:0 0 8px">Scenario</h3>
       <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
-        A special assessment is an extra HOA charge (sometimes thousands) when reserves aren’t enough to cover major repairs:
-        roofs, elevators, structural work, plumbing, etc.
+        Diane bought a condo in a well-maintained complex for $248,000. The HOA fees were $320/month — reasonable for the amenities. Fourteen months after closing, every owner received a letter: a $6,800 special assessment for emergency elevator replacement and partial roof repair. Payment due in 90 days or subject to lien. Diane had $4,000 in savings. If she had reviewed the reserve study before buying, she would have seen the elevator was flagged as critically underfunded two years prior. The information existed. She just didn't know to look for it.
       </p>
     </div>
-
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">What causes special assessments</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Major repairs not covered by reserves — roof, elevator, pool, parking</li>
+          <li>Emergency repairs from storm damage or structural issues</li>
+          <li>Legal judgments against the association</li>
+          <li>Underfunded reserves unable to cover scheduled maintenance</li>
+          <li>Capital improvements voted on by the board</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">How to protect yourself before buying</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Request the reserve study — look for funding percentage and flagged items</li>
+          <li>Review 2 years of board meeting minutes — issues discussed = warning signs</li>
+          <li>Ask directly: any pending or anticipated special assessments?</li>
+          <li>Check the reserve fund balance vs recommended balance</li>
+          <li>Low HOA dues can signal underfunded reserves — not a deal, a warning</li>
+        </ul>
+      </div>
+    </div>
     <div class="card" style="margin-top:14px">
-      <h3 style="margin:0 0 8px">Protection checklist</h3>
+      <h3 style="margin:0 0 8px">Things to consider</h3>
       <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
-        <li>Request HOA docs early (financials, reserves, meeting minutes)</li>
-        <li>Look for big upcoming projects and “we voted” language</li>
-        <li>Check reserve balance vs building age/condition</li>
-        <li>Ask about pending litigation (can impact lending)</li>
-        <li>Understand rental restrictions (future flexibility)</li>
+        <li>In Georgia, sellers are required to provide HOA documents — use your due diligence period to review them.</li>
+        <li>A reserve fund below 70% of the recommended level is a yellow flag. Below 50% is a red flag.</li>
+        <li>Ask the HOA management company directly whether any assessments are being planned or discussed.</li>
+        <li>What is the age of major building components — roof, elevators, HVAC systems? Proximity to replacement = risk.</li>
+        <li>Is the building FHA-approved? FHA has its own review process that can flag financially troubled associations.</li>
       </ul>
     </div>
-
     <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
       <h3 style="margin:0 0 8px">BRIK takeaway</h3>
       <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
-        Condos can be amazing — if the HOA is healthy. Special assessments are usually a symptom of weak reserves or deferred maintenance.
-        We focus on HOA financial health the same way we focus on roof/HVAC health for a single-family.
+        When you buy into an HOA, you buy into its financial health. An underfunded reserve account is a deferred special assessment waiting to happen. Read the documents, check the reserves, and ask the hard questions before closing — not after the letter arrives.
       </p>
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
         <a class="pill" href="/case-studies">Back to Case Studies</a>

@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Relocating for work: buy or rent in the new city?";
+const description = "Moving for a job is exciting. Buying a house in a market you don't know yet carries real risk.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Simone accepted a job offer in Atlanta and is relocating from Chicago in six weeks. She has $40,000 saved, a strong credit score, and her new salary is $92,000. Her employer is offering a relocation package. She's considering buying immediately — she doesn't want to "waste money" renting. But she's never lived in Atlanta and doesn't yet know which neighborhoods fit her life.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Case for renting first</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Learn the market before committing to a neighborhood</li>
+          <li>Confirm the job is the right fit before buying</li>
+          <li>No transaction costs if life changes in year one</li>
+          <li>12 months of local knowledge = better buying decision</li>
+          <li>Reduces risk of buying in the wrong area</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Case for buying quickly</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Locks in current prices before the market moves</li>
+          <li>Avoids rent costs and starts building equity</li>
+          <li>Employer relocation package may include buy-down assistance</li>
+          <li>Makes sense if you've researched the market thoroughly</li>
+          <li>Works best with a long-term commitment to staying</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>How confident are you that this job and city are long-term? Buying and selling within 2 years often results in a loss after transaction costs.</li>
+        <li>Does your relocation package include any buy-up or rate assistance programs?</li>
+        <li>Have you researched neighborhoods for commute, lifestyle, and resale — or are you buying blind?</li>
+        <li>Can you negotiate a lease with a 6–12 month option while you get oriented?</li>
+        <li>What happens if the job doesn't work out — how quickly could you sell or rent the home?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Renting for 6–12 months after relocation is not failure — it's due diligence. Buying in a market you don't know, in a neighborhood you haven't experienced, is one of the most common ways buyers end up owning the wrong house. Take the time to learn the city before you commit to a zip code.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

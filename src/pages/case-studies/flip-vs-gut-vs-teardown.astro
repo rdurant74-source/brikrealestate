@@ -1,0 +1,69 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Quick flip vs full gut vs teardown: how to read a property correctly";
+const description = "The wrong scope decision kills deals. Learn to diagnose a property before you price it.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Angela is walking through a distressed property listed at $118,000 in a neighborhood where renovated homes sell for $210,000–$230,000. She sees cosmetic issues — dated finishes, old carpet, ugly paint. But she also sees sagging floors in the back bedroom, a crawl space with standing water, and electrical panels from the 1970s. Is this a quick flip, a full gut, or a teardown? The answer determines whether this deal makes money or destroys it.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 4">
+        <h3 style="margin:0 0 8px">Quick flip</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Cosmetic issues only — paint, flooring, fixtures</li>
+          <li>Structure and systems are sound</li>
+          <li>$15,000–$40,000 rehab budget</li>
+          <li>Fastest timeline — 4–8 weeks</li>
+          <li>Highest profit margin when priced right</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 4">
+        <h3 style="margin:0 0 8px">Full gut</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Cosmetic plus major systems: HVAC, electric, plumbing</li>
+          <li>Structural repairs needed</li>
+          <li>$60,000–$120,000+ rehab budget</li>
+          <li>Longer timeline — 3–6 months</li>
+          <li>Margin squeezed by scope and carrying costs</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 4">
+        <h3 style="margin:0 0 8px">Teardown</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Structure is beyond economical repair</li>
+          <li>Land value exceeds improved value</li>
+          <li>Demolition cost: $10,000–$25,000+</li>
+          <li>New construction timeline: 8–14 months</li>
+          <li>Highest risk — highest potential upside</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Always get a structural engineer's opinion before committing to a scope level — surprises are expensive.</li>
+        <li>Sagging floors and standing water in crawl spaces are major red flags for structural and moisture damage.</li>
+        <li>What does it cost to remediate the problems you're seeing — get actual contractor bids, not estimates.</li>
+        <li>Is the ARV supported by actual sold comps of renovated properties — not just active listings?</li>
+        <li>What happens to your profit if the scope expands 30%? Can the deal still work?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Misreading scope is one of the most expensive mistakes in real estate investing. A cosmetic flip budget applied to a full gut project will leave you undercapitalized mid-renovation. Walk every property with expert eyes — or bring someone who has them. The scope determines the deal.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

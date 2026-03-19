@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Renting vs buying: when the math actually favors buying";
+const description = "Renting isn't throwing money away. But at some point, the math shifts.";
+---
+
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Tanya has rented the same apartment for four years at $1,500/month. She's paid $72,000 in rent and has nothing to show for it financially. A comparable home in her area would cost $245,000 with a mortgage payment around $1,750/month — $250 more than rent. Her friends say buying is always better. Her parents say wait. She wants the actual math, not opinions.
+      </p>
+    </div>
+
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Case for renting</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Flexibility to move without transaction costs</li>
+          <li>No maintenance or repair responsibility</li>
+          <li>Capital stays liquid for other investments</li>
+          <li>Lower upfront cost — no down payment required</li>
+          <li>Smart if you'll move within 2–3 years</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Case for buying</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Every payment builds equity — rent builds none</li>
+          <li>Fixed-rate payment doesn't rise with market rents</li>
+          <li>Appreciation grows your net worth passively</li>
+          <li>Tax advantages on mortgage interest</li>
+          <li>Forced savings through equity accumulation</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>How long do you plan to stay? Under 3 years often favors renting due to transaction costs.</li>
+        <li>What is the price-to-rent ratio in your market? High ratios favor renting.</li>
+        <li>Do you have the reserves to handle ownership costs beyond the mortgage?</li>
+        <li>Is your income stable enough to carry a fixed payment for 5+ years?</li>
+        <li>What would you do with capital not tied up in a down payment?</li>
+        <li>Are rents in your area rising faster than home prices?</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Risks</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Buying too early in the wrong market or at the wrong life stage can be more expensive than renting. Buying with inadequate reserves, unstable income, or a short timeline often costs more than continuing to rent — even accounting for equity.
+      </p>
+    </div>
+
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Renting is not throwing money away — it's paying for housing flexibility. Buying is not automatically better — it's a long-term financial commitment that rewards patience and stability. The math favors buying when you have the reserves, the timeline, and the market conditions working together. When those three align, waiting usually costs more than buying.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

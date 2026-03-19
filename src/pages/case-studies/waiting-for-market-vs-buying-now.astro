@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Waiting for the market vs buying now";
+const description = "Every month you wait is a financial decision whether you treat it like one or not.";
+---
+
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Darnell has been "about to buy" for two years. He has $42,000 saved, a 748 credit score, and earns $91,000/year. He keeps waiting for prices to drop. They haven't. His rent is $1,750/month. He's paid over $42,000 in rent during his waiting period — ironically the same amount he has saved. Every six months he resets the clock and tells himself conditions aren't right yet.
+      </p>
+    </div>
+
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Cost of waiting 12 more months</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>$21,000 in additional rent paid</li>
+          <li>If prices rise 5%: target home costs $15,000+ more</li>
+          <li>If rates rise 0.5%: monthly payment increases ~$85</li>
+          <li>Zero equity built during the wait</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Case for buying now</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Locks in current price and rate</li>
+          <li>Starts equity clock immediately</li>
+          <li>Stops sunk rent cost</li>
+          <li>10-year hold absorbs short-term volatility</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>How much rent will you pay during the wait — and what does that total look like?</li>
+        <li>What specific market signal are you waiting for — and what's the evidence it's coming?</li>
+        <li>What does a 5% price increase do to your purchasing power?</li>
+        <li>Are you waiting for data or waiting because the decision feels uncomfortable?</li>
+        <li>If you bought today and held for 10 years, would current conditions still matter?</li>
+        <li>Is your income and life situation stable enough to commit now?</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Risks</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Waiting in a rising market compounds the cost. Waiting in a declining market protects capital but extends the rent drain. Neither outcome is free. The real risk of perpetual waiting is that no conditions will ever feel perfect — and you'll have paid years of rent while building no equity.
+      </p>
+    </div>
+
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Nobody times the market perfectly — not investors, not economists, not agents. The right question isn't "will prices drop?" It's "does buying now at these terms serve my goals over the next 7–10 years?" For most buyers with stable income, adequate reserves, and a long horizon, waiting usually costs more than it saves.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

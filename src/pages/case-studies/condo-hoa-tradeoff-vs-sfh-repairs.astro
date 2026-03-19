@@ -1,47 +1,54 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-const title = "Condo HOA tradeoff vs SFH repairs";
-const description = "The real cost tradeoff: dues + rules vs maintenance + reserves.";
+const title = "Condo HOA tradeoff vs SFH repairs: the real cost comparison";
+const description = "HOA dues vs maintenance responsibility — the right choice depends on your cash flow, lifestyle, and risk tolerance.";
 ---
-
 <BaseLayout title={`${title} | BRIK`} description={description}>
   <section style="padding:28px 0 10px">
     <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
-    <p style="margin:0 0 18px;color:var(--muted);max-width:80ch">{description}</p>
-
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
     <div class="card">
       <h3 style="margin:0 0 8px">Scenario</h3>
       <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
-        You’re torn: condo convenience vs single-family control. You want clarity beyond vibes.
+        Jerome is deciding between a $240,000 condo with a $380/month HOA and a $255,000 single-family home with no HOA. The condo is lower maintenance — the HOA handles exterior upkeep, landscaping, and common areas. The SFH gives him full control but full responsibility. His monthly budget looks similar on paper. But when he factors in HOA fees, the total monthly cost of the condo exceeds the SFH — and the HOA's reserve fund is only 48% funded.
       </p>
     </div>
-
     <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
       <div class="card" style="grid-column:span 6">
-        <h3 style="margin:0 0 8px">Condo math & checks</h3>
+        <h3 style="margin:0 0 8px">Condo with HOA — real picture</h3>
         <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
-          <li>HOA covers what, exactly?</li>
-          <li>Reserves healthy? (future repairs funded?)</li>
-          <li>Rental rules (caps/approval)?</li>
-          <li>Special assessment history?</li>
+          <li>HOA covers exterior maintenance — less personal responsibility</li>
+          <li>Monthly fee is fixed but can increase with board votes</li>
+          <li>Special assessment risk if reserves are underfunded</li>
+          <li>Rules restrict modifications, rentals, and sometimes pets</li>
+          <li>Shared walls mean shared noise and shared risk</li>
         </ul>
       </div>
       <div class="card" style="grid-column:span 6">
-        <h3 style="margin:0 0 8px">SFH math & checks</h3>
+        <h3 style="margin:0 0 8px">SFH without HOA — real picture</h3>
         <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
-          <li>Roof/HVAC age and life left</li>
-          <li>Plumbing + electrical condition</li>
-          <li>Foundation/drainage red flags</li>
-          <li>Build a repair reserve fund</li>
+          <li>No mandatory monthly fee beyond mortgage/taxes/insurance</li>
+          <li>All maintenance is your responsibility and your cost</li>
+          <li>Full control — renovate, rent, modify as you choose</li>
+          <li>Budget 1-2% of value annually for maintenance</li>
+          <li>Costs are variable — a good year or a bad year is yours alone</li>
         </ul>
       </div>
     </div>
-
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Add the HOA fee to the mortgage before comparing — that is your real monthly cost.</li>
+        <li>Check the condo's reserve study — an underfunded reserve is a potential special assessment.</li>
+        <li>What does the HOA actually cover — just common areas, or also roof, windows, and exterior walls?</li>
+        <li>Are you paying for amenities you'll actually use, or subsidizing a pool and gym you'll never visit?</li>
+        <li>Can you handle variable repair costs on a SFH, or does predictability of HOA fees serve your budgeting style better?</li>
+      </ul>
+    </div>
     <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
       <h3 style="margin:0 0 8px">BRIK takeaway</h3>
       <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
-        Condos trade repairs for rules and shared risk. SFHs trade rules for personal responsibility.
-        The “right” answer depends on your cash reserves, lifestyle, and how much uncertainty you can carry.
+        Neither option is universally better. The condo trades maintenance simplicity for fee exposure and association risk. The SFH trades predictability for full control and full responsibility. Know which tradeoff fits your cash flow, your lifestyle, and your risk tolerance — and make sure you've run the real monthly numbers before choosing.
       </p>
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
         <a class="pill" href="/case-studies">Back to Case Studies</a>

@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Rural vs suburban: commute, cost, and lifestyle math";
+const description = "The cheaper home isn't always cheaper when you run the full numbers.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Yvonne works in Atlanta and is considering two homes: a $340,000 suburban home 20 minutes from her office, or a $240,000 rural home 55 minutes away. The rural home saves $100,000 on the purchase price. But Yvonne commutes five days a week — and hasn't calculated what that daily drive actually costs in time, fuel, vehicle wear, and quality of life.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Rural — the real math</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Lower purchase price and property taxes</li>
+          <li>More land, more space, more privacy</li>
+          <li>Extra 35 min each way = 290+ hours/year commuting</li>
+          <li>Higher fuel, maintenance, and vehicle costs</li>
+          <li>Less access to services, restaurants, healthcare</li>
+          <li>USDA loan may be available (0% down)</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Suburban — the real math</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Higher price but lower transportation costs</li>
+          <li>Time savings translate to real quality of life gains</li>
+          <li>Stronger resale market and buyer pool</li>
+          <li>Closer to amenities, schools, employers</li>
+          <li>Appreciation often stronger in metro-adjacent markets</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Calculate true commute cost: miles × IRS rate (~67¢/mile) × 250 workdays.</li>
+        <li>What is your time worth per hour — multiply that by commute hours per year.</li>
+        <li>Is remote work permanent, hybrid, or could it change? That changes the equation completely.</li>
+        <li>What is the resale market like in the rural area? Smaller buyer pool = harder exit.</li>
+        <li>Are utilities, internet, and services available at the rural property you're considering?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        The sticker price is only part of the cost. Run the full math — transportation, time, lifestyle tradeoffs, and resale potential — before deciding that rural is the deal it appears to be. For some buyers it absolutely is. For others the savings evaporate quickly once the real costs are tallied.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Utility access and infrastructure: what raw land is really missing";
+const description = "Raw land without utilities isn't undeveloped — it's expensive to develop. Know what you're buying into.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Simone purchased a 3-acre lot for $42,000 to build her dream home. After closing she got contractor bids to prep the site. Electric connection from the road: $14,000. Well drilling: $9,500. Septic system installation: $18,000. Driveway grading and gravel: $7,200. She's now $48,700 into a lot that was supposed to cost $42,000 — before a single wall goes up. The land was priced as raw. She didn't fully price what raw meant.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Infrastructure costs to investigate</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Electric service — distance from road to meter location matters</li>
+          <li>Water — public connection fee vs well drilling cost and depth</li>
+          <li>Sewer — public connection vs septic system installation</li>
+          <li>Gas — if desired, is it available or propane only?</li>
+          <li>Internet/fiber — critical for remote workers, often overlooked</li>
+          <li>Driveway — grading, gravel, culvert, and paving costs</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">How to evaluate a raw lot</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Call the utility companies — ask about connection costs to that specific parcel</li>
+          <li>Perc test — required for septic, determines system type and cost</li>
+          <li>Well log search — check county records for nearby well depths</li>
+          <li>Survey — confirm boundaries, easements, and road frontage</li>
+          <li>Site visit with a builder — get infrastructure cost estimates before buying</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>What is your all-in lot cost once infrastructure is included — does the deal still make sense?</li>
+        <li>Is the lot already served by any utilities — even one reduces your cost significantly?</li>
+        <li>Is high-speed internet available — this is now a deal-breaker for many buyers and affects resale.</li>
+        <li>What does the perc test show — a failing perc test may mean no septic permit is possible.</li>
+        <li>Are there deed restrictions or easements that affect where you can build or run utilities?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        The price of raw land is only the beginning. Infrastructure costs are real, significant, and must be estimated before you commit. A lot that looks cheap at $45,000 can cost $90,000+ by the time it's build-ready. Get your infrastructure numbers before you close — not after.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

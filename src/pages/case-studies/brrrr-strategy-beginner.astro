@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "BRRRR strategy: is this realistic for a beginner?";
+const description = "Buy, Renovate, Rent, Refinance, Repeat — powerful in theory. Here's what it actually takes.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Jerome has been watching real estate YouTube for six months and is convinced the BRRRR method is the path to financial freedom. He has $45,000 saved and wants to buy a distressed property, renovate it, rent it out, refinance to pull his money back out, and repeat. His plan is solid in concept. What he hasn't fully priced in is the execution risk at every step.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">How BRRRR works</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Buy distressed property below market value</li>
+          <li>Renovate to raise value to ARV</li>
+          <li>Rent to stabilize income and qualify for refinance</li>
+          <li>Refinance based on new higher value — pull capital out</li>
+          <li>Repeat with recycled capital on next deal</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Where beginners get hurt</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Overestimating ARV — valuing the finish line before the work is done</li>
+          <li>Underestimating rehab costs — scopes always grow</li>
+          <li>Contractor issues causing delays — carrying costs compound</li>
+          <li>Refinance falls short — not enough equity to pull out full capital</li>
+          <li>Undercapitalized — one surprise and the deal stalls</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Do you have enough capital to carry the deal if renovation takes 3 months longer than planned?</li>
+        <li>Have you verified ARV with sold comps of renovated properties — not just active listings?</li>
+        <li>Do you have a reliable, vetted contractor — or are you hoping to find one during the deal?</li>
+        <li>What is the lender's seasoning requirement before a cash-out refinance? (Often 6–12 months.)</li>
+        <li>What happens if you can only pull out 70% of what you put in — can the deal still work?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        BRRRR is a real strategy that real investors use successfully. But it requires accurate ARV analysis, realistic rehab budgets, a reliable contractor, and enough capital to absorb delays. For a beginner, the first deal should be stress-tested at every step before capital is committed. It's not a passive strategy — it's an active project that rewards preparation and punishes optimism.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

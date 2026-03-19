@@ -1,40 +1,152 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+const description = "Real-world scenarios that teach decision-making across every stage of the real estate journey.";
 
-const description =
-  "Real-world scenarios that teach decision-making: offers, inspections, HOA vs repairs, rentability, and more.";
-const studies = [
-  { slug: "offer-strategy-clean-terms-vs-escalation", title: "Offer strategy: clean terms vs escalation", desc: "How to win without overpaying, and what terms actually move the needle." },
-  { slug: "inspection-negotiation-credits-vs-repairs", title: "Inspection negotiation: credits vs repairs", desc: "How to negotiate after inspection without killing the deal or getting shorted." },
-  { slug: "condo-hoa-tradeoff-vs-sfh-repairs", title: "Condo HOA tradeoff vs SFH repairs", desc: "The real cost tradeoff: dues + rules vs maintenance + reserves." },
-  { slug: "special-assessments-protection", title: "Special assessments: what they are + how to protect yourself", desc: "What to check before buying into an HOA to avoid ugly surprises." },
-  { slug: "first-year-ownership-costs", title: "First-year ownership costs: repairs, reserves, reality", desc: "The hidden costs nobody budgets for — and how to plan correctly." },
-  { slug: "rentability-checklist", title: "Rentability checklist: what makes a property easy to rent later", desc: "Even if you buy to live, this protects your future flexibility." },
-  { slug: "preapproval-the-5-numbers", title: "Pre-approval basics: the 5 numbers that matter", desc: "Budget clarity: what you can afford vs what you should buy." },
+const categories = [
+  {
+    label: "First-Time Buyer",
+    studies: [
+      { slug: "max-approval-vs-smart-approval", title: "Max approval vs smart approval", desc: "Getting approved for the most doesn't mean buying the most is smart." },
+      { slug: "renting-vs-buying", title: "Renting vs buying: when the math favors buying", desc: "Renting isn't throwing money away. But at some point, the math shifts." },
+      { slug: "waiting-for-market-vs-buying-now", title: "Waiting for the market vs buying now", desc: "Every month you wait is a financial decision whether you treat it like one or not." },
+      { slug: "moving-from-renting-to-owning", title: "Moving from renting to owning: what nobody tells you", desc: "The mortgage payment is just the beginning." },
+      { slug: "rent-vs-homeownership", title: "Rent vs homeownership: an honest look at both sides", desc: "Neither is universally better. The right answer depends on your life." },
+    ]
+  },
+  {
+    label: "Financially Challenged Buyer",
+    studies: [
+      { slug: "buying-with-bad-credit", title: "Buying with bad credit: realistic options and timelines", desc: "A low credit score doesn't close the door — but it changes the path." },
+      { slug: "credit-not-ready-build-now-vs-buy-later", title: "Credit score not ready: build now vs buy later", desc: "A 40-point difference can mean thousands over the life of a loan." },
+      { slug: "no-savings-want-to-buy", title: "No savings, want to buy: where to actually start", desc: "Zero saved doesn't mean zero options. It means being honest about the timeline." },
+      { slug: "fha-vs-conventional-low-down-payment", title: "FHA vs conventional: low down payment tradeoffs", desc: "Both programs get you in the door. They don't cost the same over time." },
+      { slug: "first-time-homebuyer-programs", title: "First-time homebuyer programs: what's available", desc: "There's money on the table most buyers don't know exists." },
+      { slug: "va-loan-deep-dive", title: "VA loan deep dive: benefits, eligibility, strategy", desc: "The most powerful home financing tool available — and the most underused." },
+    ]
+  },
+  {
+    label: "Offers & Negotiation",
+    studies: [
+      { slug: "offer-strategy-clean-terms-vs-escalation", title: "Offer strategy: clean terms vs escalation clause", desc: "How to win without overpaying — and what terms actually move the needle." },
+      { slug: "bidding-war-when-to-walk-away", title: "Bidding war: when to walk away", desc: "Winning a bidding war at the wrong price is still losing." },
+      { slug: "inspection-negotiation-credits-vs-repairs", title: "Inspection negotiation: credits vs repairs vs price drop", desc: "How you respond to inspection findings shapes your protection." },
+      { slug: "as-is-purchase", title: "As-is purchase: what you're actually agreeing to", desc: "As-is doesn't mean uninspected. It means the seller won't fix anything." },
+      { slug: "seller-concessions", title: "Seller concessions: how to use them strategically", desc: "Concessions can reduce your cash to close — if you ask correctly." },
+    ]
+  },
+  {
+    label: "Property Types",
+    studies: [
+      { slug: "condo-vs-single-family", title: "Condo vs single-family: the true cost comparison", desc: "The purchase price is only the beginning. The monthly numbers tell the real story." },
+      { slug: "condo-hoa-tradeoff-vs-sfh-repairs", title: "Condo HOA tradeoff vs SFH repairs", desc: "Dues and rules vs maintenance and reserves — the real tradeoff." },
+      { slug: "single-family-vs-duplex-first-purchase", title: "Single-family vs duplex for a first purchase", desc: "Your first home doesn't have to just be a place to live." },
+      { slug: "new-construction-vs-resale", title: "New construction vs resale: hidden tradeoffs", desc: "New doesn't always mean better — and the builder's contract isn't in your favor." },
+      { slug: "rural-vs-suburban", title: "Rural vs suburban: commute, cost, and lifestyle math", desc: "The cheaper home isn't always cheaper when you run the full numbers." },
+    ]
+  },
+  {
+    label: "Financing",
+    studies: [
+      { slug: "preapproval-the-5-numbers", title: "Pre-approval: the 5 numbers that actually matter", desc: "Your pre-approval letter has one number on it. You need to understand five." },
+      { slug: "rate-lock-timing", title: "Rate lock timing: when to lock and when to wait", desc: "Locking too early or too late can cost you." },
+      { slug: "construction-loan-basics", title: "Construction loan basics: build vs buy existing", desc: "Building a home sounds like the dream. The financing is more complex." },
+    ]
+  },
+  {
+    label: "Ownership Costs",
+    studies: [
+      { slug: "first-year-ownership-costs", title: "First-year ownership costs: repairs, reserves, reality", desc: "The hidden costs nobody budgets for — and how to plan correctly." },
+      { slug: "special-assessments-protection", title: "Special assessments: what they are and how to protect yourself", desc: "What to check before buying into an HOA to avoid ugly surprises." },
+      { slug: "hoa-deep-dive", title: "HOA deep dive: what to read before you sign", desc: "The HOA documents are boring. Not reading them is expensive." },
+      { slug: "rentability-checklist", title: "Rentability checklist: what makes a property easy to rent later", desc: "Even if you buy to live, this protects your future flexibility." },
+    ]
+  },
+  {
+    label: "Investment & Strategy",
+    studies: [
+      { slug: "house-hacking-duplex-real-numbers", title: "House hacking a duplex: real numbers walkthrough", desc: "House hacking works when the math works. Here's how to actually run it." },
+      { slug: "long-term-rental-analysis", title: "Long-term rental analysis: does this property cash flow?", desc: "The rent number on a listing is marketing. Cash flow is what matters." },
+      { slug: "investor-curious-first-home", title: "Investor-curious buyer: should your first home be a rental?", desc: "Skipping primary residence for investment property — the math is nuanced." },
+      { slug: "brrrr-strategy-beginner", title: "BRRRR strategy: is this realistic for a beginner?", desc: "Powerful in theory. Here's what it actually takes to execute." },
+      { slug: "short-term-rental-airbnb-math", title: "Short-term rental potential: what Airbnb math actually looks like", desc: "STR income is real — but the numbers on the listing aren't yours." },
+    ]
+  },
+  {
+    label: "Timing & Life Decisions",
+    studies: [
+      { slug: "divorce-and-real-estate", title: "Divorce and real estate: what happens to the house", desc: "The house is often the largest asset and the most complicated part." },
+      { slug: "relocating-for-work", title: "Relocating for work: buy or rent in the new city?", desc: "Moving for a job is exciting. Buying in a market you don't know carries risk." },
+      { slug: "inherited-property", title: "Inherited property: sell, rent, or move in?", desc: "Inheriting property feels like a gift. The decision is more complex than it looks." },
+    ]
+  },
+  {
+    label: "Your Realtor & The Relationship",
+    studies: [
+      { slug: "choosing-your-realtor", title: "Choosing your realtor: alignment, vision, what to look for", desc: "The right agent isn't the one with the most yard signs." },
+      { slug: "what-to-expect-from-your-realtor", title: "What to expect from your realtor: roles, responsibilities, red flags", desc: "Most buyers don't know what their agent is actually supposed to do." },
+      { slug: "buyers-agent-vs-listing-agent", title: "Buyer's agent vs listing agent: who represents who", desc: "Walking in without your own agent means the other side has one and you don't." },
+    ]
+  },
+  {
+    label: "Commercial Real Estate",
+    studies: [
+      { slug: "salon-suite-ownership", title: "Salon suite ownership: buy the building your business lives in", desc: "Leasing your suite builds your landlord's equity. Owning it builds yours." },
+      { slug: "retail-storefront-lease-vs-own", title: "Retail storefront: leasing vs owning your commercial space", desc: "Most small business owners lease forever. The ones who own build two assets." },
+    ]
+  },
+  {
+    label: "Land",
+    studies: [
+      { slug: "buying-raw-land", title: "Buying raw land: what due diligence actually looks like", desc: "Land has no roof to inspect. But the due diligence is more complex, not less." },
+    ]
+  },
+  {
+    label: "Renovation & Rehab",
+    studies: [
+      { slug: "flip-vs-gut-vs-teardown", title: "Quick flip vs full gut vs teardown: how to read a property", desc: "The wrong scope decision kills deals. Learn to diagnose before you price." },
+      { slug: "estimating-arv", title: "Estimating ARV: how investors price the finished product", desc: "ARV is where the deal math starts. Get it wrong and everything else is wrong." },
+      { slug: "finding-the-right-contractor", title: "Finding the right contractor: vetting, contracts, red flags", desc: "The wrong contractor can turn a profitable deal into a financial disaster." },
+      { slug: "carrying-costs-renovation", title: "Carrying costs: what the property costs you while you renovate", desc: "Every day a renovation runs long is money out of your profit." },
+    ]
+  },
 ];
 ---
 
 <BaseLayout title="Case Studies | BRIK Real Estate" description={description}>
   <section style="padding:28px 0 10px">
     <h2 style="font-size:34px;line-height:1.1;margin:0 0 10px;letter-spacing:-.5px">Case Studies</h2>
-    <p style="margin:0 0 18px;color:var(--muted);max-width:75ch">{description}</p>
+    <p style="margin:0 0 28px;color:var(--muted);max-width:75ch">{description}</p>
 
-    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr)">
-      {studies.map((s) => (
-        <a class="card" style="grid-column:span 6" href={`/case-studies/${s.slug}`}>
-          <h3 style="margin:0 0 6px;font-size:16px">{s.title}</h3>
-          <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.6">{s.desc}</p>
-          <div style="margin-top:10px;color:var(--muted);font-size:12px">Read →</div>
-        </a>
-      ))}
-    </div>
+    {categories.map((cat) => (
+      <div style="margin-bottom:32px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+          <h3 style="margin:0;font-size:13px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)">{cat.label}</h3>
+          <div style="flex:1;height:1px;background:var(--line)"></div>
+        </div>
+        <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr)">
+          {cat.studies.map((s) => (
+            <a class="card" style="grid-column:span 6" href={`/case-studies/${s.slug}`}>
+              <h3 style="margin:0 0 6px;font-size:16px">{s.title}</h3>
+              <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.6">{s.desc}</p>
+              <div style="margin-top:10px;color:var(--muted);font-size:12px">Read →</div>
+            </a>
+          ))}
+        </div>
+      </div>
+    ))}
 
     <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
       <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.35px;margin-bottom:6px">Want it personalized?</div>
       <p style="margin:0 0 12px;color:var(--muted);font-size:13px">
-        Submit your Intake and we’ll map the right path for your budget, timeline, and goals.
+        Submit your Intake and we'll map the right path for your budget, timeline, and goals.
       </p>
       <a class="pill primary" href="/intake">Submit Intake</a>
     </div>
   </section>
+
+  <style>
+    @media (max-width: 900px) {
+      a.card { grid-column: span 12 !important; }
+    }
+  </style>
 </BaseLayout>

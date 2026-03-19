@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Condo vs single-family: the true cost comparison";
+const description = "The purchase price is only the beginning. The real comparison happens in the monthly numbers.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Jasmine has $220,000 to spend. She can buy a condo at $215,000 in a well-maintained complex with a $380/month HOA, or a single-family home at $219,000 in a nearby neighborhood with no HOA. The condo mortgage is lower. But when she adds the HOA fee, the monthly number shifts. And that's before accounting for what each property costs to own long-term.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Condo — real monthly picture</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Lower purchase price, lower base mortgage</li>
+          <li>HOA adds $200–$600/month in many markets</li>
+          <li>HOA covers exterior maintenance, amenities</li>
+          <li>Special assessment risk if reserves are low</li>
+          <li>Lender restrictions on condo financing (warrantability)</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Single-family — real monthly picture</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Higher purchase price, no HOA fee</li>
+          <li>All maintenance is your responsibility</li>
+          <li>More flexibility — rent, renovate, expand</li>
+          <li>No shared walls, no association rules</li>
+          <li>Land ownership included — long-term appreciation driver</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Add HOA fees to the mortgage payment before comparing — that is your true monthly cost.</li>
+        <li>Request the condo's reserve study — how funded are they for major repairs?</li>
+        <li>What are the rental restrictions? Can you rent it if you need to move?</li>
+        <li>Is the condo complex FHA or VA approved? This affects your financing options and future resale pool.</li>
+        <li>What does your lifestyle actually need — low maintenance or full control?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        A condo at a lower price isn't necessarily cheaper to own. Build the full monthly picture — mortgage, HOA, taxes, insurance — before comparing. And look at the HOA's financial health before you commit. A building with underfunded reserves is a special assessment waiting to happen.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

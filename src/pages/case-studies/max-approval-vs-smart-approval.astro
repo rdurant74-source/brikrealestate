@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "First-time buyer: max approval vs smart approval";
+const description = "Getting approved for the most doesn't mean buying the most is smart.";
+---
+
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Marcus just got pre-approved for $320,000. His lender said he qualifies and his agent is already sending listings at the top of that range. His take-home pay is $4,800/month and he has $18,000 saved. The mortgage at $320K would run $2,100/month before taxes and insurance — leaving $2,700 for everything else. Nobody in the process has asked him if that number feels sustainable.
+      </p>
+    </div>
+
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Buy at $320K</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Maximum house now</li>
+          <li>Minimum financial breathing room</li>
+          <li>One unexpected expense away from stress</li>
+          <li>Reserves nearly gone at closing</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Buy at $240–260K</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Lower payment, margin for real life</li>
+          <li>Reserves intact after closing</li>
+          <li>Room to absorb repairs, job changes</li>
+          <li>Still building equity — just more safely</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>What does your full monthly budget look like after the mortgage payment?</li>
+        <li>Do you have 3–6 months of expenses in reserve after closing — not before?</li>
+        <li>What happens if your income drops or stops for 60 days?</li>
+        <li>Has your lender factored in taxes, insurance, and HOA — or just principal and interest?</li>
+        <li>Is the agent showing you homes at your approval ceiling or your comfort zone?</li>
+        <li>What would you have to give up monthly to afford the higher payment?</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Risks</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Buying at the approval ceiling leaves no margin for real life. One unexpected expense — medical bill, car repair, job interruption — and you're behind on a mortgage. Being house-poor isn't just stressful, it limits every other financial decision you make for years.
+      </p>
+    </div>
+
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        The bank's job is to decide if you can repay the loan. Your job is to decide if you can own comfortably. Those are two very different questions. The best purchase isn't the biggest one you qualify for — it's the one that doesn't make you regret buying within the first year.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

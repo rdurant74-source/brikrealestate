@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Scope creep: what happens when the rehab grows beyond the plan";
+const description = "Every renovation starts with a budget. Scope creep is what happens when reality doesn't cooperate.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Marcus bought a property with a $42,000 rehab budget. Week two, the contractor opens the walls and finds knob-and-tube wiring throughout — $8,500 to remediate. Week four, they pull up the bathroom floor and find subfloor rot from a slow leak — $4,200 to repair. Week six, the roof starts leaking during rain — $6,800. Marcus is now $19,500 over budget before the cosmetic work has even started. His projected $31,000 profit is now $11,500 — if nothing else surfaces.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Common sources of scope creep</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Hidden electrical issues — old wiring, code violations</li>
+          <li>Plumbing problems found after walls are opened</li>
+          <li>Subfloor or structural damage from past moisture</li>
+          <li>Mold found in walls, crawlspace, or attic</li>
+          <li>Permit requirements triggering additional upgrades</li>
+          <li>Contractor change orders for unforeseen conditions</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">How to protect yourself</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Budget 15-20% contingency specifically for unknowns</li>
+          <li>Do invasive due diligence before closing — open walls if needed</li>
+          <li>Get a sewer scope, thermal imaging, and structural inspection</li>
+          <li>Require written change order approval before contractor proceeds</li>
+          <li>Structure your deal so it still works at 20% over budget</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>What is your break-even point — at what total cost does this project stop making sense?</li>
+        <li>Do you have reserve capital to absorb scope creep without stopping the project mid-renovation?</li>
+        <li>A half-finished renovation is often worse than not starting — make sure you can see it through.</li>
+        <li>How did your contractor handle the change order conversation — did they communicate proactively or surprise you?</li>
+        <li>Would more invasive pre-purchase due diligence have revealed these issues before you committed?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Scope creep is not a question of if — it's a question of how much. Budget for it explicitly, do invasive due diligence before committing, and structure every deal so it still works when the unexpected happens. Because it will.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

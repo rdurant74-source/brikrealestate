@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Bidding war: when to walk away";
+const description = "Winning a bidding war at the wrong price is still losing.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Andre has been searching for four months. He's lost three offers already. Now he's in a bidding war on a home listed at $298,000. Offers are due in 24 hours and his agent says there are five competing offers. He's emotionally attached and considering going to $340,000 — $42,000 over list — with no appraisal contingency. His gut says win at all costs. His math should say something different.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Signals to keep bidding</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Comps support the price you're considering</li>
+          <li>You have reserves to cover an appraisal gap</li>
+          <li>The property genuinely fits your long-term needs</li>
+          <li>You understand and accept the financial risk</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Signals to walk away</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Price has exceeded what comps can support</li>
+          <li>You're waiving protections you can't afford to lose</li>
+          <li>You're bidding to win, not because it's the right house</li>
+          <li>The monthly payment at this price strains your budget</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>What is your absolute walk-away number — and did you set it before emotions got involved?</li>
+        <li>What do the comps support? If you waive the appraisal contingency, can you cover the gap in cash?</li>
+        <li>Are you bidding because this is the right house, or because losing again feels unbearable?</li>
+        <li>What does the monthly payment look like at your max bid — is it sustainable?</li>
+        <li>If you overpay and need to sell in 3 years, will the market support your exit?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Risks</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Bidding war psychology is real. When you've lost several offers, the next one feels like must-win. That emotional state leads to decisions that look rational in the moment and painful six months later. The home you overpay for doesn't care about your feelings — it just becomes harder to sell, refinance, or exit.
+      </p>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Set your walk-away number before the bidding starts — not during it. The market will produce another house. Overpaying for the wrong one at the wrong terms can cost years of financial recovery. Losing a bidding war is disappointing. Winning one at the wrong price is worse.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

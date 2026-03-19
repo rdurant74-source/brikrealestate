@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Down payment assistance: grants, loans, and how to stack them";
+const description = "DPA programs can be combined — but most buyers don't know that. Here's how stacking works.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Maya earns $52,000/year, has a 668 credit score, and has $7,000 saved. She needs roughly $13,000 to cover a 3.5% FHA down payment and closing costs on a $210,000 home. She knows about Georgia Dream but doesn't realize that Georgia Dream can be layered with a local county grant, an employer assistance program, and a lender credit — potentially covering her entire gap without touching her savings. Most buyers use one program. Strategic buyers stack them.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Programs that can be stacked</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Georgia Dream — state-level DPA up to $10,000+</li>
+          <li>County or city grants — varies by municipality</li>
+          <li>Employer-assisted housing programs — check with HR</li>
+          <li>Lender credits — rate tradeoff for closing cost offset</li>
+          <li>Seller concessions — up to 3-6% depending on loan type</li>
+          <li>Nonprofit DPA — organizations like NACA, Invest Atlanta</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Stacking rules to know</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Not all programs can be combined — verify with lender</li>
+          <li>Total assistance cannot exceed actual closing costs and down payment</li>
+          <li>Some programs require specific lenders — shop for rate among approved lenders</li>
+          <li>DPA second mortgages may have repayment triggers at sale or refinance</li>
+          <li>Some grants are forgivable after a set occupancy period</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Start with your state program (Georgia Dream) then layer local programs on top.</li>
+        <li>Ask your lender specifically: what DPA programs do you work with, and can they be combined?</li>
+        <li>Check with your employer — many large employers offer housing assistance that goes unclaimed.</li>
+        <li>Understand the repayment terms on every program before accepting — some have clawback provisions.</li>
+        <li>Programs have funding limits and close when the money runs out — apply early in the year.</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Down payment assistance isn't one program — it's a landscape of overlapping programs that strategic buyers layer together. State, county, employer, lender, and nonprofit sources can all contribute toward your closing costs. Know what's available, understand the terms, and work with a lender who knows how to stack them properly.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

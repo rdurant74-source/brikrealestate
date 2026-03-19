@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "No savings, want to buy: where to actually start";
+const description = "Zero saved doesn't mean zero options. It means being honest about the timeline and the plan.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Tanya earns $55,000/year, has a 661 credit score, and has essentially no savings. She wants to buy a home. She's been told she needs 20% down and has given up on the idea. What she doesn't know is that there are programs that require as little as 0–3.5% down, and that closing cost assistance may be available in her county. She's not as far from buying as she thinks — but she needs a realistic 12-month plan.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Low/no down payment options</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>USDA loan: 0% down in eligible areas</li>
+          <li>VA loan: 0% down for qualifying veterans</li>
+          <li>FHA: 3.5% down with 580+ credit score</li>
+          <li>Conventional 97: 3% down with strong credit</li>
+          <li>Georgia Dream DPA: assistance up to $10,000+</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">A realistic 12-month savings plan</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Set a specific savings target: down payment + closing costs + 3-month reserve</li>
+          <li>Automate a monthly transfer to a dedicated savings account</li>
+          <li>Reduce one recurring expense meaningfully — not everything</li>
+          <li>Apply for DPA programs that stack with low down payment loans</li>
+          <li>Simultaneously build credit to improve your rate options</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Low down payment programs exist — but you still need reserves after closing for repairs and emergencies.</li>
+        <li>What is a realistic monthly savings amount given your current income and expenses?</li>
+        <li>Are there opportunities to increase income in the next 12 months — side work, overtime, promotion?</li>
+        <li>Have you contacted a HUD-approved housing counselor? Many offer free guidance and program navigation.</li>
+        <li>Is your credit score something you can meaningfully improve in the next 6–12 months?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Starting from zero savings is a starting point, not a permanent position. The buyers who get there are the ones who make a specific plan, execute it consistently, and use every available program. 12 months of focused effort can change your position completely. Start the plan today.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

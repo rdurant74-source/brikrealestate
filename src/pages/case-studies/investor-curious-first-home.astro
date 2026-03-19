@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Investor-curious buyer: should your first home be a rental?";
+const description = "Skipping your primary residence and going straight to investment property sounds smart. The math is more nuanced.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Marcus has been studying real estate investing for a year. He currently rents for $1,200/month and wants to skip buying a primary residence entirely — instead buying a rental property and letting tenants build equity for him while he continues renting. It sounds efficient on paper. But the financing terms, tax implications, and capital requirements are different for investment properties than owner-occupied homes.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Investment property first</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Requires 15–25% down — significantly more cash upfront</li>
+          <li>Higher interest rate than owner-occupied financing</li>
+          <li>Rental income potential from day one</li>
+          <li>No owner-occupancy requirement — full flexibility</li>
+          <li>Depreciation and expense deductions available</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Primary residence first (house hack option)</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>3–5% down with owner-occupied financing</li>
+          <li>Lower rate — better terms on the same dollar amount</li>
+          <li>House hacking turns primary into investment vehicle</li>
+          <li>Build equity and credit history simultaneously</li>
+          <li>More capital preserved for future deals</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Do you have 20–25% down plus reserves for an investment property — or would that deplete your capital?</li>
+        <li>What does the investment property cash flow at realistic assumptions with the higher rate?</li>
+        <li>Would a house hack on a duplex let you invest AND reduce your housing cost simultaneously?</li>
+        <li>Are you prepared for the landlord responsibilities that come with a pure investment property?</li>
+        <li>What is your timeline — and does starting with a primary give you more flexibility to grow?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Going straight to investment property is valid — but it requires more capital and comes at worse financing terms. For many first-time buyers, a house hack on a duplex is the best of both worlds: owner-occupied financing, rental income, and an investment education all in one move. Know your capital position before choosing your path.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

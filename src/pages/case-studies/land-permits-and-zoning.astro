@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Land permits and zoning: what you must verify before you close";
+const description = "Zoning tells you what's allowed. Permits tell you what's possible. Both must be checked before you buy land.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Simone purchased a 2-acre lot in a county outside Atlanta for $38,000, intending to build a duplex. After closing, she discovered the parcel is zoned R-1 — single-family residential only. A duplex requires R-2 zoning or a special use permit, which the county has denied twice to other applicants on the same road. She paid for land she can't use as intended. A 30-minute call to the county planning office before closing would have prevented this entirely.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">What to verify before closing on land</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Current zoning classification and permitted uses</li>
+          <li>Minimum lot size requirements for intended structure</li>
+          <li>Setback requirements — how close to boundaries can you build?</li>
+          <li>Height restrictions and density limits</li>
+          <li>Flood zone designation — FEMA map check</li>
+          <li>Wetlands or environmental restrictions on the parcel</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Permit considerations</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Building permit required before any construction</li>
+          <li>Septic permit if no public sewer connection</li>
+          <li>Well permit if no public water</li>
+          <li>Driveway and road access permits</li>
+          <li>Grading and stormwater permits in some jurisdictions</li>
+          <li>Some counties have development moratoriums — verify current status</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Call the county planning and zoning office directly — they will tell you exactly what is permitted.</li>
+        <li>Ask specifically: "Can I build [your intended use] on this parcel?" Get the answer in writing if possible.</li>
+        <li>A variance or rezoning application is possible — but it's not guaranteed and can take 6-18 months.</li>
+        <li>Include a zoning contingency in your land purchase contract — so you can exit if zoning doesn't support your use.</li>
+        <li>Hire a land use attorney if your intended use requires a variance or special use permit.</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Never buy land without confirming that your intended use is legally permitted. Zoning verification takes one phone call. Not making it can cost tens of thousands of dollars and years of frustration. Confirm zoning, confirm permits, confirm there are no environmental restrictions — before you close, not after.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,51 +1,63 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-const title = "Offer strategy: clean terms vs escalation";
-const description = "How to win without overpaying — and which terms actually matter.";
+const title = "Offer strategy: clean terms vs escalation clause";
+const description = "How to win without overpaying — and what terms actually move the needle.";
 ---
-
 <BaseLayout title={`${title} | BRIK`} description={description}>
   <section style="padding:28px 0 10px">
     <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
-    <p style="margin:0 0 18px;color:var(--muted);max-width:80ch">{description}</p>
-
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
     <div class="card">
       <h3 style="margin:0 0 8px">Scenario</h3>
       <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
-        You found “the one.” There are multiple offers. You want to win, but you don’t want to get played or overpay.
+        Keisha found a home listed at $310,000. Her agent says there are likely multiple offers coming. She has two strategies on the table — submit a clean offer at $325,000 with strong terms and a short due diligence period, or submit at $310,000 with an escalation clause up to $335,000. Both could win. They carry very different risks.
       </p>
     </div>
-
     <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
       <div class="card" style="grid-column:span 6">
-        <h3 style="margin:0 0 8px">Clean terms (often wins quietly)</h3>
+        <h3 style="margin:0 0 8px">Clean offer strategy</h3>
         <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
-          <li>Strong earnest money (signals commitment)</li>
-          <li>Short due diligence (if you can inspect fast)</li>
-          <li>Solid lender + quick close timeline</li>
-          <li>Clear appraisal plan (if you’re financing)</li>
+          <li>Fixed price — seller knows exactly what they're getting</li>
+          <li>Fewer moving parts — easier to evaluate against other offers</li>
+          <li>Strong terms signal a serious, prepared buyer</li>
+          <li>Works well when you know the true market value</li>
         </ul>
       </div>
       <div class="card" style="grid-column:span 6">
-        <h3 style="margin:0 0 8px">Escalation clause (use carefully)</h3>
+        <h3 style="margin:0 0 8px">Escalation clause strategy</h3>
         <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
-          <li>Set a real max you can live with</li>
-          <li>Require proof of the competing offer</li>
-          <li>Don’t escalate past appraisal reality</li>
-          <li>Know you may “win” and still lose value</li>
+          <li>Automatically beats competing offers up to your cap</li>
+          <li>Signals you want it but caps your exposure</li>
+          <li>Can backfire if seller uses it to anchor negotiations</li>
+          <li>Reveals your ceiling — some sellers use that information</li>
         </ul>
       </div>
     </div>
-
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>What do the comps actually support — is the list price accurate or low?</li>
+        <li>How competitive is this market — days on market, list-to-sale ratios?</li>
+        <li>What terms matter most to the seller — closing date, possession, certainty of close?</li>
+        <li>Is your financing rock solid — pre-approval letter ready, lender responsive?</li>
+        <li>What happens if you win at $335K and the appraisal comes in at $310K?</li>
+        <li>Are you prepared to cover an appraisal gap if you escalate aggressively?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Risks</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Escalation clauses expose your ceiling. In a hot market, a seller may counter at your cap even without competing offers. Clean offers at a strong price with tight terms can win without revealing your hand. Whichever path you choose, make sure your appraisal contingency protects you if the property doesn't value out.
+      </p>
+    </div>
     <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
       <h3 style="margin:0 0 8px">BRIK takeaway</h3>
       <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
-        Price helps. But in hot situations, the offer that feels easiest to close often wins.
-        Clean terms + credible financing can beat a higher number with uncertainty.
+        Winning an offer isn't just about price. Sellers want certainty — that the deal closes, on time, without drama. A clean offer from a well-qualified buyer with strong terms often beats a higher number with shaky financing or excessive contingencies. Know what the seller needs and structure your offer accordingly.
       </p>
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
         <a class="pill" href="/case-studies">Back to Case Studies</a>
-        <a class="pill primary" href="/intake">Submit Intake (build my strategy)</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
       </div>
     </div>
   </section>

@@ -1,0 +1,58 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Buyer's agent vs listing agent: who represents who";
+const description = "Walking into a listing without your own agent is like going to court without a lawyer — the other side has one.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Janelle saw a home on Zillow and called the number on the listing. The agent who answered was friendly, showed her the home, and offered to help her write an offer. Janelle assumed this person was working for her. She wasn't. That agent represented the seller. Janelle submitted an offer without her own representation — and had no one in her corner during negotiations.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Listing agent (seller's agent)</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Hired by and legally represents the seller</li>
+          <li>Obligated to get the best price and terms for the seller</li>
+          <li>Cannot share information that harms the seller's position</li>
+          <li>May offer dual agency — representing both sides (risky for buyer)</li>
+          <li>Friendly doesn't mean neutral</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Buyer's agent</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Represents you and your interests exclusively</li>
+          <li>Obligated to negotiate on your behalf</li>
+          <li>Can access MLS data, comps, and market intel for your benefit</li>
+          <li>Costs you nothing in most transactions — paid from seller proceeds</li>
+          <li>Your advocate from offer through closing</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Always have your own buyer's agent before contacting listing agents or attending open houses.</li>
+        <li>Dual agency — one agent representing both buyer and seller — is legal in Georgia but rarely benefits the buyer.</li>
+        <li>The listing agent's job is to sell the home for the most money. That is not aligned with your goal.</li>
+        <li>A buyer's agent is typically compensated from the seller's proceeds — it costs you nothing to have representation.</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Never go unrepresented in a real estate transaction. The listing agent is professional, experienced, and working for the other side. You deserve someone equally capable working for yours. Get a buyer's agent before you start seriously touring homes.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Downsizing: equity extraction and the real tradeoffs";
+const description = "Selling a larger home to buy a smaller one seems straightforward. The financial and emotional math is more complex.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+    <div class="card">
+      <h3 style="margin:0 0 8px">Scenario</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Margaret and her husband are empty nesters. Their 4BR home is worth $485,000 with $95,000 left on the mortgage — $390,000 in equity. They want to downsize to a low-maintenance condo around $275,000, pocket the equity difference, and reduce their monthly expenses. The math sounds simple. But between capital gains, HOA fees, moving costs, and emotional readiness, the decision has more dimensions than the numbers alone suggest.
+      </p>
+    </div>
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">Financial benefits of downsizing</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Free up equity — potentially $100,000-$300,000+ in cash</li>
+          <li>Lower or eliminated mortgage payment</li>
+          <li>Lower property taxes, insurance, utilities</li>
+          <li>Reduced maintenance responsibility</li>
+          <li>Capital gains exclusion: $500K for married couples on primary residence</li>
+        </ul>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">What to watch out for</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+          <li>Capital gains above exclusion thresholds may be taxable</li>
+          <li>HOA fees on the new property can offset monthly savings</li>
+          <li>Moving costs, staging, and transaction fees reduce net proceeds</li>
+          <li>Emotional attachment to the family home — plan for this</li>
+          <li>Condo market liquidity may differ from single-family market</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">Things to consider</h3>
+      <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+        <li>Have you consulted a CPA about the capital gains implications on your specific situation?</li>
+        <li>What is the all-in monthly cost of the new property — mortgage, HOA, taxes, insurance?</li>
+        <li>What will you do with the freed equity — and is that plan solid before you sell?</li>
+        <li>Is downsizing driven by genuine lifestyle preference or financial pressure — both are valid but the process differs.</li>
+        <li>Have you researched the HOA health of the target condo or community?</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK takeaway</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        Downsizing done right is a powerful wealth move. The equity freed can fund retirement, investment, or simply peace of mind. But the decision requires tax planning, honest lifestyle evaluation, and clarity on what you're moving into — not just what you're leaving behind.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="pill" href="/case-studies">Back to Case Studies</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
