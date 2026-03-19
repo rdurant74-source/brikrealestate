@@ -2,6 +2,8 @@
 const {
   title = "BRIK Real Estate",
   description = "Build your next move, BRIK by BRIK.",
+  heroTitle,
+  heroSub,
 } = Astro.props;
 ---
 
@@ -12,123 +14,525 @@ const {
     <title>{title}</title>
     <meta name="description" content={description} />
     <style>
-      :root{
-        --bg:#0b0d10;
-        --text:#e9eef5;
-        --muted:#b7c0cc;
-        --line:rgba(255,255,255,.10);
-        --accent:#2f6bff;
+      :root {
+        --bg:            #f0f0f2;
+        --bg-card:       #ffffff;
+        --bg-card-alt:   #ebebed;
+        --text:          #0f172a;
+        --muted:         #4b5563;
+        --muted-light:   #9ca3af;
+        --line:          rgba(29,78,216,.10);
+        --accent:        #1d4ed8;
+        --accent-soft:   #3b82f6;
+        --accent-bg:     rgba(29,78,216,.07);
+        --accent-border: rgba(29,78,216,.22);
+        --shadow:        0 1px 3px rgba(0,0,0,.07), 0 4px 12px rgba(0,0,0,.05);
+        --shadow-hover:  0 4px 18px rgba(0,0,0,.11), 0 8px 24px rgba(0,0,0,.07);
+        --nav-bg:        rgba(240,240,242,.94);
+        --pill-bg:       rgba(15,23,42,.05);
+        --pill-border:   rgba(15,23,42,.13);
+        --hero-text:     #0f172a;
+        --hero-overlay:  rgba(240,240,242,.45);
       }
-      *{box-sizing:border-box;margin:0;padding:0}
-      html, body {
-        width:100%;
-        min-height:100vh;
+
+      [data-theme="dark"] {
+        --bg:            #0b0d11;
+        --bg-card:       #13161e;
+        --bg-card-alt:   rgba(255,255,255,.03);
+        --text:          #e8edf4;
+        --muted:         #8b96a8;
+        --muted-light:   #5a6578;
+        --line:          rgba(255,255,255,.08);
+        --accent:        #3b82f6;
+        --accent-soft:   #60a5fa;
+        --accent-bg:     rgba(59,130,246,.10);
+        --accent-border: rgba(59,130,246,.28);
+        --shadow:        0 1px 4px rgba(0,0,0,.35), 0 4px 14px rgba(0,0,0,.25);
+        --shadow-hover:  0 4px 20px rgba(0,0,0,.45), 0 8px 28px rgba(0,0,0,.30);
+        --nav-bg:        rgba(11,13,17,.94);
+        --pill-bg:       rgba(255,255,255,.05);
+        --pill-border:   rgba(255,255,255,.09);
+        --hero-text:     #e8edf4;
+        --hero-overlay:  rgba(11,13,17,.55);
       }
-      body{
-        font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;
-        background:
-          radial-gradient(1200px 600px at 20% 0%, rgba(47,107,255,.25), transparent 55%),
-          radial-gradient(900px 500px at 80% 10%, rgba(255,255,255,.08), transparent 55%),
-          var(--bg);
-        color:var(--text);
+
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+
+      body {
+        font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.65;
+        color: var(--text);
+        background-color: var(--bg);
+        min-height: 100vh;
+        transition: background-color .3s ease, color .3s ease;
       }
-      a{color:inherit;text-decoration:none}
-      .container{
-        width:100%;
-        max-width:1100px;
-        margin:0 auto;
-        padding:0 24px;
+
+      a { color: inherit; text-decoration: none; }
+
+      /* ============================================================
+         HERO SECTION
+      ============================================================ */
+      .hero-section {
+        width: 100%;
+        min-height: 200px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
-      .nav{
-        display:flex;
-        align-items:center;
-        justify-content:space-between;
-        padding:14px 0;
-        border-bottom:1px solid var(--line);
+
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center 42%;
+        background-repeat: no-repeat;
+        transition: opacity .4s ease;
       }
-      .brand{display:flex;gap:10px;align-items:center}
-      .logo{
-        width:34px;height:34px;border-radius:10px;
-        background:linear-gradient(135deg, rgba(47,107,255,.95), rgba(47,107,255,.35));
-        display:grid;place-items:center;font-weight:800;
+
+      /* Overlay for readability */
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: var(--hero-overlay);
+        z-index: 1;
       }
-      .navlinks{display:flex;gap:10px;flex-wrap:wrap}
-      .pill{
-        padding:10px 14px;
-        border:1px solid var(--line);
-        border-radius:999px;
-        background:rgba(255,255,255,.03);
+
+      /* Left/right edge fades */
+      .hero-fade-left,
+      .hero-fade-right {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 180px;
+        z-index: 2;
       }
-      .pill.primary{
-        border-color:rgba(47,107,255,.55);
-        background:rgba(47,107,255,.16);
+
+      .hero-fade-left {
+        left: 0;
+        background: linear-gradient(to right, var(--bg), transparent);
       }
-      .card{
-        border:1px solid var(--line);
-        border-radius:18px;
-        background:rgba(17,21,27,.75);
-        padding:18px;
+
+      .hero-fade-right {
+        right: 0;
+        background: linear-gradient(to left, var(--bg), transparent);
       }
-      footer{
-        margin-top:28px;
-        padding:22px 0;
-        border-top:1px solid var(--line);
-        color:var(--muted);
-        font-size:12px;
+
+      /* Top/bottom fades */
+      .hero-fade-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background: linear-gradient(to bottom, var(--bg), transparent);
+        z-index: 2;
+      }
+
+      .hero-fade-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+        background: linear-gradient(to top, var(--bg), transparent);
+        z-index: 2;
+      }
+
+      /* Hero text content */
+      .hero-content {
+        position: relative;
+        z-index: 3;
+        text-align: center;
+        padding: 40px 28px;
+        max-width: 780px;
+      }
+
+      .hero-tagline {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: .25em;
+        text-transform: uppercase;
+        color: var(--accent);
+        text-shadow: 0 1px 8px rgba(255,255,255,.5);
+        background: var(--hero-overlay);
+        padding: 8px 20px;
+        border-radius: 999px;
+        border: 1px solid var(--accent-border);
+        backdrop-filter: blur(8px);
+      }
+
+      /* ============================================================
+         LAYOUT
+      ============================================================ */
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 28px;
+      }
+
+      /* ============================================================
+         NAV
+      ============================================================ */
+      .nav-wrapper {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: var(--nav-bg);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 0;
+        gap: 20px;
+      }
+
+      .brand {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        flex-shrink: 0;
+        text-decoration: none;
+      }
+
+      .brand-brik {
+        font-size: 26px;
+        font-weight: 900;
+        letter-spacing: .16em;
+        color: var(--text);
+        text-transform: uppercase;
+        line-height: 1;
+      }
+
+      .brand-brik .k { color: var(--accent); }
+
+      .brand-sub {
+        font-size: 10.5px;
+        font-weight: 600;
+        letter-spacing: .28em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .navlinks {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .theme-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 999px;
+        border: 1px solid var(--pill-border);
+        background: var(--pill-bg);
+        cursor: pointer;
+        font-size: 15px;
+        flex-shrink: 0;
+        transition: background .2s, border-color .2s;
+        user-select: none;
+      }
+
+      .theme-toggle:hover {
+        background: var(--accent-bg);
+        border-color: var(--accent-border);
+      }
+
+      /* ============================================================
+         PILLS
+      ============================================================ */
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        padding: 9px 16px;
+        border: 1px solid var(--pill-border);
+        border-radius: 999px;
+        background: var(--pill-bg);
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+        cursor: pointer;
+        transition: background .15s, border-color .15s, transform .1s, box-shadow .15s, color .15s;
+        white-space: nowrap;
+        font-family: inherit;
+      }
+
+      .pill:hover {
+        background: var(--accent-bg);
+        border-color: var(--accent-border);
+        color: var(--accent);
+        transform: translateY(-1px);
+        box-shadow: var(--shadow);
+      }
+
+      .pill.primary {
+        border-color: var(--accent-border);
+        background: var(--accent-bg);
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      .pill.primary:hover {
+        background: var(--accent);
+        color: #ffffff;
+        border-color: var(--accent);
+        box-shadow: 0 4px 16px rgba(29,78,216,.28);
+        transform: translateY(-1px);
+      }
+
+      /* ============================================================
+         CARDS
+      ============================================================ */
+      .card {
+        border: 1px solid var(--line);
+        border-left: 3px solid var(--accent-border);
+        border-radius: 20px;
+        background: var(--bg-card);
+        padding: 22px;
+        box-shadow: var(--shadow);
+        transition: box-shadow .2s, transform .2s, border-color .2s;
+      }
+
+      a.card:hover {
+        box-shadow: var(--shadow-hover);
+        transform: translateY(-2px);
+        border-color: var(--accent-border);
+        border-left-color: var(--accent);
+      }
+
+      /* ============================================================
+         TYPOGRAPHY
+      ============================================================ */
+      h1, h2, h3, h4, h5 { color: var(--text); line-height: 1.2; }
+      h2 { font-size: 32px; font-weight: 800; letter-spacing: -.5px; margin-bottom: 10px; }
+      h3 { font-size: 17px; font-weight: 700; letter-spacing: -.2px; }
+      h4 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .55px; color: var(--muted); }
+      p { color: var(--muted); line-height: 1.75; }
+      strong { color: var(--text); font-weight: 700; }
+      ul, ol { padding-left: 20px; color: var(--muted); }
+      li { line-height: 1.75; margin-bottom: 3px; }
+
+      /* ============================================================
+         FORM ELEMENTS
+      ============================================================ */
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        background: var(--bg-card);
+        color: var(--text);
+        font-size: 14px;
+        font-family: inherit;
+        transition: border-color .15s, box-shadow .15s;
+        outline: none;
+      }
+
+      input:focus, select:focus, textarea:focus {
+        border-color: var(--accent-border);
+        box-shadow: 0 0 0 3px var(--accent-bg);
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        accent-color: var(--accent);
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+        cursor: pointer;
+      }
+
+      label {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        color: var(--muted);
+        font-size: 14px;
+        cursor: pointer;
+        line-height: 1.5;
+        padding: 5px 0;
+      }
+
+      label:hover { color: var(--text); }
+      fieldset { border: 0; padding: 0; margin: 0; }
+
+      legend {
+        font-weight: 700;
+        font-size: 15px;
+        color: var(--text);
+        margin-bottom: 10px;
+        line-height: 1.4;
+        display: block;
+        width: 100%;
+      }
+
+      button { font-family: inherit; cursor: pointer; }
+
+      /* ============================================================
+         MAIN + FOOTER
+      ============================================================ */
+      main { padding: 32px 0 52px; }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        padding: 28px 0 24px;
+      }
+
+      .footer-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+      }
+
+      .footer-inner img { display: block; object-fit: contain; opacity: .5; transition: opacity .2s; }
+      .footer-powered { font-size: 12px; color: var(--muted); font-weight: 500; }
+      .footer-disclaimer { font-size: 11px; color: var(--muted-light); max-width: 640px; line-height: 1.65; }
+
+      /* ============================================================
+         RESPONSIVE
+      ============================================================ */
+      @media (max-width: 900px) {
+        h2 { font-size: 26px; }
+        .container { padding: 0 18px; }
+        .card { padding: 16px; border-radius: 16px; }
+        .navlinks .pill { padding: 7px 12px; font-size: 12px; }
+        .hero-section { min-height: 160px; }
+        .hero-content h1 { font-size: 30px; }
+        .hero-fade-left, .hero-fade-right { width: 80px; }
+      }
+
+      @media (max-width: 640px) {
+        .nav { flex-wrap: wrap; }
+        .navlinks { width: 100%; gap: 5px; }
+        main { padding: 20px 0 36px; }
+        .brand-brik { font-size: 22px; }
+        .hero-section { min-height: 160px; }
+        .hero-content h1 { font-size: 24px; }
+        .hero-fade-left, .hero-fade-right { width: 40px; }
       }
     </style>
   </head>
 
   <body>
-    <div class="container">
-      <div class="nav">
-        <a class="brand" href="/">
-          <div style="display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid var(--line)">
-            <img
-              src="/images/brik-logo.png"
-              alt="BRIK Real Estate logo"
-              width="44"
-              height="44"
-              style="display:block;object-fit:contain"
-            />
-          </div>
-          <div>
-            <strong>BRIK Real Estate</strong><br />
-            <small style="color:var(--muted)">BRIK by BRIK</small>
-          </div>
-        </a>
-        <div class="navlinks">
-          <a class="pill" href="/start">Start</a>
-          <a class="pill" href="/education">Education</a>
-          <a class="pill" href="/glossary">Glossary</a>
-          <a class="pill" href="/market-intel">GA Intel</a>
-          <a class="pill primary" href="/intake">Intake</a>
-          <a class="pill" href="/about">About</a>
-        </div>
-      </div>
+    <script is:inline>
+      (function() {
+        try {
+          const saved = localStorage.getItem('brik-theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+        } catch(e) {}
+      })();
+    </script>
 
+    <!-- NAV -->
+    <div class="nav-wrapper">
+      <div class="container">
+        <nav class="nav">
+          <a class="brand" href="/">
+            <div class="brand-brik">BRI<span class="k">K</span></div>
+            <div class="brand-sub">Real Estate</div>
+          </a>
+          <div class="navlinks">
+            <a class="pill" href="/start">Start</a>
+            <a class="pill" href="/education">Education</a>
+            <a class="pill" href="/glossary">Glossary</a>
+            <a class="pill" href="/market-intel">GA Intel</a>
+            <a class="pill primary" href="/intake">Intake</a>
+            <a class="pill" href="/about">About</a>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+              <span id="themeIcon">🌙</span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- HERO SECTION — full width image with page title overlaid -->
+    <div class="hero-section">
+      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-fade-left"></div>
+      <div class="hero-fade-right"></div>
+      <div class="hero-fade-top"></div>
+      <div class="hero-fade-bottom"></div>
+      <div class="hero-content">
+        <div class="hero-tagline">Building Realty &amp; Investment Knowledge</div>
+      </div>
+    </div>
+
+    <!-- PAGE CONTENT -->
+    <div class="container">
       <main>
         <slot />
       </main>
-
-      <footer>
-        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center">
-          <img
-            src="/images/cj-logo.png"
-            alt="CJ Property Solutions LLC logo"
-            width="160"
-            height="64"
-            style="display:block;object-fit:contain"
-          />
-          <div style="color:var(--muted)">
-            Powered by <strong style="color:var(--text)">CJ Property Solutions LLC</strong>
-          </div>
-          <div style="max-width:760px;color:var(--muted)">
-            Educational content is general information and not financial/legal advice.
-          </div>
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <img src="/images/cj-logo.png" alt="CJ Property Solutions LLC" width="140" height="56" />
+          <div class="footer-powered">Powered by <strong>CJ Property Solutions LLC</strong></div>
+          <div class="footer-disclaimer">Educational content is general information and not financial or legal advice.</div>
         </div>
       </footer>
-
     </div>
+
+    <!-- THEME + HERO IMAGE SCRIPT -->
+    <script is:inline>
+      function applyHeroImage(theme) {
+        var heroBg = document.getElementById('heroBg');
+        if (!heroBg) return;
+        heroBg.style.backgroundImage = theme === 'dark'
+          ? "url('/images/Hero-Dark.png')"
+          : "url('/images/Hero-Light.png')";
+      }
+
+      function getTheme() {
+        return document.documentElement.getAttribute('data-theme') || 'light';
+      }
+
+      function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        try { localStorage.setItem('brik-theme', theme); } catch(e) {}
+        var icon = document.getElementById('themeIcon');
+        if (icon) icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+        applyHeroImage(theme);
+      }
+
+      // Apply immediately
+      applyHeroImage(getTheme());
+
+      // Also apply on DOM ready in case element wasn't available
+      document.addEventListener('DOMContentLoaded', function() {
+        var icon = document.getElementById('themeIcon');
+        var toggle = document.getElementById('themeToggle');
+        var theme = getTheme();
+
+        if (icon) icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+        applyHeroImage(theme);
+
+        if (toggle) {
+          toggle.addEventListener('click', function() {
+            setTheme(getTheme() === 'dark' ? 'light' : 'dark');
+          });
+        }
+      });
+    </script>
+
   </body>
 </html>

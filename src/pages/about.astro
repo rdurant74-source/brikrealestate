@@ -1,42 +1,96 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const description = "Rudolph “Realtor Rudy” Durant — licensed Georgia Realtor. Powered by CJ Property Solutions LLC.";
+const description = "BRIK Real Estate exists to bridge the gap between realty and reality — making the power of property ownership accessible to anyone who desires it.";
 ---
 
 <BaseLayout title="About | BRIK Real Estate" description={description}>
   <section style="padding:28px 0 10px">
-    <h2 style="font-size:34px;line-height:1.1;margin:0 0 10px;letter-spacing:-.5px">About</h2>
-    <p style="margin:0 0 18px;color:var(--muted);max-width:75ch">{description}</p>
+    <h2 style="font-size:34px;line-height:1.1;margin:0 0 10px;letter-spacing:-.5px">About BRIK</h2>
+    <p style="margin:0 0 28px;color:var(--muted);max-width:75ch">{description}</p>
 
+    <!-- Mission Statement -->
+    <div class="card" style="margin-bottom:14px;border-color:rgba(47,107,255,.35);background:rgba(47,107,255,.08)">
+      <div style="font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);margin-bottom:10px">The Mission</div>
+      <h3 style="margin:0 0 12px;font-size:22px;line-height:1.3;letter-spacing:-.3px">
+        Building Realty and Investment Knowledge — one BRIK at a time.
+      </h3>
+      <p style="margin:0;color:var(--muted);font-size:14px;line-height:1.8">
+        BRIK exists to bridge the gap between realty and reality. Between what real estate actually is and what most people have been told — or not told — about it. Between the opportunity that exists and the people who deserve access to it but haven't been given the language, the framework, or the foundation to pursue it.
+      </p>
+    </div>
 
-   <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;margin-top:16px">
-  <img
-    src="/images/rudy-headshot.JPG"
-    alt="Rudolph “Realtor Rudy” Durant"
-    width="200"
-    height="240"
-    style="
-      display:block;
-      object-fit:cover;
-      border-radius:18px;
-      border:1px solid var(--line);
-      background:#f5f5f5;
-    "
-  />
+    <!-- Who Is Rudy -->
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-bottom:14px">
+      <div class="card" style="grid-column:span 12">
+        <div style="font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);margin-bottom:10px">Who Is Behind BRIK</div>
+        <h3 style="margin:0 0 12px;font-size:20px">Rudolph Durant Jr. — known as Realtor Rudy</h3>
+        <p style="margin:0 0 14px;color:var(--muted);font-size:13px;line-height:1.8">
+          I'm a licensed Georgia Realtor with a background in real estate sales, investing, and property management. I work across Metro Atlanta and throughout Georgia — but BRIK isn't just about transactions. It never was.
+        </p>
+        <p style="margin:0 0 14px;color:var(--muted);font-size:13px;line-height:1.8">
+          I built BRIK because I kept seeing the same thing: people walking into one of the most significant financial decisions of their lives without a real foundation. Not because they weren't capable — but because nobody had given them the tools. The industry speaks in jargon that excludes. Marketing uses fear and urgency to push decisions. And the people who would benefit most from owning property are often the least equipped to navigate the process.
+        </p>
+        <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.8">
+          That's the gap BRIK was built to close.
+        </p>
+      </div>
+    </div>
 
-  <div style="max-width:720px">
-    <p style="margin:0 0 12px;color:var(--text)">
-      I’m Rudolph “Realtor Rudy” Durant, a licensed Georgia Realtor serving Atlanta and surrounding communities.
-      BRIK was created to make real estate clearer, calmer, and more strategic — whether you’re buying, selling,
-      or just trying to understand your options.
-    </p>
+    <!-- Why It Matters -->
+    <div class="card" style="margin-bottom:14px">
+      <div style="font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);margin-bottom:10px">Why This Matters</div>
+      <h3 style="margin:0 0 12px;font-size:18px">Property ownership is one of the most powerful tools a person can hold.</h3>
+      <p style="margin:0 0 14px;color:var(--muted);font-size:13px;line-height:1.8">
+        Owning land or property isn't just a financial decision — it's a civic one. In this country, and in most countries around the world, property ownership entitles you to stability, to equity, to a foundation that can be passed down. It is one of the few tools available to everyday people that can genuinely shift the trajectory of a family — not just for one generation, but for the ones that follow.
+      </p>
+      <p style="margin:0 0 14px;color:var(--muted);font-size:13px;line-height:1.8">
+        Wealth in America has been built on land. And for too long, access to that wealth-building tool has been limited by complexity, by confusion, and by a system that benefits from buyers staying uninformed. Predatory lending. Confusing contracts. Propaganda that makes people believe homeownership is out of reach when it isn't.
+      </p>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.8">
+        BRIK is a direct response to that. The opportunity is real. It is open to anyone who desires it. And this platform exists to make sure that no one is excluded from it simply because they couldn't understand the language.
+      </p>
+    </div>
 
-    <p style="margin:0;color:var(--muted)">
-      My approach blends education, market awareness, and practical planning so clients can move with confidence,
-      not pressure.
-    </p>
-  </div>
-</div>
+    <!-- Education First -->
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-bottom:14px">
+      <div class="card" style="grid-column:span 6">
+        <div style="font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);margin-bottom:8px">The Philosophy</div>
+        <h3 style="margin:0 0 10px;font-size:16px">Education first. Always.</h3>
+        <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.8">
+          Most real estate content is designed to get you to act — to call an agent, fill out a form, book a showing. BRIK is designed to get you to think. A buyer who understands the process makes better decisions. Better decisions lead to better outcomes — financially, emotionally, and generationally. You are welcome to benefit from everything on this site whether or not you ever work with me directly. That's the point.
+        </p>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <div style="font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);margin-bottom:8px">The Standard</div>
+        <h3 style="margin:0 0 10px;font-size:16px">No jargon. No confusion. No exclusion.</h3>
+        <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.8">
+          Every term is defined in plain language. Every concept has a real-world analogy that makes it stick. Every case study shows a real decision framework — not just a success story. Because you shouldn't have to already speak the language to learn it. And you shouldn't be left out of generational wealth-building because the industry made it feel too complicated to pursue.
+        </p>
+      </div>
+    </div>
+
+    <!-- Service Area -->
+    <div class="card" style="margin-bottom:14px">
+      <div style="font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);margin-bottom:8px">Service Area</div>
+      <h3 style="margin:0 0 10px;font-size:16px">Metro Atlanta and throughout Georgia</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.8">
+        BRIK is based in Metro Atlanta and serves buyers, investors, and property owners across Georgia — from the suburbs surrounding Atlanta to coastal Savannah, North Georgia mountain towns, Central Georgia's military corridors, and South Georgia's land markets. Wherever you are in the state, the education on this platform applies — and so does the ability to work together directly if you're ready.
+      </p>
+    </div>
+
+    <!-- CTA -->
+    <div class="card" style="background:rgba(255,255,255,.03)">
+      <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.35px;margin-bottom:6px">Start where you are</div>
+      <p style="margin:0 0 14px;color:var(--muted);font-size:13px;line-height:1.7">
+        Whether you're just beginning to understand real estate or you're ready to make your next move — BRIK is here to give you the foundation. Start with the glossary. Take the quiz. Read the case studies. And when you're ready to work together, submit intake and we'll take it from there.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a href="/start" class="pill primary">Start Here</a>
+        <a href="/glossary" class="pill">Glossary</a>
+        <a href="/case-studies" class="pill">Case Studies</a>
+        <a href="/intake" class="pill">Submit Intake</a>
+      </div>
+    </div>
 
   </section>
 </BaseLayout>

@@ -1,45 +1,127 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const description = "Pick your lane — buyer, seller, investor lens, or commercial — and get a clear next step.";
+const description = "Pick your lane — buyer, seller, investor, or commercial — and get a clear next step.";
+
+const lanes = [
+  {
+    icon: "🏠",
+    label: "Buy",
+    tag: "Residential",
+    headline: "Start your buying journey",
+    body: "Whether you're buying your first home, upsizing, or buying smart — the Buyers Beginning quiz clarifies your intent, property type, and next move.",
+    links: [
+      { label: "Start as a buyer →", href: "/buyers-beginning", primary: true },
+      { label: "Build your vocabulary", href: "/glossary", primary: false },
+    ]
+  },
+  {
+    icon: "📋",
+    label: "Sell",
+    tag: "Residential",
+    headline: "Map your selling strategy",
+    body: "Pricing, prep, timing, and marketing — submit intake and we'll build a plan around your property, your timeline, and your goals.",
+    links: [
+      { label: "Start seller intake →", href: "/intake", primary: true },
+    ]
+  },
+  {
+    icon: "📈",
+    label: "Invest",
+    tag: "Investor Lens",
+    headline: "Think like an investor",
+    body: "Cap rate, cash flow, ARV, BRRRR — learn how deals are evaluated, how numbers are run, and how investors think before they buy.",
+    links: [
+      { label: "Go to Education →", href: "/education", primary: true },
+      { label: "Investor case studies", href: "/case-studies", primary: false },
+    ]
+  },
+  {
+    icon: "🏢",
+    label: "Commercial",
+    tag: "Commercial",
+    headline: "Commercial entry points",
+    body: "Retail storefronts, salon suites, office condos, mixed-use, land — strategy-first commercial guidance for small business owners and investors.",
+    links: [
+      { label: "Start commercial intake →", href: "/intake", primary: true },
+      { label: "Commercial case studies", href: "/case-studies", primary: false },
+    ]
+  },
+];
 ---
 
 <BaseLayout title="Start Here | BRIK Real Estate" description={description}>
-  <section style="padding:28px 0 10px">
-    <h2 style="font-size:34px;line-height:1.1;margin:0 0 10px;letter-spacing:-.5px">Start Here</h2>
-    <p style="margin:0 0 18px;color:var(--muted);max-width:70ch">{description}</p>
+  <section style="padding:28px 0 48px">
 
-    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr)">
-      <div class="card" style="grid-column:span 6">
-        <h3 style="margin:0 0 8px">Buy</h3>
-        <p style="margin:0 0 14px;color:var(--muted);font-size:13px">
-          Take Buyers Beginning to clarify your intent and next steps.
-        </p>
-        <a class="pill primary" href="/buyers-beginning">Start as a buyer</a>
-      </div>
+    <!-- Page Header -->
+    <div style="margin-bottom:32px">
+      <h2 style="font-size:36px;font-weight:900;letter-spacing:-.6px;margin-bottom:10px">
+        Start Here.
+      </h2>
+      <p style="max-width:68ch;font-size:15px;line-height:1.75;color:var(--muted)">
+        Real estate is not one-size-fits-all. Pick your lane below — each path is built around a different intent, a different set of questions, and a different next step.
+      </p>
+    </div>
 
-      <div class="card" style="grid-column:span 6">
-        <h3 style="margin:0 0 8px">Sell</h3>
-        <p style="margin:0 0 14px;color:var(--muted);font-size:13px">
-          Submit intake so we can map a pricing + prep + marketing plan.
-        </p>
-        <a class="pill primary" href="/intake">Start as a seller</a>
-      </div>
+    <!-- Lane Cards -->
+    <div style="display:grid;gap:16px;grid-template-columns:repeat(12,1fr);margin-bottom:32px">
+      {lanes.map((lane) => (
+        <div class="card" style="grid-column:span 6;display:flex;flex-direction:column;gap:16px">
 
-      <div class="card" style="grid-column:span 6">
-        <h3 style="margin:0 0 8px">Investor Lens</h3>
-        <p style="margin:0 0 14px;color:var(--muted);font-size:13px">
-          Learn the basics of deal evaluation, cash flow, and risk.
-        </p>
-        <a class="pill primary" href="/education">Go to Education</a>
-      </div>
+          <!-- Card Header -->
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
+            <div style="display:flex;align-items:center;gap:14px">
+              <div style="width:48px;height:48px;border-radius:14px;background:var(--accent-bg);border:1px solid var(--accent-border);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">
+                {lane.icon}
+              </div>
+              <div>
+                <div style="font-size:18px;font-weight:800;letter-spacing:-.2px;color:var(--text)">{lane.label}</div>
+                <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-top:2px">{lane.tag}</div>
+              </div>
+            </div>
+          </div>
 
-      <div class="card" style="grid-column:span 6">
-        <h3 style="margin:0 0 8px">Commercial</h3>
-        <p style="margin:0 0 14px;color:var(--muted);font-size:13px">
-          Retail, office, industrial, land, mixed-use — strategy-first.
-        </p>
-        <a class="pill primary" href="/intake">Start commercial intake</a>
+          <!-- Divider -->
+          <div style="height:1px;background:var(--line)"></div>
+
+          <!-- Body -->
+          <div style="flex:1">
+            <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px">{lane.headline}</div>
+            <p style="font-size:13px;line-height:1.75;color:var(--muted);margin:0">{lane.body}</p>
+          </div>
+
+          <!-- Links -->
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:auto">
+            {lane.links.map((link) => (
+              <a class={`pill${link.primary ? ' primary' : ''}`} href={link.href}>{link.label}</a>
+            ))}
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+    <!-- Bottom orientation strip -->
+    <div class="card" style="background:var(--accent-bg);border-color:var(--accent-border)">
+      <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;justify-content:space-between">
+        <div>
+          <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-bottom:6px">Not sure where to start?</div>
+          <p style="margin:0;font-size:13px;line-height:1.7;color:var(--muted);max-width:60ch">
+            The Glossary builds your foundation. The Case Studies show real decision frameworks. GA Intel maps the market. Start anywhere — it all connects.
+          </p>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;flex-shrink:0">
+          <a class="pill primary" href="/glossary">Glossary</a>
+          <a class="pill" href="/case-studies">Case Studies</a>
+          <a class="pill" href="/market-intel">GA Intel</a>
+        </div>
       </div>
     </div>
+
   </section>
+
+  <style>
+    @media (max-width: 900px) {
+      div[style*="grid-column:span 6"] { grid-column: span 12 !important; }
+    }
+  </style>
 </BaseLayout>

@@ -1,47 +1,128 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-const description = "Newsletter archive, glossary breakdowns, and case studies — the BRIK learning hub.";
+const description = "The BRIK learning hub — glossary, case studies, market intel, and the newsletter archive.";
+
+const resources = [
+  {
+    icon: "📖",
+    label: "Glossary",
+    tag: "Foundation",
+    headline: "77 real estate terms — plain language",
+    body: "Every concept defined in plain language with a BRIK Link analogy that makes it stick. Search by term or filter by category.",
+    count: "77 terms",
+    links: [
+      { label: "Browse Glossary →", href: "/glossary", primary: true },
+    ]
+  },
+  {
+    icon: "📂",
+    label: "Case Studies",
+    tag: "Decision Frameworks",
+    headline: "66 real-world scenarios",
+    body: "First-time buyers, investors, commercial entry, land, rehab, relocation — real decisions with real frameworks. Find yourself in the library.",
+    count: "66 studies",
+    links: [
+      { label: "Browse Case Studies →", href: "/case-studies", primary: true },
+    ]
+  },
+  {
+    icon: "🗺️",
+    label: "GA Intel",
+    tag: "Market Context",
+    headline: "Georgia market breakdowns",
+    body: "Metro Atlanta suburbs, North GA mountain towns, Coastal, Central, and South Georgia — county-level clarity with key city notes and live MLS access.",
+    count: "5 regions · 40+ cities",
+    links: [
+      { label: "View GA Intel →", href: "/market-intel", primary: true },
+    ]
+  },
+  {
+    icon: "📬",
+    label: "Newsletter",
+    tag: "Ongoing Education",
+    headline: "BRIK Builder News",
+    body: "Education-first insights, market clarity, and real-world framing delivered to your inbox. View the archive or join the list.",
+    count: "Growing archive",
+    links: [
+      { label: "Join + view archive →", href: "/newsletter", primary: true },
+    ]
+  },
+];
 ---
 
 <BaseLayout title="Education | BRIK Real Estate" description={description}>
-  <section style="padding:28px 0 10px">
-    <h2 style="font-size:34px;line-height:1.1;margin:0 0 10px;letter-spacing:-.5px">Education</h2>
-    <p style="margin:0 0 18px;color:var(--muted);max-width:75ch">{description}</p>
+  <section style="padding:28px 0 48px">
 
-    <div class="card" id="newsletter">
-      <h3 style="margin:0 0 8px">Newsletter Archive</h3>
-      <p style="margin:0;color:var(--muted);font-size:13px">
-        Next: embed MailerLite signup and store past newsletters here on the site.
+    <!-- Page Header -->
+    <div style="margin-bottom:32px">
+      <h2 style="font-size:36px;font-weight:900;letter-spacing:-.6px;margin-bottom:10px">
+        Education Hub
+      </h2>
+      <p style="max-width:68ch;font-size:15px;line-height:1.75;color:var(--muted)">
+        Real estate literacy is the foundation of every good decision. Start with the glossary, go deep in the case studies, check the market intel, and stay current with the newsletter.
       </p>
-	<div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
-  <h3 style="margin:0 0 6px">Get the newsletter</h3>
-  <p style="margin:0 0 12px;color:var(--muted);font-size:13px">
-    Weekly BRIK clarity + archived issues you can reference anytime.
-  </p>
-  <a class="pill primary" href="/newsletter">Join + view archive →</a>
-</div>
-
     </div>
 
-    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
-      <div class="card" id="glossary" style="grid-column:span 6">
-        <h3 style="margin:0 0 8px">Glossary</h3>
-        <p style="margin:0;color:var(--muted);font-size:13px">
-          Plain language definitions + “BRIK Link” examples. Unlimited growth.
-        </p>
-	<a class="pill" href="/glossary">Browse glossary →</a>
+    <!-- Resource Cards -->
+    <div style="display:grid;gap:16px;grid-template-columns:repeat(12,1fr);margin-bottom:32px">
+      {resources.map((res) => (
+        <div class="card" style="grid-column:span 6;display:flex;flex-direction:column;gap:16px">
+
+          <!-- Card Header -->
+          <div style="display:flex;align-items:flex-start;gap:14px">
+            <div style="width:48px;height:48px;border-radius:14px;background:var(--accent-bg);border:1px solid var(--accent-border);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">
+              {res.icon}
+            </div>
+            <div style="flex:1;min-width:0">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap">
+                <div style="font-size:18px;font-weight:800;letter-spacing:-.2px;color:var(--text)">{res.label}</div>
+                <span style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--accent);background:var(--accent-bg);border:1px solid var(--accent-border);padding:3px 10px;border-radius:999px">{res.count}</span>
+              </div>
+              <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-top:2px">{res.tag}</div>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div style="height:1px;background:var(--line)"></div>
+
+          <!-- Body -->
+          <div style="flex:1">
+            <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px">{res.headline}</div>
+            <p style="font-size:13px;line-height:1.75;color:var(--muted);margin:0">{res.body}</p>
+          </div>
+
+          <!-- Links -->
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:auto">
+            {res.links.map((link) => (
+              <a class={`pill${link.primary ? ' primary' : ''}`} href={link.href}>{link.label}</a>
+            ))}
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="card" style="background:var(--accent-bg);border-color:var(--accent-border)">
+      <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;justify-content:space-between">
+        <div>
+          <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-bottom:6px">Ready to move?</div>
+          <p style="margin:0;font-size:13px;line-height:1.7;color:var(--muted);max-width:60ch">
+            When the education clicks and you're ready for a personalized plan — submit intake and we'll map your specific situation.
+          </p>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;flex-shrink:0">
+          <a class="pill primary" href="/intake">Submit Intake</a>
+          <a class="pill" href="/start">Back to Start</a>
+        </div>
       </div>
-      <div class="card" id="case-studies" style="grid-column:span 6">
-  <h3 style="margin:0 0 8px">Case Studies</h3>
-  <p style="margin:0;color:var(--muted);font-size:13px">
-    Scenario → decision points → what to consider → outcome options.
-  </p>
-
-  <div style="margin-top:12px">
-    <a class="pill primary" href="/case-studies">Browse Case Studies</a>
-  </div>
-</div>
-
     </div>
+
   </section>
+
+  <style>
+    @media (max-width: 900px) {
+      div[style*="grid-column:span 6"] { grid-column: span 12 !important; }
+    }
+  </style>
 </BaseLayout>

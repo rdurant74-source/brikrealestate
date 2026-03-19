@@ -34,7 +34,7 @@ const categories = Array.from(new Set(items.map((i) => i.category))).sort();
           <label style="display:block;color:var(--muted);font-size:12px;margin-bottom:6px">Category</label>
           <select
             id="category"
-            style="width:100%;padding:12px;border-radius:12px;border:1px solid var(--line);background:#11151b;color:var(--text)"
+            style="width:100%;padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--bg-card);color:var(--text)"
           >
             <option value="All">All</option>
             {categories.map((c) => <option value={c}>{c}</option>)}
@@ -61,7 +61,7 @@ const categories = Array.from(new Set(items.map((i) => i.category))).sort();
         >
           <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between">
             <h3 style="margin:0 0 6px;font-size:16px">{i.term}</h3>
-            <span style="font-size:12px;color:var(--muted);border:1px solid var(--line);padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.03)">
+            <span style="font-size:12px;color:var(--muted);border:1px solid var(--line);padding:6px 10px;border-radius:999px;background:var(--bg-card-alt)">
               {i.category}
             </span>
           </div>
@@ -80,7 +80,7 @@ const categories = Array.from(new Set(items.map((i) => i.category))).sort();
       ))}
     </div>
 
-    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+    <div class="card" style="margin-top:14px;background:var(--bg-card-alt)">
       <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.35px;margin-bottom:6px">Want a personalized breakdown?</div>
       <p style="margin:0 0 12px;color:var(--muted);font-size:13px">
         Submit Intake and we'll translate the terms into a plan for your situation.

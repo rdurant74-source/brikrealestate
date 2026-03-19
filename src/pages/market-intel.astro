@@ -1,16 +1,221 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const description = "Georgia Market Intel — county-based clarity with city recognition triggers, plus a Search Smart guide.";
+const description = "County-level market clarity across Georgia — Metro Atlanta, North GA, Coastal, Central, and South Georgia.";
+
+const regions = [
+  {
+    id: "metro-atlanta",
+    label: "Metro Atlanta",
+    counties: "Fulton · DeKalb · Cobb · Gwinnett · Clayton · Henry · Fayette · Paulding · Carroll · Bartow · Rockdale · Cherokee · Douglas",
+    overview: "Metro Atlanta is Georgia's primary real estate market and one of the fastest-growing metros in the Southeast. Demand consistently outpaces supply across intown and suburban corridors. The market is hyper-local — a 10-minute drive can mean a completely different price point, school zone, and investment profile. Suburban expansion has pushed buyer activity well beyond the perimeter, making markets like Fayette, Henry, and Paulding counties increasingly competitive. Buyers who understand neighborhood-level dynamics make better decisions than those shopping by zip code alone.",
+    characteristics: [
+      "Highly competitive intown — multiple offers common on well-priced homes",
+      "Suburban markets offer more inventory and value relative to intown Atlanta",
+      "New construction expanding in outer suburbs — Cherokee, Paulding, Henry, Carroll",
+      "Investor activity is high — expect competition from cash buyers on distressed properties",
+      "School district quality is a major price driver across all suburban markets",
+      "MARTA proximity adds measurable value in specific corridors"
+    ],
+    cities: [
+      { name: "Atlanta (Intown)", note: "Buckhead, Grant Park, Old Fourth Ward, Kirkwood — premium pricing, high demand, strong appreciation. Most competitive segment of the market." },
+      { name: "Alpharetta / Fulton County", note: "Tech corridor with strong job base. Premium suburb with excellent schools. High demand, low inventory. Strong appreciation history." },
+      { name: "Marietta / Cobb County", note: "Established suburb with strong school systems. Good value relative to intown. Active duplex and SFR market." },
+      { name: "Acworth / Kennesaw / Cobb", note: "Growing Cobb County suburbs. More affordable than Marietta. Lake Allatoona access adds lifestyle appeal. Strong rental demand." },
+      { name: "Cartersville / Bartow County", note: "Expanding suburb with affordable entry points. Growing commuter population. New construction active. Good first-time buyer market." },
+      { name: "Dallas / Paulding County", note: "One of Metro Atlanta's most affordable growing markets. New construction heavy. Strong first-time buyer and investor activity." },
+      { name: "Carrollton / Carroll County", note: "University of West Georgia anchors rental demand. Affordable SFR market. Growing infrastructure investment." },
+      { name: "Decatur / DeKalb County", note: "Walkable, established, school-driven demand. Strong rental market. More inventory than intown Atlanta at better value." },
+      { name: "Conyers / Rockdale County", note: "Affordable east-side suburb with growing demand. Good value for buyers priced out of closer-in markets. Active SFR and rental market." },
+      { name: "Duluth / Gwinnett County", note: "Diverse, growing market. Strong rental demand. More affordable entry points than Fulton/DeKalb with good school options." },
+      { name: "Fayetteville / Fayette County", note: "Premium south metro suburb. Highly rated schools drive strong family buyer demand. Limited inventory keeps prices firm." },
+      { name: "McDonough / Stockbridge / Henry County", note: "Fast-growing south metro corridor. Affordable relative to north metro. Strong new construction activity. Good house hacking and SFR investment market." },
+      { name: "Hampton / Henry County", note: "More rural feel with suburban growth pressure. Affordable. Good land and lot availability for buyers wanting space." },
+      { name: "College Park / Clayton County", note: "Airport proximity drives rental demand. Most affordable Metro Atlanta entry point. Strong house hacking potential for buyers willing to do due diligence." }
+    ]
+  },
+  {
+    id: "north-georgia",
+    label: "North Georgia",
+    counties: "White · Fannin · Lumpkin · Hall · Murray · Gilmer · Pickens",
+    overview: "North Georgia is driven by two distinct buyer types: vacation and short-term rental investors drawn to mountain towns, and lifestyle buyers seeking land, space, and lower cost of living. The STR market in Blue Ridge and Helen has matured significantly — buyers entering now need accurate revenue projections, not optimistic ones. Land and lot opportunities remain for buyers willing to navigate rural due diligence.",
+    characteristics: [
+      "STR regulations vary by city and county — verify before buying for Airbnb",
+      "Cabin and mountain properties command premium in Blue Ridge and Helen",
+      "Land values have risen significantly since 2020 — cheap land is largely gone",
+      "Financing for vacation and rural properties requires specialized lenders",
+      "Seasonality affects STR income — model at 60-70% occupancy, not peak season rates"
+    ],
+    cities: [
+      { name: "Blue Ridge / Fannin County", note: "Premier STR market. Cabin demand strong but pricing has compressed margins. Verify STR permits before buying." },
+      { name: "Helen / White County", note: "Tourism-driven market. Strong STR potential but heavily seasonal. Know your off-season numbers before buying." },
+      { name: "Dahlonega / Lumpkin County", note: "Growing wine country appeal. Mix of primary residence and STR buyers. Less saturated than Blue Ridge." },
+      { name: "Gainesville / Hall County", note: "Lake Lanier access drives demand. Mix of vacation and primary buyers. Stronger year-round market than mountain towns." },
+      { name: "Jasper / Pickens County", note: "Emerging north Georgia market. More affordable than Blue Ridge. Growing primary and STR buyer interest." },
+      { name: "Ellijay / Gilmer County", note: "Adjacent to Blue Ridge. More affordable entry points. STR market less established but growing quickly." }
+    ]
+  },
+  {
+    id: "coastal-georgia",
+    label: "Coastal Georgia",
+    counties: "Chatham · Glynn · Camden · McIntosh · Liberty · Bryan",
+    overview: "Coastal Georgia offers two distinct markets: Savannah's historic urban core with strong STR and investment activity, and the Golden Isles coastal communities with premium lifestyle pricing. Both markets have seen significant appreciation post-2020 as out-of-state buyers discovered Georgia's coast. Entry points are rising but remain below comparable coastal markets in Florida and the Carolinas.",
+    characteristics: [
+      "Savannah's historic district STR market is heavily regulated — verify city rules",
+      "Flood zone considerations are significant — factor flood insurance into true cost",
+      "Out-of-state buyer demand has compressed inventory and raised prices",
+      "Strong military presence near Hinesville/Fort Stewart creates stable rental demand",
+      "Coastal properties require specialized insurance — budget accordingly"
+    ],
+    cities: [
+      { name: "Savannah / Chatham County", note: "Historic district commands premium. STR regulations strict downtown. Midtown and Southside offer better value. Strong long-term rental demand from SCAD and hospital corridor." },
+      { name: "Brunswick / Glynn County", note: "Gateway to Golden Isles. More affordable than St. Simons. Growing local market with infrastructure investment." },
+      { name: "St. Simons Island", note: "Premium coastal lifestyle market. Limited inventory, high demand. Vacation and second home buyers dominate." },
+      { name: "Jekyll Island", note: "State-owned island with unique lease land structure — understand ownership terms before buying." },
+      { name: "Hinesville / Liberty County", note: "Fort Stewart proximity creates strong, stable rental demand. Affordable entry points. Military buyer pool is significant." },
+      { name: "Richmond Hill / Bryan County", note: "Fast-growing Savannah suburb. Family-driven demand. More affordable than Chatham County with strong school ratings." }
+    ]
+  },
+  {
+    id: "central-georgia",
+    label: "Central Georgia",
+    counties: "Bibb · Muscogee · Houston · Peach · Baldwin · Jones · Monroe",
+    overview: "Central Georgia offers some of the most affordable real estate in the state with stable demand driven by military installations, state government, and regional medical centers. Markets like Warner Robins and Columbus have consistent rental demand and accessible price points for first-time buyers and investors. Appreciation is slower than Metro Atlanta but entry costs are significantly lower and cash flow potential is stronger.",
+    characteristics: [
+      "Robins Air Force Base anchors Warner Robins market — stable military rental demand",
+      "Fort Moore (formerly Fort Benning) drives Columbus rental market",
+      "Lower price points make cash flow positive investing more achievable",
+      "Slower appreciation than metro markets but stronger yield potential",
+      "First-time buyer programs and DPA funds often go unclaimed in these markets"
+    ],
+    cities: [
+      { name: "Macon / Bibb County", note: "State's geographic center. Affordable. Growing arts and downtown revitalization. Good investor entry point with improving fundamentals." },
+      { name: "Warner Robins / Houston County", note: "Military-driven stable market. Strong SFR rental demand. Consistent appreciation. One of Georgia's best value markets for investors." },
+      { name: "Columbus / Muscogee County", note: "Fort Moore anchors strong rental demand. Riverwalk development improving downtown appeal. Affordable with real cash flow potential." },
+      { name: "Perry / Houston County", note: "Small city with stable growth adjacent to Warner Robins. Affordable SFR market with low vacancy rates." },
+      { name: "Milledgeville / Baldwin County", note: "Georgia College anchors consistent rental demand. Small but steady market. Good entry-level investor market." },
+      { name: "Forsyth / Monroe County", note: "I-75 corridor growth. Affordable suburb between Macon and Atlanta. Growing commuter population." }
+    ]
+  },
+  {
+    id: "south-georgia",
+    label: "South Georgia",
+    counties: "Lowndes · Tift · Toombs · Thomas · Dougherty · Brooks · Cook",
+    overview: "South Georgia is Georgia's most affordable real estate region and one of the most overlooked by investors. Agricultural land, small city markets, and medical and university anchored towns offer genuine value for buyers who understand rural due diligence. Appreciation is modest but cash-on-cash returns can be strong given low entry costs. Buyers should verify infrastructure, employment base, and population trends before committing.",
+    characteristics: [
+      "Lowest entry prices in Georgia — SFR under $150K still achievable in many markets",
+      "Agricultural land opportunities significant — understand zoning and conservation use programs",
+      "University and medical anchors provide rental stability in select markets",
+      "Infrastructure and internet access vary significantly — verify before buying rural",
+      "Population trends matter more here than in growing metro markets — research carefully"
+    ],
+    cities: [
+      { name: "Valdosta / Lowndes County", note: "Valdosta State University and Moody AFB drive consistent rental demand. South Georgia's most dynamic and liquid market." },
+      { name: "Tifton / Tift County", note: "Agricultural hub with Abraham Baldwin Agricultural College providing some rental base. Affordable and stable." },
+      { name: "Vidalia / Toombs County", note: "Small market known for agriculture. Affordable SFR with limited but stable rental demand." },
+      { name: "Thomasville / Thomas County", note: "Charming small city with growing tourism and lifestyle appeal. Affordable with improving amenities." },
+      { name: "Albany / Dougherty County", note: "Regional medical center and state government provide some market stability. Affordable but requires careful due diligence on neighborhood selection." },
+      { name: "Douglas / Coffee County", note: "Small regional market. South Georgia Tech anchors some rental demand. Very affordable entry points for investors." }
+    ]
+  }
+];
 ---
 
 <BaseLayout title="Georgia Market Intel | BRIK Real Estate" description={description}>
   <section style="padding:28px 0 10px">
     <h2 style="font-size:34px;line-height:1.1;margin:0 0 10px;letter-spacing:-.5px">Georgia Market Intel</h2>
-    <p style="margin:0 0 18px;color:var(--muted);max-width:75ch">{description}</p>
-    <div class="card">
-      <p style="margin:0;color:var(--muted);font-size:13px">
-        Placeholder live. Next: full county-based build including Metro ATL + North GA (Helen/Blue Ridge) + Coastal (Savannah/Brunswick) + Central (Macon/Columbus) + South GA (Vidalia).
-      </p>
+    <p style="margin:0 0 24px;color:var(--muted);max-width:75ch">{description}</p>
+
+    <!-- MLS Search CTA -->
+    <div class="card" style="margin-bottom:28px;border-color:rgba(47,107,255,.35);background:rgba(47,107,255,.08)">
+      <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+        <div style="flex:1;min-width:0">
+          <div style="font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);margin-bottom:6px">Live MLS Access</div>
+          <h3 style="margin:0 0 6px;font-size:18px">Ready to search active listings?</h3>
+          <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+            Browse real-time Georgia MLS listings directly — homes, investment properties, land, and commercial. Use the market context below to search smarter.
+          </p>
+        </div>
+        <div style="flex-shrink:0">
+          <a
+            href="https://durantrudolp.georgiamls.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="pill primary"
+            style="font-size:14px;padding:12px 20px;display:inline-block"
+          >
+            Search Georgia MLS →
+          </a>
+        </div>
+      </div>
     </div>
+
+    <!-- Region Sections -->
+    {regions.map((region) => (
+      <div style="margin-bottom:36px">
+
+        <!-- Region Header -->
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap">
+          <h3 style="margin:0;font-size:13px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)">{region.label}</h3>
+          <div style="flex:1;height:1px;background:var(--line);min-width:20px"></div>
+          <span style="font-size:11px;color:var(--muted)">{region.counties}</span>
+        </div>
+
+        <!-- Overview -->
+        <div class="card" style="margin-bottom:14px">
+          <h4 style="margin:0 0 8px;font-size:14px">Market Overview</h4>
+          <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">{region.overview}</p>
+        </div>
+
+        <!-- Characteristics + Cities Grid -->
+        <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr)">
+
+          <div class="card" style="grid-column:span 5">
+            <h4 style="margin:0 0 10px;font-size:14px">What to Know</h4>
+            <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.8">
+              {region.characteristics.map((c) => (
+                <li style="margin-bottom:4px">{c}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="card" style="grid-column:span 7">
+            <h4 style="margin:0 0 10px;font-size:14px">Key Markets</h4>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              {region.cities.map((city, i) => (
+                <div style={i < region.cities.length - 1 ? "border-bottom:1px solid var(--line);padding-bottom:10px" : ""}>
+                  <div style="font-weight:700;font-size:13px;margin-bottom:3px">{city.name}</div>
+                  <div style="color:var(--muted);font-size:12px;line-height:1.6">{city.note}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    ))}
+
+    <!-- Bottom CTA -->
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.35px;margin-bottom:6px">Search with context</div>
+      <p style="margin:0 0 12px;color:var(--muted);font-size:13px;line-height:1.7">
+        Now that you understand the market landscape, search active Georgia MLS listings with a clearer picture of what you're looking at — and submit intake when you're ready to move.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a href="https://durantrudolp.georgiamls.com" target="_blank" rel="noopener noreferrer" class="pill primary">Search Georgia MLS →</a>
+        <a href="/intake" class="pill">Submit Intake</a>
+        <a href="/glossary" class="pill">Glossary</a>
+        <a href="/case-studies" class="pill">Case Studies</a>
+      </div>
+    </div>
+
   </section>
+
+  <style>
+    @media (max-width: 900px) {
+      div[style*="grid-column:span 5"],
+      div[style*="grid-column:span 7"] {
+        grid-column: span 12 !important;
+      }
+    }
+  </style>
 </BaseLayout>
