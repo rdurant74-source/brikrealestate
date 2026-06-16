@@ -230,6 +230,16 @@ const {
         align-items: center;
       }
 
+      @media (max-width: 640px) {
+        .navlinks {
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+        }
+        .navlinks::-webkit-scrollbar { display: none; }
+      }
+
       .theme-toggle {
         display: flex;
         align-items: center;
@@ -422,7 +432,6 @@ const {
 
       @media (max-width: 640px) {
         .nav { flex-wrap: wrap; }
-        .navlinks { width: 100%; gap: 5px; }
         main { padding: 20px 0 36px; }
         .brand-brik { font-size: 22px; }
         .hero-section { min-height: 160px; }
