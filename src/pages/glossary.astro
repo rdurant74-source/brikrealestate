@@ -18,9 +18,9 @@ const categories = Array.from(new Set(items.map((i) => i.category))).sort();
     <p style="margin:0 0 18px;color:var(--muted);max-width:80ch">{description}</p>
 
     <div class="card" style="margin-bottom:14px">
-      <div style="display:flex;flex-direction:row;gap:40px;align-items:flex-end;width:100%">
+      <div style="display:flex;flex-direction:row;gap:12px;flex-wrap:wrap;align-items:flex-end;width:100%">
 
-        <div style="flex:2;min-width:0">
+        <div style="flex:2 1 200px;min-width:0;max-width:100%">
           <label style="display:block;color:var(--muted);font-size:12px;margin-bottom:6px">Search terms</label>
           <input
             id="search"
@@ -30,7 +30,7 @@ const categories = Array.from(new Set(items.map((i) => i.category))).sort();
           />
         </div>
 
-        <div style="flex:1;min-width:0">
+        <div style="flex:1 1 140px;min-width:0;max-width:100%">
           <label style="display:block;color:var(--muted);font-size:12px;margin-bottom:6px">Category</label>
           <select
             id="category"

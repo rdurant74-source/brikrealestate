@@ -87,6 +87,7 @@ const {
       .hero-bg {
         position: absolute;
         inset: 0;
+        background-image: url('/images/Hero-Light.png');
         background-size: cover;
         background-position: center 42%;
         background-repeat: no-repeat;
@@ -427,6 +428,51 @@ const {
         .hero-section { min-height: 160px; }
         .hero-content h1 { font-size: 24px; }
         .hero-fade-left, .hero-fade-right { width: 40px; }
+        .path-strip { display: none; }
+      }
+
+      /* ============================================================
+         GUIDED PATH STRIP
+      ============================================================ */
+      .path-strip {
+        width: 100%;
+        background: var(--accent-bg);
+        border-top: 1px solid var(--accent-border);
+        border-bottom: 1px solid var(--accent-border);
+        padding: 10px 0;
+      }
+
+      .path-strip-inner {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .path-label {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+        color: var(--accent);
+        white-space: nowrap;
+        margin-right: 4px;
+      }
+
+      .path-step {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+        white-space: nowrap;
+        transition: color .15s;
+      }
+
+      .path-step:hover { color: var(--accent); }
+
+      .path-sep {
+        font-size: 12px;
+        color: var(--muted-light);
+        user-select: none;
       }
     </style>
   </head>
@@ -467,7 +513,7 @@ const {
 
     <!-- HERO SECTION — full width image with page title overlaid -->
     <div class="hero-section">
-      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-bg"></div>
       <div class="hero-overlay"></div>
       <div class="hero-fade-left"></div>
       <div class="hero-fade-right"></div>
@@ -475,6 +521,24 @@ const {
       <div class="hero-fade-bottom"></div>
       <div class="hero-content">
         <div class="hero-tagline">Building Realty &amp; Investment Knowledge</div>
+      </div>
+    </div>
+
+    <!-- GUIDED PATH STRIP -->
+    <div class="path-strip">
+      <div class="container">
+        <div class="path-strip-inner">
+          <span class="path-label">Start here &rarr;</span>
+          <a class="path-step" href="/start">Choose your path</a>
+          <span class="path-sep">&rsaquo;</span>
+          <a class="path-step" href="/buyers-beginning">Take the diagnostic</a>
+          <span class="path-sep">&rsaquo;</span>
+          <a class="path-step" href="/glossary">Learn the language</a>
+          <span class="path-sep">&rsaquo;</span>
+          <a class="path-step" href="/case-studies">Study real deals</a>
+          <span class="path-sep">&rsaquo;</span>
+          <a class="path-step" href="/intake">Work with Rudy</a>
+        </div>
       </div>
     </div>
 
@@ -492,16 +556,8 @@ const {
       </footer>
     </div>
 
-    <!-- THEME + HERO IMAGE SCRIPT -->
+    <!-- THEME SCRIPT -->
     <script is:inline>
-      function applyHeroImage(theme) {
-        var heroBg = document.getElementById('heroBg');
-        if (!heroBg) return;
-        heroBg.style.backgroundImage = theme === 'dark'
-          ? "url('/images/Hero-Dark.png')"
-          : "url('/images/Hero-Light.png')";
-      }
-
       function getTheme() {
         return document.documentElement.getAttribute('data-theme') || 'light';
       }
@@ -511,20 +567,14 @@ const {
         try { localStorage.setItem('brik-theme', theme); } catch(e) {}
         var icon = document.getElementById('themeIcon');
         if (icon) icon.textContent = theme === 'dark' ? '☀️' : '🌙';
-        applyHeroImage(theme);
       }
 
-      // Apply immediately
-      applyHeroImage(getTheme());
-
-      // Also apply on DOM ready in case element wasn't available
       document.addEventListener('DOMContentLoaded', function() {
         var icon = document.getElementById('themeIcon');
         var toggle = document.getElementById('themeToggle');
         var theme = getTheme();
 
         if (icon) icon.textContent = theme === 'dark' ? '☀️' : '🌙';
-        applyHeroImage(theme);
 
         if (toggle) {
           toggle.addEventListener('click', function() {
