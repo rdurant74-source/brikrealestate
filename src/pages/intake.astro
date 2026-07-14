@@ -1,14 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const description = "Submit your intake so we can build a plan around your goals. (Form embed goes here.)";
+const description = "Submit your intake form so we can build a plan around your goals.";
 ---
 
 <BaseLayout title="Intake | BRIK Real Estate" description={description}>
   <section style="padding:28px 0 10px">
     <h2 style="font-size:34px;line-height:1.1;margin:0 0 10px;letter-spacing:-.5px">Intake</h2>
-    <p style="margin:0 0 18px;color:var(--muted);max-width:75ch">{description}</p>
 
     <!-- Tally Intake Form -->
+<script src="https://tally.so/widgets/embed.js"></script>
 <iframe
   data-tally-src="https://tally.so/embed/zxeRka?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
   loading="lazy"
@@ -19,6 +19,5 @@ const description = "Submit your intake so we can build a plan around your goals
   marginwidth="0"
   title="BRIK Real Estate Intake"
 ></iframe>
-<script src="https://tally.so/widgets/embed.js"></script>
   </section>
 </BaseLayout>
