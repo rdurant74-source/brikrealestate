@@ -936,20 +936,40 @@ import newsletters from "../../data/newsletters.json";
     </div>
 
     <!-- Archive -->
-    <div
-      style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:18px"
-    >
-      {newsletters.map((n) => (
-        <div class="card" style="grid-column:span 6">
-          <h3 style="margin:0 0 6px">{n.title}</h3>
-          <p style="margin:0;color:var(--muted);font-size:13px">
-            {n.summary}
-          </p>
-          <a class="pill" href={n.url} target="_blank">
-            Read issue →
-          </a>
+    <h3 style="margin:32px 0 4px;font-size:22px;letter-spacing:-.3px">Archive</h3>
+    <p style="margin:0 0 18px;color:var(--muted);font-size:13px">Past editions, organized by series.</p>
+
+    {newsletters.map((cat) => (
+      <div style="margin-bottom:32px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:6px">
+          <h3 style="margin:0;font-size:13px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)">{cat.name}</h3>
+          <div style="flex:1;height:1px;background:var(--line)"></div>
         </div>
-      ))}
-    </div>
+        <p style="margin:0 0 14px;color:var(--muted);font-size:13px">{cat.description}</p>
+        <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr)">
+          {cat.issues.map((n) => (
+            n.url === "#" ? (
+              <div class="card newsletter-card" style="grid-column:span 6">
+                <h3 style="margin:0 0 6px;font-size:16px">{n.title}</h3>
+                <p style="margin:0 0 10px;color:var(--muted);font-size:13px;line-height:1.6">{n.summary}</p>
+                <span class="pill" style="opacity:0.5;cursor:default">Coming soon</span>
+              </div>
+            ) : (
+              <a class="card newsletter-card" style="grid-column:span 6" href={n.url}>
+                <h3 style="margin:0 0 6px;font-size:16px">{n.title}</h3>
+                <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.6">{n.summary}</p>
+                <div style="margin-top:10px;color:var(--muted);font-size:12px">Read issue →</div>
+              </a>
+            )
+          ))}
+        </div>
+      </div>
+    ))}
   </section>
+
+  <style>
+    @media (max-width: 900px) {
+      .newsletter-card { grid-column: span 12 !important; }
+    }
+  </style>
 </BaseLayout>

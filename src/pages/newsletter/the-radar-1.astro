@@ -1,0 +1,118 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "The BRIK Radar — 4 Homes Across the Map";
+const description = "A look around the city — from Eastside gems to Southside space.";
+
+const homes = [
+  {
+    area: "Central Atlanta",
+    address: "678 Echo St NW, Atlanta, GA 30318 (Bankhead/Westside)",
+    stats: "$395,000 | 3 bed · 2.5 bath · 1,544 sq ft",
+    bullets: [
+      "Located in the fast-developing Echo Street corridor",
+      "5 minutes from downtown, Mercedes-Benz Stadium, and Beltline access",
+      "New construction with modern finishes + smart layout",
+      "This area is growing fast — equity potential is real",
+    ],
+  },
+  {
+    area: "South Atlanta / Clayton County",
+    address: "11656 Genova Ct, Hampton, GA 30228",
+    stats: "$299,000 | 4 bed · 2.5 bath · 2,302 sq ft",
+    bullets: [
+      "Priced under $300K and still over 2,300 sq ft",
+      "Built in 2016 — move-in ready with newer systems",
+      "Located in a quiet cul-de-sac with a spacious backyard",
+      "Minutes from Lovejoy High, shopping centers, and major commute routes",
+    ],
+  },
+  {
+    area: "East Atlanta / Lithonia",
+    address: "4217 Ansley Park Ln, Lithonia, GA 30038",
+    stats: "$339,900 | 4 bed · 2.5 bath · 2,622 sq ft",
+    bullets: [
+      "Large square footage for under $340K",
+      "Fresh exterior and interior updates",
+      "Quiet community near Arabia Mountain trails",
+      "Ideal for buyers needing space with suburban calm + city access",
+    ],
+  },
+  {
+    area: "North Metro / Norcross",
+    address: "1753 Beaver Ridge Cir, Norcross, GA 30071",
+    stats: "$319,900 | 3 bed · 2.5 bath · 1,828 sq ft",
+    bullets: [
+      "Great access to I-85 and Peachtree Corners",
+      "Bright, open concept with modern kitchen upgrades",
+      "Private backyard and community pool",
+      "Strong rental potential or first-time homebuyer fit",
+    ],
+  },
+];
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 6px;color:var(--muted);max-width:82ch">{description}</p>
+    <p style="margin:0 0 18px;color:var(--muted);font-size:12px;font-style:italic">
+      Archived from an original send — listings reflect availability at the time and may no longer be active.
+    </p>
+
+    <div class="card">
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        This week, we're showing you the range. Whether you're drawn to Atlanta's heartbeat, seeking room to grow on the Southside, craving comfort out east, or looking for long-term value up north — there's something in every direction. Think of it as a guided scroll. Your Pinterest board, but real.
+      </p>
+    </div>
+
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      {homes.map((h) => (
+        <div class="card radar-card" style="grid-column:span 6">
+          <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.3px;margin-bottom:6px">🧭 {h.area}</div>
+          <h3 style="margin:0 0 6px;font-size:16px">{h.address}</h3>
+          <p style="margin:0 0 10px;color:var(--muted);font-size:13px">💰 {h.stats}</p>
+          <div style="margin-bottom:10px">
+            <span style="font-size:12px;color:var(--muted);border:1px solid var(--line);padding:6px 10px;border-radius:999px;background:var(--bg-card-alt)">🔗 Zillow Listing (archived)</span>
+          </div>
+          <p style="margin:0 0 6px;color:var(--text);font-size:13px;font-weight:600">Why We Like It:</p>
+          <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7">
+            {h.bullets.map((b) => <li>{b}</li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">🔎 BRIK Scout Tip</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        When browsing homes online, use the "Save" feature on Zillow or Redfin. Over time, you'll start to see patterns in what you really like — and what you don't. That clarity makes your next step way easier.
+      </p>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">📍 Neighborhood in Focus: Norcross</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        With quick access to I-85, nearby tech corridors, and a growing food scene, Norcross is one of North Metro's best-kept secrets for first-time buyers and investors alike.
+      </p>
+    </div>
+
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <h3 style="margin:0 0 8px">BRIK Thought of the Week</h3>
+      <p style="margin:0 0 10px;color:var(--muted);font-size:13px;line-height:1.7">
+        There's no one "right" location. Every area has its rhythm. The key is matching your budget, lifestyle, and goals to the pocket that fits. We don't just unlock doors — we walk with you through them.
+      </p>
+      <p style="margin:0 0 12px;color:var(--muted);font-size:13px;line-height:1.7">
+        Ready to find your corner of the city? Let's start the search — BRIK BY BRIK.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="pill" href="/newsletter">Back to Newsletter</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @media (max-width: 900px) {
+      .radar-card { grid-column: span 12 !important; }
+    }
+  </style>
+</BaseLayout>

@@ -1,0 +1,90 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "BRIK & The City";
+const description = "Community. Culture. Conversations. You'll find BRIK in the room.";
+---
+<BaseLayout title={`${title} | BRIK`} description={description}>
+  <section style="padding:28px 0 10px">
+    <h2 style="font-size:30px;margin:0 0 10px;letter-spacing:-.4px">{title}</h2>
+    <p style="margin:0 0 18px;color:var(--muted);max-width:82ch">{description}</p>
+
+    <div class="card">
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        This week, we're not talking rates or listings — we're talking rhythm. BRIK is more than real estate — it's connection, community, and being present where it matters. Whether you're stepping into a new neighborhood, checking out local events, or just vibing in your part of the city — we're showing up right beside you.
+      </p>
+    </div>
+
+    <div style="display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:14px">
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">📍 Trap Music Museum Late Nights</h3>
+        <p style="margin:0 0 8px;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.3px">Fridays & Saturdays until 12AM</p>
+        <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+          Live DJs, curated art, ATL rap history — this one's a cultural staple. It's more than a museum. It's a movement.
+        </p>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">📍 Peace in the Wild: Skating Edition</h3>
+        <p style="margin:0 0 8px;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.3px">June 9 @ Cascade Skating Rink</p>
+        <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+          Healing, music, and movement. It's not just a night out — it's a vibe with purpose. Hosted by Peace in the Wild. Info at <a href="https://peaceinthewild.org" target="_blank" rel="noopener">peaceinthewild.org</a>.
+        </p>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">📍 Peace in the Wild: Kayaking & Flow</h3>
+        <p style="margin:0 0 8px;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.3px">June 21 @ Chattahoochee River</p>
+        <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+          Sunlight, water, and self-awareness. Join the crew for a float that fuels your peace. Reconnect with nature and your people. More at <a href="https://peaceinthewild.org" target="_blank" rel="noopener">peaceinthewild.org</a>.
+        </p>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">📍 East Atlanta Village Farmers Market</h3>
+        <p style="margin:0 0 8px;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.3px">Thursdays @ 4PM</p>
+        <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+          Fresh produce, handmade goods, and a perfect after-work stroll. A BRIK favorite for easy midweek energy.
+        </p>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">📍 Juneteenth ATL Parade & Music Festival</h3>
+        <p style="margin:0 0 8px;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.3px">Sneak peek for June 14–16</p>
+        <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+          Mark your calendar — one of the biggest celebrations in the city is around the corner.
+        </p>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3 style="margin:0 0 8px">📍 ATL BeltLine MarketPlace</h3>
+        <p style="margin:0 0 8px;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.3px">Now open @ Westside Trail</p>
+        <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+          Shop from Black-owned businesses in repurposed shipping containers along the BeltLine. Grab food, enjoy live music, and soak up the energy.
+        </p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">💬 BRIK Vibe of the Week</h3>
+      <p style="margin:0 0 10px;color:var(--text);font-size:15px;font-style:italic">"We don't just help you move — we help you belong."</p>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        We believe real estate isn't about square footage — it's about showing up. In your neighborhood. In your community. In your power.
+      </p>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px">✨ Community Spotlight: Zucot Gallery — Castleberry Hill</h3>
+      <p style="margin:0;color:var(--muted);font-size:13px;line-height:1.7">
+        "One of the most celebrated Black-owned art galleries in the South, known for its powerful exhibitions and cultural impact." — <a href="https://zucotgallery.com" target="_blank" rel="noopener">zucotgallery.com</a>
+      </p>
+    </div>
+
+    <div class="card" style="margin-top:14px;background:rgba(255,255,255,.03)">
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="pill" href="/newsletter">Back to Newsletter</a>
+        <a class="pill primary" href="/intake">Submit Intake</a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @media (max-width: 900px) {
+      .card[style*="grid-column"] { grid-column: span 12 !important; }
+    }
+  </style>
+</BaseLayout>

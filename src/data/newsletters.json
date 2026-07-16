@@ -1,12 +1,40 @@
 [
   {
-    "title": "Issue #1 — Starting With Clarity",
-    "summary": "How buyers should think before Zillow, lenders, or open houses.",
-    "url": "#"
+    "name": "BRIK Market Update",
+    "description": "Georgia & Atlanta housing data, financing terms, and what the numbers actually mean for your next move.",
+    "issues": [
+      {
+        "title": "Seller Concessions",
+        "summary": "Homes are sitting, rates are steady, and options are opening up.",
+        "url": "/newsletter/market-update-1"
+      },
+      {
+        "title": "Days on Market (DOM)",
+        "summary": "The advantage just flipped. Buyers hold the cards.",
+        "url": "/newsletter/market-update-2"
+      }
+    ]
   },
   {
-    "title": "Issue #2 — Investor Thinking for Homebuyers",
-    "summary": "Even if you plan to live there, here’s how deals are evaluated.",
-    "url": "#"
+    "name": "BRIK & The City",
+    "description": "Local events, culture, and community spotlights around Atlanta — things to do, not just homes to buy.",
+    "issues": [
+      {
+        "title": "Community. Culture. Conversations.",
+        "summary": "You'll find BRIK in the room.",
+        "url": "/newsletter/the-city-1"
+      }
+    ]
+  },
+  {
+    "name": "The BRIK Radar",
+    "description": "A curated look at homes across the metro — real listings, real numbers, real neighborhoods.",
+    "issues": [
+      {
+        "title": "4 Homes Across the Map",
+        "summary": "A look around the city — from Eastside gems to Southside space.",
+        "url": "/newsletter/the-radar-1"
+      }
+    ]
   }
 ]
